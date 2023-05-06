@@ -8,6 +8,8 @@ public class EnemyBasic : MonoBehaviour
     public float velocidadMovimiento = 5f; // Velocidad del movimiento horizontal
     public float maxRange = 5f; // Distancia máxima de movimiento hacia la izquierda
 
+    public float visionDistance = 5f;
+
     private float rightLimit, leftLimit;
     public GameObject target;
 
@@ -24,20 +26,33 @@ public class EnemyBasic : MonoBehaviour
 
     void FixedUpdate() 
     {
-        // Si el personaje ha llegado al límite izquierdo, cambia la dirección del movimiento a la derecha
-        if(transform.position.x <= leftLimit)
-        {
-            Debug.Log("hola");
-            movimiento = Vector2.right * velocidadMovimiento;
-        }
-        // Si el personaje ha llegado al límite derecho, cambia la dirección del movimiento a la izquierda
-        else if(transform.position.x > rightLimit)
-        {
-            movimiento = Vector2.left * velocidadMovimiento;
-        }
+        if(target != null){
 
-        // Aplica el movimiento al Rigidbody2D
-        rb.velocity = movimiento;
+            float distance = Mathf.Abs(transform.position.x - target.transform.position.x);
+
+            if(distance <= 5){
+                 // Calcula la nueva posición del sprite solo en el eje X
+                Vector2 newPosition = new Vector2(target.transform.position.x, transform.position.y);
+                // Mueve el sprite hacia la nueva posición
+                transform.position = Vector2.MoveTowards(transform.position, newPosition, Time.deltaTime * velocidadMovimiento);
+            }else{
+                // Si el personaje ha llegado al límite izquierdo, cambia la dirección del movimiento a la derecha
+                if(transform.position.x <= leftLimit)
+                {
+                    movimiento = Vector2.right * velocidadMovimiento;
+                }
+                // Si el personaje ha llegado al límite derecho, cambia la dirección del movimiento a la izquierda
+                else if(transform.position.x > rightLimit)
+                {
+                    movimiento = Vector2.left * velocidadMovimiento;
+                }
+
+                // Aplica el movimiento al Rigidbody2D
+                rb.velocity = movimiento;
+            }
+            
+        }
+        
     }
         
 }
