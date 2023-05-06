@@ -180,7 +180,7 @@ GameObject:
   - component: {fileID: 185108774}
   m_Layer: 0
   m_Name: edificio3 1
-  m_TagString: Untagged
+  m_TagString: Object bacground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -264,7 +264,7 @@ GameObject:
   - component: {fileID: 224521630}
   m_Layer: 0
   m_Name: edificio5
-  m_TagString: Untagged
+  m_TagString: Object bacground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -348,7 +348,7 @@ GameObject:
   - component: {fileID: 268543703}
   m_Layer: 0
   m_Name: edificio4
-  m_TagString: Untagged
+  m_TagString: Object bacground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -431,7 +431,7 @@ GameObject:
   - component: {fileID: 395907105}
   m_Layer: 0
   m_Name: City
-  m_TagString: Untagged
+  m_TagString: Object bacground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -476,7 +476,7 @@ GameObject:
   - component: {fileID: 398954616}
   m_Layer: 0
   m_Name: edificio1_50
-  m_TagString: Untagged
+  m_TagString: Object bacground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -560,7 +560,7 @@ GameObject:
   - component: {fileID: 400919148}
   m_Layer: 0
   m_Name: farola (2)
-  m_TagString: Untagged
+  m_TagString: Object bacground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -728,7 +728,7 @@ GameObject:
   - component: {fileID: 673961812}
   m_Layer: 0
   m_Name: farola (1)
-  m_TagString: Untagged
+  m_TagString: Object bacground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -812,7 +812,7 @@ GameObject:
   - component: {fileID: 730648342}
   m_Layer: 0
   m_Name: edificio6
-  m_TagString: Untagged
+  m_TagString: Object bacground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -896,7 +896,7 @@ GameObject:
   - component: {fileID: 1007348930}
   m_Layer: 0
   m_Name: torre
-  m_TagString: Untagged
+  m_TagString: Object bacground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -980,7 +980,7 @@ GameObject:
   - component: {fileID: 1087924045}
   m_Layer: 0
   m_Name: edificio2 1
-  m_TagString: Untagged
+  m_TagString: Object bacground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1148,7 +1148,7 @@ GameObject:
   - component: {fileID: 1491823100}
   m_Layer: 0
   m_Name: farola
-  m_TagString: Untagged
+  m_TagString: Object bacground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1232,7 +1232,7 @@ GameObject:
   - component: {fileID: 1526319500}
   m_Layer: 0
   m_Name: torre
-  m_TagString: Untagged
+  m_TagString: Object bacground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1316,7 +1316,7 @@ GameObject:
   - component: {fileID: 1576158861}
   m_Layer: 0
   m_Name: farola
-  m_TagString: Untagged
+  m_TagString: Object bacground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9939,8 +9939,8 @@ Tilemap:
   - first: {x: 14, y: -2, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 22
-      m_TileSpriteIndex: 15
+      m_TileIndex: 7
+      m_TileSpriteIndex: 7
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -11006,6 +11006,16 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+  - first: {x: -14, y: 1, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 6
+      m_TileSpriteIndex: 6
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   - first: {x: -13, y: 1, z: 0}
     second:
       serializedVersion: 2
@@ -11206,6 +11216,36 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+  - first: {x: 25, y: 1, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 26
+      m_TileSpriteIndex: 26
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 26, y: 1, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 24
+      m_TileSpriteIndex: 24
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 27, y: 1, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 11
+      m_TileSpriteIndex: 11
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   - first: {x: -7, y: 2, z: 0}
     second:
       serializedVersion: 2
@@ -11320,17 +11360,17 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 657635400319b4f4fbab80bf255044b8, type: 2}
   - m_RefCount: 859
     m_Data: {fileID: 11400000, guid: aefa3c2b93c461b4dbfb76cd337bfb21, type: 2}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 956df017b20f8aa4598e0950320c2cd4, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 5d31d8d0cbe0e544581ea477c28862d5, type: 2}
   - m_RefCount: 5
     m_Data: {fileID: 11400000, guid: 8da2c1e72a8944146b776170a619bc7a, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 5b5d0b6eb733d1f449da25856bf539ec, type: 2}
   - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: 6862586cd2dee05459307d26bb41f906, type: 2}
-  - m_RefCount: 2
+  - m_RefCount: 3
     m_Data: {fileID: 11400000, guid: 74a7a391db799e745893934deb9c65b3, type: 2}
   - m_RefCount: 7
     m_Data: {fileID: 11400000, guid: d2325fb66025b4945b7cf4594482db8b, type: 2}
@@ -11352,15 +11392,15 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 4f4a3629e1c726f459df1e1de423a714, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 1d14bc23f9523d14abfadb9e9f282ac3, type: 2}
-  - m_RefCount: 3
+  - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: 4df7717d158feea48912c36d4219850f, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 26024332f80b343419c7ca6be9a1c0fc, type: 2}
-  - m_RefCount: 2
+  - m_RefCount: 3
     m_Data: {fileID: 11400000, guid: 15e7678df463b224cb90966a5ab244b7, type: 2}
   - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: d43d8e3688250c144a451dac39c8391b, type: 2}
-  - m_RefCount: 8
+  - m_RefCount: 9
     m_Data: {fileID: 11400000, guid: aabc3a309e4634848b2f6f3ad63573f9, type: 2}
   - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: 0849b3dce1f318c44b54255e4a0b8457, type: 2}
@@ -11377,17 +11417,17 @@ Tilemap:
     m_Data: {fileID: 21300000, guid: dfee1fb4c07c2be4896bb6087490b99f, type: 3}
   - m_RefCount: 859
     m_Data: {fileID: 21300000, guid: 805edc536270c34428a9c9afc5486864, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 21300000, guid: 100c11b964248884e8ef8dbf8ee863e4, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 21300000, guid: 7a2f067dc66960b499ed0184e90d1ec1, type: 3}
   - m_RefCount: 5
     m_Data: {fileID: 21300000, guid: 6fb6eea2d90988741bbe83d18b307645, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 21300000, guid: 98430ce0b8aaf184d97486a017f71a6d, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 21300000, guid: e74631ea16451514696c2ac39bd4fd0d, type: 3}
-  - m_RefCount: 2
+  - m_RefCount: 3
     m_Data: {fileID: 21300000, guid: e469ae890e1df4a40a24519c067efc1e, type: 3}
   - m_RefCount: 7
     m_Data: {fileID: 21300000, guid: c819a6b4a936a94459f257f150d5458f, type: 3}
@@ -11395,7 +11435,7 @@ Tilemap:
     m_Data: {fileID: 21300000, guid: 0947341668a33814eae6f5355bc2f634, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 21300000, guid: 52dfd11b77c983d4a81f643529eb53e4, type: 3}
-  - m_RefCount: 3
+  - m_RefCount: 2
     m_Data: {fileID: 21300000, guid: 2fb8b051faedfd1489d6d1a176b9537a, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 21300000, guid: 695878eaf15aa9441b8767c5f6b508f6, type: 3}
@@ -11413,16 +11453,16 @@ Tilemap:
     m_Data: {fileID: 21300000, guid: f8a9c8cb48f05ce4ca4d07483939d7ae, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 21300000, guid: 34f268c94cdb5de48a5a287b86f9b07e, type: 3}
-  - m_RefCount: 2
+  - m_RefCount: 3
     m_Data: {fileID: 21300000, guid: 4e77475275906e94fb39b84e9e26d4cf, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 21300000, guid: cc1f03e9165d4eb4f8ca108f77438a18, type: 3}
-  - m_RefCount: 8
+  - m_RefCount: 9
     m_Data: {fileID: 21300000, guid: ff1d2cf2a6125a14ca5061d535725b8d, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 21300000, guid: f85389f23c121fe49ae42c1a4dbfa2c4, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 971
+  - m_RefCount: 975
     m_Data:
       e00: 1
       e01: 0
@@ -11440,8 +11480,26 @@ Tilemap:
       e31: 0
       e32: 0
       e33: 1
+  - m_RefCount: 0
+    m_Data:
+      e00: 6.011035e+13
+      e01: 0
+      e02: 1.8295932e-19
+      e03: 1.8295932e-19
+      e10: 8.9e-43
+      e11: 0
+      e12: 8.87e-43
+      e13: 8.87e-43
+      e20: 7.5551976e+36
+      e21: 1e-45
+      e22: -5.0438877e-29
+      e23: -8.655733e+9
+      e30: 4.5905e-41
+      e31: 0
+      e32: 8.87e-43
+      e33: 8.9e-43
   m_TileColorArray:
-  - m_RefCount: 971
+  - m_RefCount: 975
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -11479,7 +11537,7 @@ GameObject:
   - component: {fileID: 2072388859}
   m_Layer: 0
   m_Name: farola
-  m_TagString: Untagged
+  m_TagString: Object bacground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
