@@ -122,10 +122,10 @@ TextureImporter:
         serializedVersion: 2
         x: 13
         y: 0
-        width: 27
-        height: 30
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -138,36 +138,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Goblin_Melee_walk_1
-      rect:
-        serializedVersion: 2
-        x: 52
-        y: 0
-        width: 26
-        height: 29
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 036e6501c45fc62409b2de35f0cb48c4
-      internalID: 694978275
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Goblin_Melee_walk_2
       rect:
         serializedVersion: 2
         x: 91
         y: 0
-        width: 31
-        height: 31
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -185,10 +164,10 @@ TextureImporter:
         serializedVersion: 2
         x: 136
         y: 0
-        width: 31
-        height: 30
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -206,10 +185,10 @@ TextureImporter:
         serializedVersion: 2
         x: 175
         y: 0
-        width: 31
-        height: 29
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -227,10 +206,10 @@ TextureImporter:
         serializedVersion: 2
         x: 220
         y: 0
-        width: 27
-        height: 31
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -238,6 +217,27 @@ TextureImporter:
       bones: []
       spriteID: 07dfb9026cec25c4397ae4966e054ed6
       internalID: -1852956945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goblin_Melee_walk_1
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 0
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb0da2269073d32448a628ea09e1e81d
+      internalID: 694978275
       vertices: []
       indices: 
       edges: []
