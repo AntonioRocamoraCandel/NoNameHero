@@ -1474,7 +1474,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5.0633717
+  orthographic size: 2.69
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -9010,7 +9010,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 16
-      m_TileSpriteIndex: 13
+      m_TileSpriteIndex: 16
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -9940,7 +9940,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 7
-      m_TileSpriteIndex: 7
+      m_TileSpriteIndex: 13
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -11000,7 +11000,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 6
-      m_TileSpriteIndex: 6
+      m_TileSpriteIndex: 7
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -11407,10 +11407,10 @@ Tilemap:
     m_Data: {fileID: 21300000, guid: dfee1fb4c07c2be4896bb6087490b99f, type: 3}
   - m_RefCount: 859
     m_Data: {fileID: 21300000, guid: 805edc536270c34428a9c9afc5486864, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: 21300000, guid: 100c11b964248884e8ef8dbf8ee863e4, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 21300000, guid: 7a2f067dc66960b499ed0184e90d1ec1, type: 3}
   - m_RefCount: 5
     m_Data: {fileID: 21300000, guid: 6fb6eea2d90988741bbe83d18b307645, type: 3}
   - m_RefCount: 2
@@ -11422,13 +11422,13 @@ Tilemap:
   - m_RefCount: 7
     m_Data: {fileID: 21300000, guid: c819a6b4a936a94459f257f150d5458f, type: 3}
   - m_RefCount: 1
-    m_Data: {fileID: 21300000, guid: 0947341668a33814eae6f5355bc2f634, type: 3}
+    m_Data: {fileID: 21300000, guid: 7a2f067dc66960b499ed0184e90d1ec1, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 21300000, guid: 52dfd11b77c983d4a81f643529eb53e4, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 21300000, guid: 2fb8b051faedfd1489d6d1a176b9537a, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 21300000, guid: 0947341668a33814eae6f5355bc2f634, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 21300000, guid: 8dab747367c72234da710b19ed1a6f39, type: 3}
   - m_RefCount: 1
