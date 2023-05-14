@@ -7,6 +7,7 @@ TagManager:
   - Object bacground
   - Background
   - Npc
+  - Coin
   layers:
   - Default
   - TransparentFX

@@ -28,6 +28,7 @@ public class Npc_interaction : MonoBehaviour
             if (dialoguePanel.activeInHierarchy)
             {
                 zeroText();
+                
             }
             else
             {
@@ -67,6 +68,7 @@ public class Npc_interaction : MonoBehaviour
             zeroText();
         }
     }
+    
 
     private void OnTriggerEnter2D(Collider2D other)
     {
