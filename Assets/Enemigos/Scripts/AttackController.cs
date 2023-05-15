@@ -9,7 +9,7 @@ public class AttackController : MonoBehaviour
     public GameObject target;
     private float lastAttack;
     private Animator animator;
-    
+  
     void Awake()
     {
         animator = GetComponent<Animator>();
@@ -55,8 +55,10 @@ public class AttackController : MonoBehaviour
         }
     }
 
+
     public void attack(int dmg){
-        
+        animator.Play("Attack");
+        //animator.SetBool("isColliding", isColliding);
         Debug.Log("Atacando");
         
     }

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class EnemyBasic : MonoBehaviour
 {
-    Animator animator;
     public float velocidadMovimiento = 5f; // Velocidad del movimiento horizontal
     public float maxRange = 5f; // Distancia máxima de movimiento hacia la izquierda
 
@@ -19,18 +18,13 @@ public class EnemyBasic : MonoBehaviour
 
     // Variable que dirá si se ha detectado o no al enemigo, para realizar solo la detección cuando lo ha visto después de perderlo de vista
     bool isDetected = false;
-    bool isColliding = false;
     void Start()
     {   
-        animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>(); // Obtiene el componente Rigidbody2D del sprite
         rightLimit = transform.position.x + maxRange; // Limite de recorrido hacia la derecha
         leftLimit = transform.position.x - maxRange; // Limite de recorrido hacia la izquierda
         movimiento = Vector2.right * velocidadMovimiento; // Define el movimiento a la derecha como el vector de velocidad por defecto
-
-        
-        
-        
+ 
     }
     void FixedUpdate() 
     {
@@ -74,18 +68,6 @@ public class EnemyBasic : MonoBehaviour
         
     }
 
-    void OnCollisionEnter2D(Collision2D collision) {
-        if (collision.gameObject.CompareTag("Heroe")) {
-            isColliding = true;
-            animator.SetBool("isColliding", true);
-        }
-    }
-
-    void OnCollisionExit2D(Collision2D collision) {
-        if (collision.gameObject.CompareTag("Heroe")) {
-            isColliding = false;
-            animator.SetBool("isColliding", false);
-        }
-    }
-     
+    
+  
 }

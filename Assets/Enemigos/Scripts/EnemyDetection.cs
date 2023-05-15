@@ -22,7 +22,7 @@ public class EnemyDetection : MonoBehaviour
         spriteRenderer.color = new Color(1f, 1f, 1f, 1f);
 
         // Esperar 2 segundos
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
 
         // Hacer el sprite transparente
         spriteRenderer.color = new Color(1f, 1f, 1f, 0f);
