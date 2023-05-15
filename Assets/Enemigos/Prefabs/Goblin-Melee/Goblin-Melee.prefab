@@ -25,9 +25,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5760118474302806149}
-  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
-  m_LocalPosition: {x: 0.6, y: 1.27, z: 0}
-  m_LocalScale: {x: 0.03, y: 0.03, z: 0}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 8346056019513000343}
@@ -105,6 +105,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< Updated upstream:Assets/Enemigos/Prefabs/Goblin-Melee/Goblin-Melee.prefab
   - component: {fileID: 8346056019513000343}
   - component: {fileID: 8346056019513000344}
   - component: {fileID: 8346056019513000345}
@@ -114,6 +115,15 @@ GameObject:
   - component: {fileID: 5760118474754160209}
   - component: {fileID: 5760118474754160208}
   - component: {fileID: 5760118474754160223}
+=======
+  - component: {fileID: 3490269237419989670}
+  - component: {fileID: 3490269237419989673}
+  - component: {fileID: 3490269237419989672}
+  - component: {fileID: 3490269237419989671}
+  - component: {fileID: 3490269237419989668}
+  - component: {fileID: 3490269237419989669}
+  - component: {fileID: 7443360399557288854}
+>>>>>>> Stashed changes:Assets/Enemigos/Prefabs/Goblin-Melee/Goblin_Melee.prefab
   m_Layer: 0
   m_Name: Goblin-Melee
   m_TagString: Untagged
@@ -202,7 +212,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.85, y: 0.48}
+  m_Offset: {x: 0.15, y: -0.15}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -273,12 +283,17 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+<<<<<<< Updated upstream:Assets/Enemigos/Prefabs/Goblin-Melee/Goblin-Melee.prefab
 --- !u!114 &5760118474754160209
+=======
+--- !u!114 &7443360399557288854
+>>>>>>> Stashed changes:Assets/Enemigos/Prefabs/Goblin-Melee/Goblin_Melee.prefab
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Enemigos/Prefabs/Goblin-Melee/Goblin-Melee.prefab
   m_GameObject: {fileID: 8346056019513000346}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -312,3 +327,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d7ff4c3ef5b81845a1ef9cb68f1f224, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+=======
+  m_GameObject: {fileID: 3490269237419989675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d64c65285ec76ca42a2f2bcbf7ad1f6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heal: 0
+  damage: 0
+  velocidadMovimiento: 5
+  maxRange: 5
+  target: {fileID: 0}
+  spriteObject: {fileID: 0}
+>>>>>>> Stashed changes:Assets/Enemigos/Prefabs/Goblin-Melee/Goblin_Melee.prefab
