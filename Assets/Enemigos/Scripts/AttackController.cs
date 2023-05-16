@@ -6,7 +6,6 @@ public class AttackController : MonoBehaviour
 {
     public int dmg;
     private bool animationAttack = false;
-    public GameObject target;
     private float lastAttack;
     private Animator animator;
   
@@ -57,9 +56,13 @@ public class AttackController : MonoBehaviour
 
 
     public void attack(int dmg){
-        animator.Play("Attack");
-        //animator.SetBool("isColliding", isColliding);
-        Debug.Log("Atacando");
+        bool isAnimationPlaying = animator.GetCurrentAnimatorStateInfo(0).IsName("Hurt");
+
+        if (!isAnimationPlaying){
+            animator.Play("Attack");
+            Debug.Log("Atacando");
+        }
+        
         
     }
 }
