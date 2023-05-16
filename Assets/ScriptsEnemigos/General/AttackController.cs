@@ -11,7 +11,7 @@ public class AttackController : MonoBehaviour
   
     void Awake()
     {
-        animator = GetComponent<Animator>();
+        animator = GetComponentInParent<Animator>();
     }
     void Start()
     {
