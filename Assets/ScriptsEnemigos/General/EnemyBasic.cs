@@ -18,17 +18,24 @@ public class EnemyBasic : MonoBehaviour
 
     // Variable que dirá si se ha detectado o no al enemigo, para realizar solo la detección cuando lo ha visto después de perderlo de vista
     bool isDetected = false;
+
+    //Detectar
+    bool isCollision = false;
+
+    // Animator 
+    private Animator animator;
     void Start()
     {   
         rb = GetComponent<Rigidbody2D>(); // Obtiene el componente Rigidbody2D del sprite
         rightLimit = transform.position.x + maxRange; // Limite de recorrido hacia la derecha
         leftLimit = transform.position.x - maxRange; // Limite de recorrido hacia la izquierda
         movimiento = Vector2.right * velocidadMovimiento; // Define el movimiento a la derecha como el vector de velocidad por defecto
- 
+        animator = GetComponent<Animator>();
     }
     void FixedUpdate() 
     {
-        if(target != null){
+        animator.SetBool("isColliding", isCollision);
+        if(target != null || !isCollision){
 
             float distance = Mathf.Abs(transform.position.x - target.transform.position.x);
 
@@ -68,6 +75,19 @@ public class EnemyBasic : MonoBehaviour
         
     }
 
+    void OnCollisionStay2D(Collision2D collision) {
+        if (collision.gameObject.CompareTag("Heroe"))
+        {
+            isCollision = true;
+        }
+    }
+
+    void OnCollisionExit2D(Collision2D collision) {
+        if (collision.gameObject.CompareTag("Heroe"))
+        {
+            isCollision = false;
+        }
+    }
     
   
 }

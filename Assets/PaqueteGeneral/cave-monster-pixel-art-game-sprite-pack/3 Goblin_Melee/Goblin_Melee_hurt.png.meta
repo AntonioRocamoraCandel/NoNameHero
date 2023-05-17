@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 42
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -120,11 +120,11 @@ TextureImporter:
       name: Goblin_Melee_hurt_0
       rect:
         serializedVersion: 2
-        x: 11
+        x: 0
         y: 0
-        width: 29
-        height: 29
-      alignment: 0
+        width: 42
+        height: 42
+      alignment: 9
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -141,11 +141,11 @@ TextureImporter:
       name: Goblin_Melee_hurt_1
       rect:
         serializedVersion: 2
-        x: 55
+        x: 42
         y: 0
-        width: 29
-        height: 31
-      alignment: 0
+        width: 42
+        height: 42
+      alignment: 9
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -162,11 +162,11 @@ TextureImporter:
       name: Goblin_Melee_hurt_2
       rect:
         serializedVersion: 2
-        x: 97
+        x: 84
         y: 0
-        width: 29
-        height: 29
-      alignment: 0
+        width: 42
+        height: 42
+      alignment: 9
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -183,11 +183,11 @@ TextureImporter:
       name: Goblin_Melee_hurt_3
       rect:
         serializedVersion: 2
-        x: 138
+        x: 126
         y: 0
-        width: 29
-        height: 29
-      alignment: 0
+        width: 42
+        height: 42
+      alignment: 9
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []

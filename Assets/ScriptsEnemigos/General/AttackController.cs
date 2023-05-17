@@ -24,9 +24,7 @@ public class AttackController : MonoBehaviour
         lastAttack = lastAttack + Time.deltaTime;
     }
 
-    // Atacar cuando sea la primera vez que se colisiona
-    void OnCollisionEnter2D(Collision2D collision)
-    {
+    void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.CompareTag("Heroe"))
         {
             if (lastAttack >= 2)
@@ -40,9 +38,8 @@ public class AttackController : MonoBehaviour
     }
 
     // Atacar cuando la colisión siga permaneciendo
-    void OnCollisionStay2D(Collision2D collision) {
-        
-        if (collision.gameObject.CompareTag("Heroe"))
+    void OnTriggerStay2D(Collider2D collision){
+         if (collision.gameObject.CompareTag("Heroe"))
         {
             if (lastAttack >= 2)
             {
@@ -54,7 +51,7 @@ public class AttackController : MonoBehaviour
         }
     }
 
-
+    
     public void attack(int dmg){
         bool isAnimationPlaying = animator.GetCurrentAnimatorStateInfo(0).IsName("Hurt");
 
