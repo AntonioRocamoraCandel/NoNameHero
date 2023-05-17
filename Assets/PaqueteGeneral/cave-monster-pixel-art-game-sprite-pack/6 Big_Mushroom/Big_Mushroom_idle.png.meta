@@ -120,12 +120,12 @@ TextureImporter:
       name: Big_Mushroom_idle_0
       rect:
         serializedVersion: 2
-        x: 16
+        x: 0
         y: 0
-        width: 24
-        height: 31
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 42
+        height: 42
+      alignment: 9
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -141,12 +141,12 @@ TextureImporter:
       name: Big_Mushroom_idle_1
       rect:
         serializedVersion: 2
-        x: 58
+        x: 42
         y: 0
-        width: 25
-        height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 42
+        height: 42
+      alignment: 9
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -162,12 +162,12 @@ TextureImporter:
       name: Big_Mushroom_idle_2
       rect:
         serializedVersion: 2
-        x: 100
+        x: 84
         y: 0
-        width: 25
-        height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 42
+        height: 42
+      alignment: 9
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -183,12 +183,12 @@ TextureImporter:
       name: Big_Mushroom_idle_3
       rect:
         serializedVersion: 2
-        x: 142
+        x: 126
         y: 0
-        width: 25
-        height: 31
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 42
+        height: 42
+      alignment: 9
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

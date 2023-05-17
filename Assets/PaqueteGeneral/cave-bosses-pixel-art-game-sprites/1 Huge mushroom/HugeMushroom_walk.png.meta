@@ -120,12 +120,12 @@ TextureImporter:
       name: HugeMushroom_walk_0
       rect:
         serializedVersion: 2
-        x: 29
+        x: 0
         y: 0
-        width: 40
-        height: 62
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 72
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -141,12 +141,12 @@ TextureImporter:
       name: HugeMushroom_walk_1
       rect:
         serializedVersion: 2
-        x: 102
+        x: 72
         y: 0
-        width: 40
-        height: 63
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 72
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -162,12 +162,12 @@ TextureImporter:
       name: HugeMushroom_walk_2
       rect:
         serializedVersion: 2
-        x: 172
+        x: 144
         y: 0
-        width: 42
-        height: 63
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 72
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -183,12 +183,12 @@ TextureImporter:
       name: HugeMushroom_walk_3
       rect:
         serializedVersion: 2
-        x: 242
+        x: 216
         y: 0
-        width: 46
-        height: 62
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 72
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -204,12 +204,12 @@ TextureImporter:
       name: HugeMushroom_walk_4
       rect:
         serializedVersion: 2
-        x: 316
+        x: 288
         y: 0
-        width: 43
-        height: 63
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 72
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -225,12 +225,12 @@ TextureImporter:
       name: HugeMushroom_walk_5
       rect:
         serializedVersion: 2
-        x: 390
+        x: 360
         y: 0
-        width: 40
-        height: 63
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 72
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

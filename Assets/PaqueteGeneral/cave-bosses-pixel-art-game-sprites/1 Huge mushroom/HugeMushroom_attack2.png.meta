@@ -120,12 +120,12 @@ TextureImporter:
       name: HugeMushroom_attack2_0
       rect:
         serializedVersion: 2
-        x: 29
+        x: 0
         y: 0
-        width: 41
-        height: 62
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 72
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -141,12 +141,12 @@ TextureImporter:
       name: HugeMushroom_attack2_1
       rect:
         serializedVersion: 2
-        x: 101
+        x: 72
         y: 0
-        width: 43
-        height: 61
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 72
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -162,12 +162,12 @@ TextureImporter:
       name: HugeMushroom_attack2_2
       rect:
         serializedVersion: 2
-        x: 160
+        x: 144
         y: 0
-        width: 46
-        height: 59
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 72
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -183,12 +183,12 @@ TextureImporter:
       name: HugeMushroom_attack2_3
       rect:
         serializedVersion: 2
-        x: 245
+        x: 216
         y: 0
-        width: 34
-        height: 61
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 72
+        height: 72
+      alignment: 9
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
