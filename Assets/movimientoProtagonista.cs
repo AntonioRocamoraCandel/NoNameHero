@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class movimientoProtagonista : MonoBehaviour
 {
-    private Rigidbody2D rb2D;
+    public Rigidbody2D rb2D;
 
     [Header("Movimiento")]
 
