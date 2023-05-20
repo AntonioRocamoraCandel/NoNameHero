@@ -19,13 +19,18 @@ public class HealController : MonoBehaviour
        
     }
 
-    void OnCollisionStay2D(Collision2D collision){
-        if (collision.gameObject.CompareTag("Heroe"))
-        {
+    /*void OnCollisionStay2D(Collision2D collision){
+        
+        
+            if (collision.gameObject.CompareTag("Heroe"))
+            {
            
-            getDamage(5);
-        }
+                getDamage(5);
+            }
+        
     }
+    */
+    
 
     
 
