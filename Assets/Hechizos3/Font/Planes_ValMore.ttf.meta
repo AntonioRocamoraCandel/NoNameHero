@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 03dae7e1295451245971cdbdd53eddab
+guid: 0cf21724852f81a4e9939f8df78bef03
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -10,7 +10,9 @@ TrueTypeFontImporter:
   includeFontData: 1
   fontNames:
   - Planes_ValMore
-  fallbackFontReferences: []
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 20c302f553e830e4e9e88247e20e4d69, type: 3}
+  - {fileID: 12800000, guid: b1ede74a75b208843b9f0f56e1afa310, type: 3}
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1
