@@ -49,7 +49,7 @@ public class EnemyBasic : MonoBehaviour
                 
                  // Calcula la nueva posición del sprite solo en el eje X
                 
-                if(target.transform.position.x > transform.position){
+                if(target.transform.position.x > transform.position.x){
                     transform.localScale = new Vector3(-1f, 1f, 1f);
                 }else{
                     transform.localScale = new Vector3(1f, 1f, 1f);
