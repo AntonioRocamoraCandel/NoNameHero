@@ -24,19 +24,6 @@ public class AttackController : MonoBehaviour
         lastAttack = lastAttack + Time.deltaTime;
     }
 
-    void OnTriggerEnter2D(Collider2D collision) {
-        if (collision.gameObject.CompareTag("Heroe"))
-        {
-            if (lastAttack >= 2)
-            {
-                // Han pasado dos segundos desde el último ataque
-                // Tu código para atacar aquí
-                lastAttack = 0; // Actualiza el tiempo del último ataque
-                attack(dmg);
-            }
-        }
-    }
-
     // Atacar cuando la colisión siga permaneciendo
     void OnTriggerStay2D(Collider2D collision){
          if (collision.gameObject.CompareTag("Heroe"))
@@ -46,18 +33,17 @@ public class AttackController : MonoBehaviour
                 // Han pasado dos segundos desde el último ataque
                 // Tu código para atacar aquí
                 lastAttack = 0; // Actualiza el tiempo del último ataque
-                attack(dmg);
+                attack(collision);
             }
         }
     }
 
     
-    public void attack(int dmg){
+    public void attack(Collider2D target){
         bool isAnimationPlaying = animator.GetCurrentAnimatorStateInfo(0).IsName("Hurt");
 
         if (!isAnimationPlaying){
             animator.Play("Attack");
-            Debug.Log("Atacando");
         }
         
         
