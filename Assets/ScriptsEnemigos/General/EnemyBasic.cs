@@ -57,13 +57,13 @@ public class EnemyBasic : MonoBehaviour
                 if(transform.position.x <= leftLimit)
                 {
                     movimiento = Vector2.right * velocidadMovimiento;
-                    transform.localScale = new Vector3(1f, 1f, 1f);
+                    transform.localScale = new Vector3(-1f, 1f, 1f);
                 }
                 // Si el personaje ha llegado al límite derecho, cambia la dirección del movimiento a la izquierda
                 else if(transform.position.x > rightLimit)
                 {
                     movimiento = Vector2.left * velocidadMovimiento;
-                    transform.localScale = new Vector3(-1f, 1f, 1f);
+                    transform.localScale = new Vector3(1f, 1f, 1f);
                 }
 
                 // Aplica el movimiento al Rigidbody2D
