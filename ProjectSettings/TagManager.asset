@@ -5,7 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - ground
-  - ramp
+  - wall
+  - stairs
+  - background
   layers:
   - Default
   - TransparentFX
@@ -20,7 +22,7 @@ TagManager:
   - ground
   - Background
   - Foreground
-  - 
+  - wall
   - 
   - 
   - 

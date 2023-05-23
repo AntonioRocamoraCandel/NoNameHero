@@ -5,14 +5,13 @@ public class PlayerMovement : MonoBehaviour
 {
     public Rigidbody2D rb;
     public Transform groundCheck;
-    public Transform wallCheck;
     public LayerMask groundLayer;
 
     private float horizontal;
     private float speed = 8f;
     private float jumpingPower = 16f;
     private bool isFacingRight = true;
-    private bool isWallSliding = false; // Nuevo
+    private bool isClimbing;
 
     [Header("Animacion")]
     private Animator animator;
@@ -22,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
     }
-
+    
     void Update()
     {
         animator.SetFloat("Horizontal", Mathf.Abs(horizontal));
@@ -38,21 +37,13 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        bool isGrounded = IsGrounded();
-        bool isWallColliding = IsWallColliding();
-
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
-        animator.SetBool("enSuelo", isGrounded);
+        animator.SetBool("enSuelo", IsGrounded());
 
-        // Evitar engancharse en las paredes
-        if (isWallColliding && !isGrounded && rb.velocity.y < 0f) // Modificado
-        {
-            isWallSliding = true; // Nuevo
-            rb.velocity = new Vector2(rb.velocity.x, -speed); // Modificado
-        }
-        else
-        {
-            isWallSliding = false; // Nuevo
+        if (isClimbing)
+        {   
+            animator.SetBool("isClimbing", isClimbing);
+            rb.velocity = new Vector2(rb.velocity.x, horizontal * speed);
         }
     }
 
@@ -62,11 +53,6 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
         }
-        else if (context.performed && isWallSliding) // Nuevo
-        {
-            rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
-            isWallSliding = false;
-        }
 
         if (context.canceled && rb.velocity.y > 0f)
         {
@@ -74,14 +60,22 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    public void Climb(InputAction.CallbackContext context)
+    {
+        if (context.performed && isClimbing)
+        {
+            horizontal = context.ReadValue<Vector2>().y;
+        }
+
+        if (context.canceled)
+        {
+            horizontal = 0f;
+        }
+    }
+
     private bool IsGrounded()
     {
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
-    }
-
-    private bool IsWallColliding()
-    {
-        return Physics2D.OverlapCircle(wallCheck.position, 0.2f, groundLayer);
     }
 
     private void Flip()
@@ -95,5 +89,22 @@ public class PlayerMovement : MonoBehaviour
     public void Move(InputAction.CallbackContext context)
     {
         horizontal = context.ReadValue<Vector2>().x;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("stairs"))
+        {
+            isClimbing = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("stairs"))
+        {
+            isClimbing = false;
+            horizontal = 0f;
+        }
     }
 }
