@@ -48,6 +48,13 @@ public class EnemyBasic : MonoBehaviour
                 isDetected = true;
                 
                  // Calcula la nueva posición del sprite solo en el eje X
+                
+                if(target.transform.position.x > transform.position){
+                    transform.localScale = new Vector3(-1f, 1f, 1f);
+                }else{
+                    transform.localScale = new Vector3(1f, 1f, 1f);
+                }
+
                 Vector2 newPosition = new Vector2(target.transform.position.x, transform.position.y);
                 // Mueve el sprite hacia la nueva posición
                 transform.position = Vector2.MoveTowards(transform.position, newPosition, Time.deltaTime * velocidadMovimiento);
