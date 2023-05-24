@@ -145,37 +145,92 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "",
-                    "id": "bcb3c1e1-cea2-499b-9800-7e8d2774bddf",
+                    "name": "WASD",
+                    "id": "804efe9d-1725-4a3d-976f-c7db02e88a21",
+                    "path": "Dpad",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Climb",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "down",
+                    "id": "20e1f61a-6d73-462a-b5e0-c66f0e2dc95c",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Climb",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "f28a0d14-5ecb-433d-93d6-660cc50d621e",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Climb",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "up",
+                    "id": "8472f8e4-9072-42b6-9be2-e8dcecf07823",
                     "path": "<Keyboard>/w",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
                     "action": "Climb",
                     "isComposite": false,
-                    "isPartOfComposite": false
+                    "isPartOfComposite": true
                 },
                 {
-                    "name": "",
-                    "id": "1ccce90c-fdcc-4f1f-b8c9-f180dfca38bf",
+                    "name": "up",
+                    "id": "283826e5-c62a-417d-a269-2c5c58762ed7",
                     "path": "<Keyboard>/upArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
                     "action": "Climb",
                     "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "UP/DOWN",
+                    "id": "a385f517-f7d4-4462-a889-031c2db9b44d",
+                    "path": "Dpad",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Climb",
+                    "isComposite": true,
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "",
-                    "id": "3db62a5f-0cfd-4c5f-980c-46fdcf19c475",
+                    "name": "up",
+                    "id": "7382d196-a275-4c5e-bd5e-856d93cb473d",
                     "path": "<Gamepad>/rightStick/up",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Keyboard&Mouse",
+                    "groups": "Gamepad",
                     "action": "Climb",
                     "isComposite": false,
-                    "isPartOfComposite": false
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "116b6098-918a-4e39-b5f4-99745260d038",
+                    "path": "<Gamepad>/rightStick/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Climb",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 }
             ]
         },

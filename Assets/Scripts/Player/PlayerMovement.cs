@@ -43,7 +43,14 @@ public class PlayerMovement : MonoBehaviour
         if (isClimbing)
         {   
             animator.SetBool("isClimbing", isClimbing);
-            rb.velocity = new Vector2(rb.velocity.x, horizontal * speed);
+            if (horizontal != 0f)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, horizontal * speed);
+            }
+        }
+        else
+        {
+            animator.SetBool("isClimbing", false);
         }
     }
 
@@ -66,8 +73,7 @@ public class PlayerMovement : MonoBehaviour
         {
             horizontal = context.ReadValue<Vector2>().y;
         }
-
-        if (context.canceled)
+        else if (context.canceled && isClimbing)
         {
             horizontal = 0f;
         }
@@ -96,6 +102,8 @@ public class PlayerMovement : MonoBehaviour
         if (collision.CompareTag("stairs"))
         {
             isClimbing = true;
+            rb.gravityScale = 0f; 
+            rb.velocity = Vector2.zero;
         }
     }
 
@@ -105,6 +113,7 @@ public class PlayerMovement : MonoBehaviour
         {
             isClimbing = false;
             horizontal = 0f;
+            rb.gravityScale = 4f; 
         }
     }
 }
