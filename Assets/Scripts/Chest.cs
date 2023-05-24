@@ -6,6 +6,7 @@ public class Chest : MonoBehaviour {
     Animator myAnim;
     public GameObject chestItems;
     public float chestDelay;
+    bool opened = false;
 
     void Start(){
 
@@ -16,14 +17,15 @@ public class Chest : MonoBehaviour {
 
         if(other.CompareTag("Player")) {
 
-            if(Input.GetKeyDown(KeyCode.E)) {
+            if(Input.GetKeyDown(KeyCode.E) && opened == false) {
 
-                myAnim.Play("chest_open");
+                myAnim.Play("Chest_open");
                 StartCoroutine(GetChestItem());
             }
         }  
     }
     IEnumerator GetChestItem() {
+        opened = true;
         yield return new WaitForSeconds(chestDelay);
         Instantiate(chestItems, transform.position, Quaternion.identity);
     }
