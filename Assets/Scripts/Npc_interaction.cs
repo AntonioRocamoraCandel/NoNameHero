@@ -12,6 +12,7 @@ public class Npc_interaction : MonoBehaviour
     public string NpcName;
     private int index;
     
+    public GameObject buttonContinue;
     public float wordSpeed;
     public bool playerIsClose;
 
@@ -32,6 +33,7 @@ public class Npc_interaction : MonoBehaviour
             }
             else
             {
+                buttonContinue.SetActive(false);
                 dialogueText.text = "";
                 dialoguePanel.SetActive(true);
                 StartCoroutine(Typing());
@@ -53,10 +55,12 @@ public class Npc_interaction : MonoBehaviour
             dialogueText.text += letter;
             yield return new WaitForSeconds(wordSpeed);
         }
+        buttonContinue.SetActive(true);
     }
 
     public void NextLine()
-    {
+    {   
+        buttonContinue.SetActive(false);
         if(index < dialogue.Length -1)
         {
             index++;

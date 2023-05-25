@@ -8,6 +8,10 @@ public class Chest : MonoBehaviour {
     public float chestDelay;
     bool opened = false;
 
+    public int itemAmount;
+
+    int ItemCount;
+
     void Start(){
 
         myAnim = GetComponent<Animator>();
@@ -25,8 +29,12 @@ public class Chest : MonoBehaviour {
         }  
     }
     IEnumerator GetChestItem() {
+        while(ItemCount < itemAmount)
+        {
         opened = true;
         yield return new WaitForSeconds(chestDelay);
         Instantiate(chestItems, transform.position, Quaternion.identity);
+        ItemCount++;
+        }   
     }
 }
