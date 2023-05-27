@@ -7,7 +7,7 @@ public class AttackControllerRange : MonoBehaviour
     public GameObject projectile;
 
     public int dmg;
-    private bool animationAttack = false;
+
     private float lastAttack;
     private Animator animator;
   
@@ -24,7 +24,6 @@ public class AttackControllerRange : MonoBehaviour
     void Update()
     {
         lastAttack = lastAttack + Time.deltaTime;
-        Debug.Log(lastAttack);
     }
     
     

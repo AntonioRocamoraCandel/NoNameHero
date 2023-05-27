@@ -1,30 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public class AttackController : MonoBehaviour
 
+public class AttackCtroller_Big_Mushroom : MonoBehaviour
 {
-    public int dmg;
+     private float lastAttack;
+     public int dmg;
 
-    private float lastAttack;
-    private Animator animator;
-  
-    void Awake()
-    {
-        animator = GetComponentInParent<Animator>();
-    }
-    void Start()
+
+     void Start()
     {
         lastAttack = 0f;
     }
 
-    
     void Update()
     {
         lastAttack = lastAttack + Time.deltaTime;
     }
 
-    // Atacar cuando la colisión siga permaneciendo
+
     void OnTriggerStay2D(Collider2D collision){
          if (collision.gameObject.CompareTag("Heroe"))
         {
@@ -40,12 +34,7 @@ public class AttackController : MonoBehaviour
 
     
     public void attack(Collider2D target){
-        bool isAnimationPlaying = animator.GetCurrentAnimatorStateInfo(0).IsName("Hurt");
-
-        if (!isAnimationPlaying){
-            animator.Play("Attack");
-        }
-        
-        
+        // Seria acceder al script del target y lanzar el metodo recibir daño enviandole nuestro dmg
+        Debug.Log("Atacando big mushrom");
     }
 }
