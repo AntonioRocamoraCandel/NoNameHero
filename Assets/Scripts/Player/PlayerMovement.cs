@@ -1,36 +1,54 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+using UnityEngine;
+using UnityEngine.InputSystem;
+
 public class PlayerMovement : MonoBehaviour
 {
     public Rigidbody2D rb;
     public Transform groundCheck;
     public LayerMask groundLayer;
+    public Transform attackCheck;
 
     private float horizontal;
-    private float speed = 8f;
-    private float jumpingPower = 16f;
+    private float speed = 6f;
+    private float jumpingPower = 14f;
     private bool isFacingRight = true;
     private bool isClimbing;
+    private int posicionDisparo;
 
-    [Header("Animacion")]
     private Animator animator;
+    private bool isJumping;
+    private bool canDoubleJump;
+    private int extraJumps = 1;
 
-    void Start()
+    [SerializeField] Transform shootingPoint;
+    [SerializeField] GameObject bullet;
+
+    GameObject bullets;
+
+    private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        canDoubleJump = false;
+        extraJumps = 1;
+        posicionDisparo=6;
     }
-    
-    void Update()
+
+    private void Update()
     {
         animator.SetFloat("Horizontal", Mathf.Abs(horizontal));
+
         if (!isFacingRight && horizontal > 0f)
         {
+            posicionDisparo=6;
             Flip();
         }
         else if (isFacingRight && horizontal < 0f)
         {
+            posicionDisparo=-6;
             Flip();
         }
     }
@@ -54,11 +72,26 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    public void Move(InputAction.CallbackContext context)
+    {
+        horizontal = context.ReadValue<Vector2>().x;
+    }
+
     public void Jump(InputAction.CallbackContext context)
     {
-        if (context.performed && IsGrounded())
+        if (context.performed)
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+            if (IsGrounded()) // Si está en el suelo, realiza un salto normal
+            {
+                rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+                canDoubleJump = true;
+                extraJumps = 1;
+            }
+            else if (extraJumps > 0 && canDoubleJump) // Si no está en el suelo pero puede hacer un doble salto, realiza el doble salto
+            {
+                rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+                extraJumps--;
+            }
         }
 
         if (context.canceled && rb.velocity.y > 0f)
@@ -92,11 +125,6 @@ public class PlayerMovement : MonoBehaviour
         transform.localScale = localScale;
     }
 
-    public void Move(InputAction.CallbackContext context)
-    {
-        horizontal = context.ReadValue<Vector2>().x;
-    }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("stairs"))
@@ -115,5 +143,30 @@ public class PlayerMovement : MonoBehaviour
             horizontal = 0f;
             rb.gravityScale = 4f; 
         }
+    }
+
+    public void Attack(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            animator.SetTrigger("golpe");
+        }
+    }
+
+    public void ThrowAttack(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            animator.SetTrigger("lanzar");
+            Invoke("InstantiateBullet", 0.3f);
+
+        }
+
+    }
+
+    private void InstantiateBullet(){
+        bullets = Instantiate(bullet, shootingPoint);
+        bullets.GetComponent<Rigidbody2D>().velocity = new Vector2(posicionDisparo,0);
+        Destroy(bullets, 3f);
     }
 }
