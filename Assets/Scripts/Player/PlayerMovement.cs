@@ -34,11 +34,7 @@ public class PlayerMovement : MonoBehaviour
         animator = GetComponent<Animator>();
         canDoubleJump = false;
         extraJumps = 1;
-<<<<<<< Updated upstream
-        posicionDisparo=6;
-=======
         posicionDisparo=9;
->>>>>>> Stashed changes
     }
 
     private void Update()
@@ -47,20 +43,12 @@ public class PlayerMovement : MonoBehaviour
 
         if (!isFacingRight && horizontal > 0f)
         {
-<<<<<<< Updated upstream
-            posicionDisparo=6;
-=======
             posicionDisparo=9;
->>>>>>> Stashed changes
             Flip();
         }
         else if (isFacingRight && horizontal < 0f)
         {
-<<<<<<< Updated upstream
-            posicionDisparo=-6;
-=======
             posicionDisparo=-9;
->>>>>>> Stashed changes
             Flip();
         }
     }
@@ -179,10 +167,7 @@ public class PlayerMovement : MonoBehaviour
     private void InstantiateBullet(){
         bullets = Instantiate(bullet, shootingPoint);
         bullets.GetComponent<Rigidbody2D>().velocity = new Vector2(posicionDisparo,0);
-<<<<<<< Updated upstream
-=======
         bullets.transform.parent = null;
->>>>>>> Stashed changes
         Destroy(bullets, 3f);
     }
 }
