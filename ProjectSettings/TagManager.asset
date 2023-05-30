@@ -8,6 +8,7 @@ TagManager:
   - wall
   - stairs
   - background
+  - spikes
   layers:
   - Default
   - TransparentFX

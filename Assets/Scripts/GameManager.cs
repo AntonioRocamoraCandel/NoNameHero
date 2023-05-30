@@ -59,4 +59,18 @@ public class GameManager : MonoBehaviour
         tiempoPasado = 0f;
         return true;
     }
+
+    public void PerderVidas(int cantidad)
+    {
+        vidas -= cantidad;
+
+        if (vidas <= 0)
+        {
+            vidas = 0;
+            SceneManager.LoadScene(0);
+        }
+
+        hud.DesactivarVida(vidas);
+    }
+
 }
