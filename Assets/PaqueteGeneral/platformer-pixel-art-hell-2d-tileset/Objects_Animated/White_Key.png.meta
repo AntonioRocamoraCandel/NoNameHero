@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -115,7 +115,355 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: White_Key_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -8}
+        - {x: 8, y: 0}
+        - {x: 0, y: 8}
+        - {x: -8, y: 0}
+      physicsShape:
+      - - {x: 0, y: -8}
+        - {x: 8, y: 0}
+        - {x: 0, y: 8}
+        - {x: -8, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: c24f04d5bb66b104aa7ca76ae859fcc8
+      internalID: -146972621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White_Key_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -8}
+        - {x: 8, y: 0}
+        - {x: 0, y: 8}
+        - {x: -8, y: 0}
+      physicsShape:
+      - - {x: 0, y: -8}
+        - {x: 8, y: 0}
+        - {x: 0, y: 8}
+        - {x: -8, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fe0465749692384faa9eb5c38efdb1c
+      internalID: 1194665615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White_Key_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -8}
+        - {x: 8, y: 0}
+        - {x: 0, y: 8}
+        - {x: -8, y: 0}
+      physicsShape:
+      - - {x: 0, y: -8}
+        - {x: 8, y: 0}
+        - {x: 0, y: 8}
+        - {x: -8, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: f79736285011f4d49a3b4339e31b62bb
+      internalID: -203060651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White_Key_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -8}
+        - {x: 8, y: 0}
+        - {x: 0, y: 8}
+        - {x: -8, y: 0}
+      physicsShape:
+      - - {x: 0, y: -8}
+        - {x: 8, y: 0}
+        - {x: 0, y: 8}
+        - {x: -8, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58714525f9befb54587cc4accc8062ad
+      internalID: 33875883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White_Key_4
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -8}
+        - {x: 8, y: 0}
+        - {x: 0, y: 8}
+        - {x: -8, y: 0}
+      physicsShape:
+      - - {x: 0, y: -8}
+        - {x: 8, y: 0}
+        - {x: 0, y: 8}
+        - {x: -8, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2203b6937a7a11b48af077bebef18510
+      internalID: -800278922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White_Key_5
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -8}
+        - {x: 8, y: 0}
+        - {x: 0, y: 8}
+        - {x: -8, y: 0}
+      physicsShape:
+      - - {x: 0, y: -8}
+        - {x: 8, y: 0}
+        - {x: 0, y: 8}
+        - {x: -8, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5d172065630a35428938630bcd38130
+      internalID: -239278402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White_Key_6
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -8}
+        - {x: 8, y: 0}
+        - {x: 0, y: 8}
+        - {x: -8, y: 0}
+      physicsShape:
+      - - {x: 0, y: -8}
+        - {x: 8, y: 0}
+        - {x: 0, y: 8}
+        - {x: -8, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c7882ba324253b40906b7cbd3046b87
+      internalID: -1693814610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White_Key_7
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -8}
+        - {x: 8, y: 0}
+        - {x: 0, y: 8}
+        - {x: -8, y: 0}
+      physicsShape:
+      - - {x: 0, y: -8}
+        - {x: 8, y: 0}
+        - {x: 0, y: 8}
+        - {x: -8, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: f76cf8c8f2e64784fa11b1f860c9d903
+      internalID: 281569057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White_Key_8
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -8}
+        - {x: 8, y: 0}
+        - {x: 0, y: 8}
+        - {x: -8, y: 0}
+      physicsShape:
+      - - {x: 0, y: -8}
+        - {x: 8, y: 0}
+        - {x: 0, y: 8}
+        - {x: -8, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: c14a93f8b66a30f4a928f1f14a1928d8
+      internalID: -9102231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White_Key_9
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -8}
+        - {x: 8, y: 0}
+        - {x: 0, y: 8}
+        - {x: -8, y: 0}
+      physicsShape:
+      - - {x: 0, y: -8}
+        - {x: 8, y: 0}
+        - {x: 0, y: 8}
+        - {x: -8, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3bb65079f1d92b4e8b5f4ccd1790602
+      internalID: -1123892444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White_Key_10
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -8}
+        - {x: 8, y: 0}
+        - {x: 0, y: 8}
+        - {x: -8, y: 0}
+      physicsShape:
+      - - {x: 0, y: -8}
+        - {x: 8, y: 0}
+        - {x: 0, y: 8}
+        - {x: -8, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: d841e80655d2e0d4db40dabaff52ace5
+      internalID: -270233150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White_Key_11
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -8}
+        - {x: 8, y: 0}
+        - {x: 0, y: 8}
+        - {x: -8, y: 0}
+      physicsShape:
+      - - {x: 0, y: -8}
+        - {x: 8, y: 0}
+        - {x: 0, y: 8}
+        - {x: -8, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdcb216ce82534845a80ac435d0073a8
+      internalID: -1070356423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -126,7 +474,19 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      White_Key_0: -146972621
+      White_Key_1: 1194665615
+      White_Key_10: -270233150
+      White_Key_11: -1070356423
+      White_Key_2: -203060651
+      White_Key_3: 33875883
+      White_Key_4: -800278922
+      White_Key_5: -239278402
+      White_Key_6: -1693814610
+      White_Key_7: 281569057
+      White_Key_8: -9102231
+      White_Key_9: -1123892444
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
