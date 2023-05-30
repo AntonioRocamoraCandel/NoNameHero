@@ -85,6 +85,7 @@ public class EnemyBasic : MonoBehaviour
         
     }
 
+    
     void OnCollisionStay2D(Collision2D collision) {
         if (collision.gameObject.CompareTag("Heroe"))
         {

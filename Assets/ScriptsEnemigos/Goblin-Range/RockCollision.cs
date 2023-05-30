@@ -23,14 +23,17 @@ namespace ScriptsEnemigos.Goblin_Range
             }
         }
 
-        void OnTriggerEnter(Collider other)
-        {
+
+        private void OnTriggerEnter2D(Collider2D other) {
             if (other.CompareTag(objectiveTag))
             {
                 Damage(other.gameObject);
                 RockDestroy();
             }
         }
+
+        
+
 
         void Damage(GameObject objeto)
         {

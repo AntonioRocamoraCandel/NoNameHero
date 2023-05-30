@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AttackCtroller_Big_Mushroom : MonoBehaviour
+public class AttackController_Big_Mushroom : MonoBehaviour
 {
      private float lastAttack;
      public int dmg;
@@ -35,6 +35,6 @@ public class AttackCtroller_Big_Mushroom : MonoBehaviour
     
     public void attack(Collider2D target){
         // Seria acceder al script del target y lanzar el metodo recibir daño enviandole nuestro dmg
-        Debug.Log("Atacando big mushrom");
+        
     }
 }
