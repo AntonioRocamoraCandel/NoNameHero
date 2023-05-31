@@ -1,9 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-using UnityEngine;
-using UnityEngine.InputSystem;
-
 public class PlayerMovement : MonoBehaviour
 {
     public Rigidbody2D rb;
@@ -81,13 +78,13 @@ public class PlayerMovement : MonoBehaviour
     {
         if (context.performed)
         {
-            if (IsGrounded()) // Si está en el suelo, realiza un salto normal
+            if (IsGrounded())
             {
                 rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
                 canDoubleJump = true;
                 extraJumps = 1;
             }
-            else if (extraJumps > 0 && canDoubleJump) // Si no está en el suelo pero puede hacer un doble salto, realiza el doble salto
+            else if (extraJumps > 0 && canDoubleJump)
             {
                 rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
                 extraJumps--;
