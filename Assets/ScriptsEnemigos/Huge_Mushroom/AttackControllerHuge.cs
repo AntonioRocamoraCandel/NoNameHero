@@ -36,7 +36,6 @@ public class AttackControllerHuge : MonoBehaviour
             if (lastAttack >= 2)
             {
                 // Han pasado dos segundos desde el último ataque
-                // Tu código para atacar aquí
                 lastAttack = 0; // Actualiza el tiempo del último ataque
                 Attack(collision);
             }
@@ -63,12 +62,8 @@ public class AttackControllerHuge : MonoBehaviour
             if (randomAnimation == "Attack4")
             {
                 canPlayAttack4 = false;
+                dmg += 1;
                 StartCoroutine(ResetAttack4Timer());
-                dmg = dmg + 1;
-            }
-            else
-            {
-                // Hacer daño
             }
         }
     }
@@ -77,6 +72,5 @@ public class AttackControllerHuge : MonoBehaviour
     {
         yield return new WaitForSeconds(attack4Cooldown);
         canPlayAttack4 = true;
-        dmg = initialDmg; // Restablecer el daño al valor inicial
     }
 }

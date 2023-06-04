@@ -33,7 +33,7 @@ public class EnemyBasic : MonoBehaviour
     void FixedUpdate() 
     {
         animator.SetBool("isColliding", isCollision);
-        if(target != null || !isCollision){
+        if(target != null && !isCollision){
 
             float distance = Mathf.Abs(transform.position.x - target.transform.position.x);
             
@@ -58,19 +58,15 @@ public class EnemyBasic : MonoBehaviour
                 transform.position = Vector2.MoveTowards(transform.position, newPosition, Time.deltaTime * velocidadMovimiento);
             }else{
                 isDetected = false;
-                Debug.Log(transform.position.x + " Left " + leftLimit);
-                Debug.Log(transform.position.x + " Right " + leftLimit);
                 // Si el personaje ha llegado al límite izquierdo, cambia la dirección del movimiento a la derecha
                 if(transform.position.x <= leftLimit)
                 {
-                    Debug.Log("hola");
                     transform.localScale = new Vector3(-1f, 1f, 1f);
                     movimiento = Vector2.right * velocidadMovimiento;
                     
                 // Si el personaje ha llegado al límite derecho, cambia la dirección del movimiento a la izquierda
                 }else if(transform.position.x > rightLimit)
                 {
-                    Debug.Log("hola");
                     transform.localScale = new Vector3(1f, 1f, 1f);
                     movimiento = Vector2.left * velocidadMovimiento;
                     
