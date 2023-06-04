@@ -9,6 +9,8 @@ TagManager:
   - stairs
   - background
   - spikes
+  - Enemigo
+  - Heroe
   layers:
   - Default
   - TransparentFX
