@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     private bool isFacingRight = true;
     private bool isClimbing;
     private int posicionDisparo;
+    private int posicionDisparoMagia;
 
     private Animator animator;
     private bool isJumping;
@@ -22,8 +23,27 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] Transform shootingPoint;
     [SerializeField] GameObject bullet;
+    [SerializeField] Transform shootingPointMagic;
+    [SerializeField] GameObject magicBullet;
 
     GameObject bullets;
+    GameObject bulletsMagic;
+
+    private bool canAttack = true; 
+    private float attackCooldown = 0.6f; 
+    private float lastAttackTime;
+
+    private bool canThrowAttack = true;
+    private float ThrowAttackCooldown = 1.5f;
+    private float lastThrowAttackTime;
+
+    private bool canMagicAttack = true;
+    private float MagicAttackCooldown = 3f;
+    private float lastMagicAttackTime; 
+
+    private bool desactivarGolpe;
+    private float desactivarGolpeTimer = 0f;
+    private float desactivarGolpeDelay = 0.6f;
 
     private void Start()
     {
@@ -32,6 +52,7 @@ public class PlayerMovement : MonoBehaviour
         canDoubleJump = false;
         extraJumps = 1;
         posicionDisparo=9;
+        posicionDisparoMagia=6;
     }
 
     private void Update()
@@ -40,20 +61,49 @@ public class PlayerMovement : MonoBehaviour
 
         if (!isFacingRight && horizontal > 0f)
         {
+            posicionDisparoMagia=6;
             posicionDisparo=9;
             Flip();
         }
         else if (isFacingRight && horizontal < 0f)
         {
+            posicionDisparoMagia=-6;
             posicionDisparo=-9;
             Flip();
         }
+        
+        if (!canAttack && Time.time >= lastAttackTime + attackCooldown)
+        {
+            canAttack = true; 
+        }
+        if (!canMagicAttack && Time.time >= lastMagicAttackTime + MagicAttackCooldown)
+        {
+            canMagicAttack = true; 
+        }
+        if (!canThrowAttack && Time.time >= lastThrowAttackTime + ThrowAttackCooldown)
+        {
+            canThrowAttack = true; 
+        }
+        
     }
 
     private void FixedUpdate()
     {
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
         animator.SetBool("enSuelo", IsGrounded());
+
+        if(animator.GetBool("golpe")){
+            if (!desactivarGolpe)
+            {
+                desactivarGolpeTimer = Time.time + desactivarGolpeDelay;
+                desactivarGolpe = true;
+            }
+            else if (Time.time >= desactivarGolpeTimer)
+            {
+                animator.SetBool("golpe", false);
+                desactivarGolpe = false;
+            }
+        }
 
         if (isClimbing)
         {   
@@ -76,6 +126,8 @@ public class PlayerMovement : MonoBehaviour
 
     public void Jump(InputAction.CallbackContext context)
     {
+        if (!animator.GetCurrentAnimatorStateInfo(0).IsTag("golpe") ||  !animator.GetCurrentAnimatorStateInfo(0).IsTag("lanzar") || !animator.GetCurrentAnimatorStateInfo(0).IsTag("lanzarMagia"))
+    {
         if (context.performed)
         {
             if (IsGrounded())
@@ -95,6 +147,7 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
         }
+    }
     }
 
     public void Climb(InputAction.CallbackContext context)
@@ -144,18 +197,24 @@ public class PlayerMovement : MonoBehaviour
 
     public void Attack(InputAction.CallbackContext context)
     {
-        if (context.performed)
+        if (context.performed && canAttack)
         {
-            animator.SetTrigger("golpe");
+            animator.SetBool("golpe",true);
+            
+            canAttack = false;
+            lastAttackTime = Time.time;
         }
     }
 
     public void ThrowAttack(InputAction.CallbackContext context)
     {
-        if (context.started)
+        if (context.started && canThrowAttack)
         {
             animator.SetTrigger("lanzar");
             Invoke("InstantiateBullet", 0.3f);
+
+            canThrowAttack = false;
+            lastThrowAttackTime = Time.time;
 
         }
 
@@ -166,5 +225,25 @@ public class PlayerMovement : MonoBehaviour
         bullets.GetComponent<Rigidbody2D>().velocity = new Vector2(posicionDisparo,0);
         bullets.transform.parent = null;
         Destroy(bullets, 3f);
+    }
+
+    public void MagicAttack(InputAction.CallbackContext context)
+    {
+        if (context.started && canMagicAttack)
+        {
+            animator.SetTrigger("lanzarMagia");
+            Invoke("InstantiateBulletMagic", 0.3f);
+
+            canMagicAttack = false;
+            lastMagicAttackTime = Time.time;
+        }
+
+    }
+
+    private void InstantiateBulletMagic(){
+        bulletsMagic = Instantiate(magicBullet, shootingPointMagic);
+        bulletsMagic.GetComponent<Rigidbody2D>().velocity = new Vector2(posicionDisparoMagia,0);
+        bulletsMagic.transform.parent = null;
+        Destroy(bulletsMagic, 1.5f);
     }
 }
