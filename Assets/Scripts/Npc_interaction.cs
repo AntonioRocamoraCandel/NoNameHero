@@ -11,7 +11,7 @@ public class Npc_interaction : MonoBehaviour
     public string[] dialogue;
     public string NpcName;
     private int index;
-    
+    public GameObject interrogacion;
     public GameObject buttonContinue;
     public float wordSpeed;
     public bool playerIsClose;
@@ -23,7 +23,17 @@ public class Npc_interaction : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    {   
+        if(playerIsClose)
+        {
+            interrogacion.SetActive(true);
+        }
+        else
+        {
+            interrogacion.SetActive(false);
+        }
+
+
         if(Input.GetKeyDown(KeyCode.E) && playerIsClose)
         {
             if (dialoguePanel.activeInHierarchy)

@@ -43,4 +43,5 @@ public class MovimientoPlayerBasic : MonoBehaviour
     {
         horizontal = context.ReadValue<Vector2>().x;
     }
+
 }
