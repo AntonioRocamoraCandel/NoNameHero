@@ -9,11 +9,13 @@ public class GameManager : MonoBehaviour
     
     public HUD hud;
 
+    public PlayerMovement playerMovement;
+
     private int vidas = 3;
     private float tiempoRecuperacion = 20f;
     private float tiempoPasado = 0f;
     private bool reinicioPendiente = false;
-    public float tiempoEspera = 2f;
+    public float tiempoEspera = 1.5f;
 
     private void Awake()
     {
@@ -69,14 +71,12 @@ public class GameManager : MonoBehaviour
         if (vidas <= 0)
         {
             vidas = 0;
-            //Animator animator = GetComponent<Animator>();
-            //if (animator != null)
-            //{
-              //  animator.SetBool("death", true);
-            //}
-            reinicioPendiente = true;
+            if (playerMovement != null && playerMovement.animator != null)
+        {
+            // Haz algo con el animator
+            playerMovement.animator.SetBool("death", true);
+        }
             StartCoroutine(EsperarYReiniciar(tiempoEspera));
-            //SceneManager.LoadScene(0);
         }
 
         hud.DesactivarVidas();

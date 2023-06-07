@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
     private int posicionDisparo;
     private int posicionDisparoMagia;
 
-    private Animator animator;
+    public Animator animator;
     private bool isJumping;
     private bool canDoubleJump;
     private int extraJumps = 1;
@@ -57,6 +57,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        GameManager.Instance.playerMovement = this;
         canDoubleJump = false;
         extraJumps = 1;
         posicionDisparo=9;
