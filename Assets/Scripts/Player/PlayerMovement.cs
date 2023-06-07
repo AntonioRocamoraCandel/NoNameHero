@@ -41,10 +41,6 @@ public class PlayerMovement : MonoBehaviour
     private float MagicAttackCooldown = 3f;
     private float lastMagicAttackTime; 
 
-    private bool desactivarGolpe;
-    private float desactivarGolpeTimer = 0f;
-    private float desactivarGolpeDelay = 0.6f;
-
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -91,19 +87,6 @@ public class PlayerMovement : MonoBehaviour
     {
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
         animator.SetBool("enSuelo", IsGrounded());
-
-        if(animator.GetBool("golpe")){
-            if (!desactivarGolpe)
-            {
-                desactivarGolpeTimer = Time.time + desactivarGolpeDelay;
-                desactivarGolpe = true;
-            }
-            else if (Time.time >= desactivarGolpeTimer)
-            {
-                animator.SetBool("golpe", false);
-                desactivarGolpe = false;
-            }
-        }
 
         if (isClimbing)
         {   
@@ -199,7 +182,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (context.performed && canAttack)
         {
-            animator.SetBool("golpe",true);
+            animator.SetTrigger("golpe");
             
             canAttack = false;
             lastAttackTime = Time.time;
