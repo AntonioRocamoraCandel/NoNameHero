@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4268057178769657910}
   - component: {fileID: 5322030185292086882}
   - component: {fileID: 8367657107015353307}
+  - component: {fileID: 3297747788353223595}
   m_Layer: 0
   m_Name: Fire-ball_0
   m_TagString: Untagged
@@ -97,7 +98,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -155,3 +156,17 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3297747788353223595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5778585777385309817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21ef48fd3a7fd7e42846b7985b55dcfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectiveTag: Enemigo
+  timeToDestroy: 1.5

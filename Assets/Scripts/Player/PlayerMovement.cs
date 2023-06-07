@@ -236,7 +236,6 @@ public class PlayerMovement : MonoBehaviour
         bullets = Instantiate(bullet, shootingPoint);
         bullets.GetComponent<Rigidbody2D>().velocity = new Vector2(posicionDisparo,0);
         bullets.transform.parent = null;
-        Destroy(bullets, 3f);
     }
 
     public void MagicAttack(InputAction.CallbackContext context)
@@ -256,7 +255,6 @@ public class PlayerMovement : MonoBehaviour
         bulletsMagic = Instantiate(magicBullet, shootingPointMagic);
         bulletsMagic.GetComponent<Rigidbody2D>().velocity = new Vector2(posicionDisparoMagia,0);
         bulletsMagic.transform.parent = null;
-        Destroy(bulletsMagic, 1.5f);
     }
 
     private void StopWallJumping()
