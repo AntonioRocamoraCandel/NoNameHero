@@ -1,5 +1,8 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -18,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
     private int posicionDisparo;
     private int posicionDisparoMagia;
 
-    private Animator animator;
+    public Animator animator;
     private bool isJumping;
     private bool canDoubleJump;
     private int extraJumps = 1;
@@ -41,6 +44,10 @@ public class PlayerMovement : MonoBehaviour
     GameObject bullets;
     GameObject bulletsMagic;
 
+    public Slider visualMana;
+    public float mana;
+    public int costoMana;
+
     private bool canAttack = true; 
     private float attackCooldown = 0.6f; 
     private float lastAttackTime;
@@ -57,16 +64,19 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        GameManager.Instance.playerMovement = this;
         canDoubleJump = false;
         extraJumps = 1;
         posicionDisparo=9;
         posicionDisparoMagia=6;
+        StartCoroutine(tiempo());
     }
 
     private void Update()
     {   
         animator.SetFloat("Horizontal", Mathf.Abs(horizontal));
     
+        visualMana.GetComponent<Slider>().value = mana;
 
         if (!isFacingRight && horizontal > 0f)
         {
@@ -101,7 +111,7 @@ public class PlayerMovement : MonoBehaviour
         {
             canAttack = true; 
         }
-        if (!canMagicAttack && Time.time >= lastMagicAttackTime + MagicAttackCooldown)
+        if (!canMagicAttack && Time.time >= lastMagicAttackTime + MagicAttackCooldown  && mana >= costoMana)
         {
             canMagicAttack = true; 
         }
@@ -245,6 +255,7 @@ public class PlayerMovement : MonoBehaviour
             animator.SetTrigger("lanzarMagia");
             Invoke("InstantiateBulletMagic", 0.3f);
 
+            mana -=costoMana;
             canMagicAttack = false;
             lastMagicAttackTime = Time.time;
         }
@@ -332,6 +343,17 @@ public class PlayerMovement : MonoBehaviour
                 }
 
                 Invoke(nameof(StopWallJumping), wallJumpingDuration);
+            }
+        }
+    }
+
+    IEnumerator tiempo()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(0.5f);
+            if(mana < 100){
+                mana+=1;
             }
         }
     }
