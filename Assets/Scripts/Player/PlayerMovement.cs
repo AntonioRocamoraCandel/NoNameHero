@@ -7,10 +7,12 @@ public class PlayerMovement : MonoBehaviour
     public Transform groundCheck;
     public LayerMask groundLayer;
     public Transform attackCheck;
+    public Transform wallCheck;
+    public LayerMask wall;
 
     private float horizontal;
     private float speed = 6f;
-    private float jumpingPower = 14f;
+    private float jumpingPower = 13f;
     private bool isFacingRight = true;
     private bool isClimbing;
     private int posicionDisparo;
@@ -20,6 +22,16 @@ public class PlayerMovement : MonoBehaviour
     private bool isJumping;
     private bool canDoubleJump;
     private int extraJumps = 1;
+
+    private bool isWallSliding;
+    private float wallSlidingSpeed = 2f;
+
+    private bool isWallJumping;
+    private float wallJumpingDirection;
+    private float wallJumpingTime = 0.2f;
+    private float wallJumpingCounter;
+    private float wallJumpingDuration = 0.4f;
+    private Vector2 wallJumpingPower = new Vector2(8f, 16f);
 
     [SerializeField] Transform shootingPoint;
     [SerializeField] GameObject bullet;
@@ -39,11 +51,7 @@ public class PlayerMovement : MonoBehaviour
 
     private bool canMagicAttack = true;
     private float MagicAttackCooldown = 3f;
-    private float lastMagicAttackTime; 
-
-    private bool desactivarGolpe;
-    private float desactivarGolpeTimer = 0f;
-    private float desactivarGolpeDelay = 0.6f;
+    private float lastMagicAttackTime;
 
     private void Start()
     {
@@ -56,8 +64,9 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private void Update()
-    {
+    {   
         animator.SetFloat("Horizontal", Mathf.Abs(horizontal));
+    
 
         if (!isFacingRight && horizontal > 0f)
         {
@@ -71,6 +80,22 @@ public class PlayerMovement : MonoBehaviour
             posicionDisparo=-9;
             Flip();
         }
+        if (InputSystem.GetDevice<Keyboard>() != null)
+        {
+            if (Keyboard.current[Key.Space].wasPressedThisFrame)
+            {
+                Jump();
+            }
+        }
+        else if (InputSystem.GetDevice<Gamepad>() != null)
+        {
+            if (Gamepad.current.buttonSouth.wasPressedThisFrame)
+            {
+                Jump();
+            }
+        }
+        WallSlide();
+        WallJump();
         
         if (!canAttack && Time.time >= lastAttackTime + attackCooldown)
         {
@@ -91,20 +116,6 @@ public class PlayerMovement : MonoBehaviour
     {
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
         animator.SetBool("enSuelo", IsGrounded());
-
-        if(animator.GetBool("golpe")){
-            if (!desactivarGolpe)
-            {
-                desactivarGolpeTimer = Time.time + desactivarGolpeDelay;
-                desactivarGolpe = true;
-            }
-            else if (Time.time >= desactivarGolpeTimer)
-            {
-                animator.SetBool("golpe", false);
-                desactivarGolpe = false;
-            }
-        }
-
         if (isClimbing)
         {   
             animator.SetBool("isClimbing", isClimbing);
@@ -117,6 +128,10 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetBool("isClimbing", false);
         }
+        if (!isWallJumping)
+        {
+            rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+        }
     }
 
     public void Move(InputAction.CallbackContext context)
@@ -124,11 +139,9 @@ public class PlayerMovement : MonoBehaviour
         horizontal = context.ReadValue<Vector2>().x;
     }
 
-    public void Jump(InputAction.CallbackContext context)
+    public void Jump()
     {
         if (!animator.GetCurrentAnimatorStateInfo(0).IsTag("golpe") ||  !animator.GetCurrentAnimatorStateInfo(0).IsTag("lanzar") || !animator.GetCurrentAnimatorStateInfo(0).IsTag("lanzarMagia"))
-    {
-        if (context.performed)
         {
             if (IsGrounded())
             {
@@ -141,13 +154,12 @@ public class PlayerMovement : MonoBehaviour
                 rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
                 extraJumps--;
             }
+            else if (IsWalled())
+            {
+                WallJump();
+            }
+        
         }
-
-        if (context.canceled && rb.velocity.y > 0f)
-        {
-            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
-        }
-    }
     }
 
     public void Climb(InputAction.CallbackContext context)
@@ -199,7 +211,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (context.performed && canAttack)
         {
-            animator.SetBool("golpe",true);
+            animator.SetTrigger("golpe");
             
             canAttack = false;
             lastAttackTime = Time.time;
@@ -245,5 +257,84 @@ public class PlayerMovement : MonoBehaviour
         bulletsMagic.GetComponent<Rigidbody2D>().velocity = new Vector2(posicionDisparoMagia,0);
         bulletsMagic.transform.parent = null;
         Destroy(bulletsMagic, 1.5f);
+    }
+
+    private void StopWallJumping()
+    {
+        isWallJumping = false;
+    }
+
+    private void WallSlide()
+    {
+        if (IsWalled() && !IsGrounded() && horizontal != 0f)
+        {
+            rb.gravityScale = 15f; 
+            isWallSliding = true;
+            rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -wallSlidingSpeed, float.MaxValue));
+        }
+        else
+        {
+            rb.gravityScale=5f;
+            isWallSliding = false;
+        }
+    }
+    private bool IsWalled()
+    {
+        return Physics2D.OverlapCircle(wallCheck.position, 0.2f, wall);
+    }
+
+    private void WallJump()
+    {
+        if (isWallSliding)
+        {
+            isWallJumping = false;
+            wallJumpingDirection = -transform.localScale.x;
+            wallJumpingCounter = wallJumpingTime;
+
+            CancelInvoke(nameof(StopWallJumping));
+        }
+        else
+        {
+            wallJumpingCounter -= Time.deltaTime;
+        }
+
+        if (InputSystem.GetDevice<Keyboard>() != null)
+        {
+            if (Keyboard.current[Key.Space].wasPressedThisFrame && wallJumpingCounter > 0f)
+            {
+                isWallJumping = true;
+                rb.velocity = new Vector2(wallJumpingDirection * wallJumpingPower.x, wallJumpingPower.y);
+                wallJumpingCounter = 0f;
+
+                if (transform.localScale.x != wallJumpingDirection)
+                {
+                    isFacingRight = !isFacingRight;
+                    Vector3 localScale = transform.localScale;
+                    localScale.x *= -1f;
+                    transform.localScale = localScale;
+                }
+
+                Invoke(nameof(StopWallJumping), wallJumpingDuration);
+            }
+        }
+        else if (InputSystem.GetDevice<Gamepad>() != null)
+        {
+            if (Gamepad.current.buttonSouth.wasPressedThisFrame && wallJumpingCounter > 0f)
+            {
+                isWallJumping = true;
+                rb.velocity = new Vector2(wallJumpingDirection * wallJumpingPower.x, wallJumpingPower.y);
+                wallJumpingCounter = 0f;
+
+                if (transform.localScale.x != wallJumpingDirection)
+                {
+                    isFacingRight = !isFacingRight;
+                    Vector3 localScale = transform.localScale;
+                    localScale.x *= -1f;
+                    transform.localScale = localScale;
+                }
+
+                Invoke(nameof(StopWallJumping), wallJumpingDuration);
+            }
+        }
     }
 }

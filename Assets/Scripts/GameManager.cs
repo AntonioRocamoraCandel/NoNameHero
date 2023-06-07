@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
 
         if (vidas == 0)
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene("SceneLevel2");
         }
 
         hud.DesactivarVida(vidas);
@@ -84,7 +84,7 @@ public class GameManager : MonoBehaviour
     private IEnumerator EsperarYReiniciar(float tiempo)
     {
         yield return new WaitForSeconds(tiempo);
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("SceneLevel2");
     }
 
 }
