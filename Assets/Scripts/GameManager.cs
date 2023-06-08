@@ -14,7 +14,6 @@ public class GameManager : MonoBehaviour
     private int vidas = 3;
     private float tiempoRecuperacion = 20f;
     private float tiempoPasado = 0f;
-    private bool reinicioPendiente = false;
     public float tiempoEspera = 1.5f;
 
     private void Awake()
@@ -42,13 +41,12 @@ public class GameManager : MonoBehaviour
     public void PerderVida()
     {
         vidas -= 1;
-
+        hud.DesactivarVida(vidas);
         if (vidas == 0)
         {
             SceneManager.LoadScene("SceneLevel2");
         }
 
-        hud.DesactivarVida(vidas);
     }
 
     public bool RecuperarVida()
@@ -67,7 +65,7 @@ public class GameManager : MonoBehaviour
     public void PerderVidas(int cantidad)
     {
         vidas -= cantidad;
-
+        hud.DesactivarVidas();
         if (vidas <= 0)
         {
             vidas = 0;
@@ -77,8 +75,6 @@ public class GameManager : MonoBehaviour
         }
             StartCoroutine(EsperarYReiniciar(tiempoEspera));
         }
-
-        hud.DesactivarVidas();
     }
     private IEnumerator EsperarYReiniciar(float tiempo)
     {

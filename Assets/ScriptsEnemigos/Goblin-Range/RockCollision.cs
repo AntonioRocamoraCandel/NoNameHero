@@ -28,7 +28,8 @@ namespace ScriptsEnemigos.Goblin_Range
         private void OnTriggerEnter2D(Collider2D other) {
             if (other.CompareTag(objectiveTag))
             {
-                Damage(other.gameObject);
+                //Damage(other.gameObject);
+                GameManager.Instance.PerderVida();
                 RockDestroy();
             }
         }
@@ -36,10 +37,10 @@ namespace ScriptsEnemigos.Goblin_Range
         
 
 
-        void Damage(GameObject objeto)
-        {
-            GameManager.Instance.PerderVidas(dmg);
-        }
+        //void Damage(GameObject objeto)
+        //{
+        //    GameManager.Instance.PerderVidas(dmg);
+        //}
 
         void RockDestroy()
         {
