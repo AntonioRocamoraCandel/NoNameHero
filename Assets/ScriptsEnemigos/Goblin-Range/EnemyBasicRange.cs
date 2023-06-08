@@ -82,4 +82,29 @@ public class EnemyBasicRange : MonoBehaviour
         }
         
     }
+
+    void OnCollisionStay2D(Collision2D collision)
+        {
+            if (collision.gameObject.CompareTag("Heroe"))
+            {
+                isCollision = true;
+            }
+        }
+
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Heroe"))
+        {
+            isCollision = false;
+        }
+    }
+
+    
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemigo") || collision.gameObject.CompareTag("Heroe"))
+        {
+            Physics2D.IgnoreCollision(GetComponent<Collider2D>(), collision.collider);
+        }
+    }
 }

@@ -37,44 +37,57 @@ public class EnemyBasic : MonoBehaviour
 
             float distance = Mathf.Abs(transform.position.x - target.transform.position.x);
             
-            if(distance <= 5){
-                if (isDetected == false){
+            if (distance <= 5)
+            {
+                if (isDetected == false)
+                {
                     EnemyDetection spriteVisibility = spriteObject.GetComponent<EnemyDetection>();
                     spriteVisibility.MakeSpriteVisible();
                 }
 
                 isDetected = true;
-                
-                 // Calcula la nueva posición del sprite solo en el eje X
-                
-                if(target.transform.position.x > transform.position.x){
+
+                Vector2 newPosition;
+
+                // Calcula la nueva posición del sprite solo en el eje X
+                if (target.transform.position.x > transform.position.x)
+                {
                     transform.localScale = new Vector3(-1f, 1f, 1f);
-                }else{
+                    newPosition = new Vector2(target.transform.position.x - 0.1f, transform.position.y);
+                }
+                else
+                {
                     transform.localScale = new Vector3(1f, 1f, 1f);
+                    newPosition = new Vector2(target.transform.position.x + 0.1f, transform.position.y);
                 }
 
-                Vector2 newPosition = new Vector2(target.transform.position.x, transform.position.y);
-                // Mueve el sprite hacia la nueva posición
                 transform.position = Vector2.MoveTowards(transform.position, newPosition, Time.deltaTime * velocidadMovimiento);
-            }else{
+            }
+            else
+            {
+                Vector2 newPosition;
+
+
                 isDetected = false;
                 // Si el personaje ha llegado al límite izquierdo, cambia la dirección del movimiento a la derecha
-                if(transform.position.x <= leftLimit)
+                if (transform.position.x <= leftLimit)
                 {
                     transform.localScale = new Vector3(-1f, 1f, 1f);
-                    movimiento = Vector2.right * velocidadMovimiento;
-                    
-                // Si el personaje ha llegado al límite derecho, cambia la dirección del movimiento a la izquierda
-                }else if(transform.position.x > rightLimit)
+                    newPosition = new Vector2(rightLimit,transform.position.y);
+                    //movimiento = Vector2.right * velocidadMovimiento;
+                   
+                    // Si el personaje ha llegado al límite derecho, cambia la dirección del movimiento a la izquierda
+                }
+                else 
                 {
                     transform.localScale = new Vector3(1f, 1f, 1f);
-                    movimiento = Vector2.left * velocidadMovimiento;
-                    
+                    //movimiento = Vector2.left * velocidadMovimiento;
+                    newPosition = new Vector2(leftLimit,transform.position.y);
                 }
 
+                 transform.position = Vector2.MoveTowards(transform.position, newPosition, Time.deltaTime * velocidadMovimiento);
                 // Aplica el movimiento al Rigidbody2D
-                rb.velocity = movimiento;
-                 
+                //rb.velocity = movimiento;
             }
             
         }
@@ -82,27 +95,30 @@ public class EnemyBasic : MonoBehaviour
     }
 
     
-    void OnCollisionStay2D(Collision2D collision) {
-        if (collision.gameObject.CompareTag("Heroe"))
+    void OnCollisionStay2D(Collision2D collision)
         {
-            isCollision = true;
+            if (collision.gameObject.CompareTag("Heroe"))
+            {
+                isCollision = true;
+            }
         }
-    }
 
-    void OnCollisionExit2D(Collision2D collision) {
+    void OnCollisionExit2D(Collision2D collision)
+    {
         if (collision.gameObject.CompareTag("Heroe"))
         {
             isCollision = false;
         }
     }
 
+    
     void OnCollisionEnter2D(Collision2D collision)
-{
-    if (collision.gameObject.CompareTag("Enemigo"))
     {
-        Physics2D.IgnoreCollision(GetComponent<Collider2D>(), collision.collider);
+        if (collision.gameObject.CompareTag("Enemigo") || collision.gameObject.CompareTag("Heroe"))
+        {
+            Physics2D.IgnoreCollision(GetComponent<Collider2D>(), collision.collider);
+        }
     }
-}
     
   
 }

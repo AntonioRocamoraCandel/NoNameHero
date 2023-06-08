@@ -64,6 +64,10 @@ public class AttackControllerHuge : MonoBehaviour
                 canPlayAttack4 = false;
                 dmg += 1;
                 StartCoroutine(ResetAttack4Timer());
+            }else if(randomAnimation == "Attack1"){
+                GameManager.Instance.PerderVidas(dmg);
+            }else if(randomAnimation == "Attack2"){
+                GameManager.Instance.PerderVidas(dmg+1);
             }
         }
     }

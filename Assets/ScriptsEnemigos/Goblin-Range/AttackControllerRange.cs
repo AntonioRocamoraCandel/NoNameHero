@@ -40,7 +40,7 @@ public class AttackControllerRange : MonoBehaviour
     
     public void shoot()
     {
-        Vector2 shootPosition = new Vector2(transform.position.x,transform.position.y + 0.5f);
+        Vector2 shootPosition = new Vector2(transform.position.x,transform.position.y - 0.2f);
         GameObject rock = Instantiate(projectile, shootPosition, Quaternion.identity);
         if (transform.localScale.x < 0)
         {

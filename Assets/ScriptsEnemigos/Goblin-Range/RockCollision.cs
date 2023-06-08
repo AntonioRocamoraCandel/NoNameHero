@@ -4,7 +4,8 @@ using UnityEngine;
 namespace ScriptsEnemigos.Goblin_Range
 {
     public class RockCollision : MonoBehaviour
-    {
+    {   
+        public int dmg=1;
         public string objectiveTag; 
         public float timeToDestroy = 3f; 
 
@@ -37,8 +38,7 @@ namespace ScriptsEnemigos.Goblin_Range
 
         void Damage(GameObject objeto)
         {
-            // Lógica para hacer daño al objeto con el que colisionó la roca
-            // ...
+            GameManager.Instance.PerderVidas(dmg);
         }
 
         void RockDestroy()
