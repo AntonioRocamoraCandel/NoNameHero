@@ -1131,7 +1131,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.4414978, y: -1.3162363, z: -10}
+  m_LocalPosition: {x: -1.5739222, y: -1.2929692, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2032,6 +2032,11 @@ SpriteRenderer:
 --- !u!1 &882901054 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4345926792152025831, guid: be75f6357473ce646b64aa3b20278732, type: 3}
+  m_PrefabInstance: {fileID: 5959745454609734672}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &882901061 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4345926791593356135, guid: be75f6357473ce646b64aa3b20278732, type: 3}
   m_PrefabInstance: {fileID: 5959745454609734672}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &909744379
@@ -3586,7 +3591,7 @@ MonoBehaviour:
   m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 0}
+  m_Follow: {fileID: 882901061}
   m_Lens:
     FieldOfView: 60
     OrthographicSize: 4.9458876
@@ -3613,7 +3618,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1648023966}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.12, y: -1.3108222, z: -10}
+  m_LocalPosition: {x: -7.58, y: -1.2808223, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -58900,11 +58905,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2393354505620945952, guid: 88eb84f95c5aee143a984c4522ca62a5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.69
+      value: 0.67
       objectReference: {fileID: 0}
     - target: {fileID: 2393354505620945952, guid: 88eb84f95c5aee143a984c4522ca62a5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.34
+      value: -2.22
       objectReference: {fileID: 0}
     - target: {fileID: 5146504069300348932, guid: 88eb84f95c5aee143a984c4522ca62a5, type: 3}
       propertyPath: m_LocalPosition.x
