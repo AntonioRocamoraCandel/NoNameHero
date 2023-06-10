@@ -29,17 +29,6 @@ public class Chest : MonoBehaviour {
         }  
     }
 
-    private void abrirCofre(Collider2D other) {
-
-        if(other.CompareTag("Player")) {
-
-            if(Input.GetKeyDown(KeyCode.E) && opened == false) {
-
-                myAnim.Play("Chest_open");
-                StartCoroutine(GetChestItem());
-            }
-        }  
-    }
     IEnumerator GetChestItem() {
         while(ItemCount < itemAmount)
         {
