@@ -357,4 +357,8 @@ public class PlayerMovement : MonoBehaviour
             }
         }
     }
+    public void DestruirProtagonista()
+    {
+        Destroy(gameObject);
+    }
 }

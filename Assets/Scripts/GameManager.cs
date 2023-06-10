@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     private int vidas = 3;
     private float tiempoRecuperacion = 20f;
     private float tiempoPasado = 0f;
-    public float tiempoEspera = 1.5f;
+    public float tiempoEspera = 0.5f;
 
     private void Awake()
     {
@@ -44,7 +44,15 @@ public class GameManager : MonoBehaviour
         hud.DesactivarVida(vidas);
         if (vidas == 0)
         {
-            SceneManager.LoadScene("SceneLevel2");
+            if (playerMovement != null && playerMovement.animator != null)
+        {
+            playerMovement.animator.SetBool("isDeath", true);
+            playerMovement.animator.SetTrigger("death");
+        }
+            StartCoroutine(EsperarYReiniciar(tiempoEspera));
+        }else if (playerMovement != null && playerMovement.animator != null)
+        {
+             playerMovement.animator.SetTrigger("hurt");
         }
 
     }
@@ -71,7 +79,8 @@ public class GameManager : MonoBehaviour
             vidas = 0;
             if (playerMovement != null && playerMovement.animator != null)
         {
-            playerMovement.animator.SetBool("death", true);
+            playerMovement.animator.SetBool("isDeath", true);
+            playerMovement.animator.SetTrigger("death");
         }
             StartCoroutine(EsperarYReiniciar(tiempoEspera));
         }
@@ -79,6 +88,7 @@ public class GameManager : MonoBehaviour
     private IEnumerator EsperarYReiniciar(float tiempo)
     {
         yield return new WaitForSeconds(tiempo);
+        playerMovement.DestruirProtagonista();
         SceneManager.LoadScene("SceneLevel2");
     }
 
