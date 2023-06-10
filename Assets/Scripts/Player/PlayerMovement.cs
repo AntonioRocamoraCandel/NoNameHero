@@ -90,16 +90,15 @@ public class PlayerMovement : MonoBehaviour
             posicionDisparo=-9;
             Flip();
         }
-        if (InputSystem.GetDevice<Keyboard>() != null)
+        if (InputSystem.GetDevice<Gamepad>() != null)
         {
-            if (Keyboard.current[Key.Space].wasPressedThisFrame)
+            if (Gamepad.current.buttonSouth.wasPressedThisFrame)
             {
                 Jump();
             }
-        }
-        else if (InputSystem.GetDevice<Gamepad>() != null)
+        }if (InputSystem.GetDevice<Keyboard>() != null)
         {
-            if (Gamepad.current.buttonSouth.wasPressedThisFrame)
+            if (Keyboard.current[Key.Space].wasPressedThisFrame)
             {
                 Jump();
             }
@@ -326,7 +325,7 @@ public class PlayerMovement : MonoBehaviour
                 Invoke(nameof(StopWallJumping), wallJumpingDuration);
             }
         }
-        else if (InputSystem.GetDevice<Gamepad>() != null)
+        if (InputSystem.GetDevice<Gamepad>() != null)
         {
             if (Gamepad.current.buttonSouth.wasPressedThisFrame && wallJumpingCounter > 0f)
             {

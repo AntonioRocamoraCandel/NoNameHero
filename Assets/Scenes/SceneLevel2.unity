@@ -63257,27 +63257,51 @@ PrefabInstance:
       objectReference: {fileID: 807030219}
     - target: {fileID: 4345926791593356142, guid: be75f6357473ce646b64aa3b20278732, type: 3}
       propertyPath: m_ActionEvents.Array.size
-      value: 17
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 4345926791593356142, guid: be75f6357473ce646b64aa3b20278732, type: 3}
       propertyPath: m_ActionEvents.Array.data[16].m_ActionId
       value: 80665a04-8f0e-4013-9060-6ef450ab9e2f
       objectReference: {fileID: 0}
     - target: {fileID: 4345926791593356142, guid: be75f6357473ce646b64aa3b20278732, type: 3}
+      propertyPath: m_ActionEvents.Array.data[17].m_ActionId
+      value: 4714727c-eb7b-4d53-bc71-1c94c30dab5c
+      objectReference: {fileID: 0}
+    - target: {fileID: 4345926791593356142, guid: be75f6357473ce646b64aa3b20278732, type: 3}
       propertyPath: m_ActionEvents.Array.data[16].m_ActionName
       value: Player/Pause[/Keyboard/escape]
+      objectReference: {fileID: 0}
+    - target: {fileID: 4345926791593356142, guid: be75f6357473ce646b64aa3b20278732, type: 3}
+      propertyPath: m_ActionEvents.Array.data[17].m_ActionName
+      value: Player/Interact[/Keyboard/e]
+      objectReference: {fileID: 0}
+    - target: {fileID: 4345926791593356142, guid: be75f6357473ce646b64aa3b20278732, type: 3}
+      propertyPath: m_ActionEvents.Array.data[11].m_PersistentCalls.m_Calls.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4345926791593356142, guid: be75f6357473ce646b64aa3b20278732, type: 3}
       propertyPath: m_ActionEvents.Array.data[16].m_PersistentCalls.m_Calls.Array.size
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4345926791593356142, guid: be75f6357473ce646b64aa3b20278732, type: 3}
+      propertyPath: m_ActionEvents.Array.data[11].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4345926791593356142, guid: be75f6357473ce646b64aa3b20278732, type: 3}
       propertyPath: m_ActionEvents.Array.data[16].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4345926791593356142, guid: be75f6357473ce646b64aa3b20278732, type: 3}
+      propertyPath: m_ActionEvents.Array.data[11].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 882901054}
+    - target: {fileID: 4345926791593356142, guid: be75f6357473ce646b64aa3b20278732, type: 3}
       propertyPath: m_ActionEvents.Array.data[16].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4345926791593356142, guid: be75f6357473ce646b64aa3b20278732, type: 3}
+      propertyPath: m_ActionEvents.Array.data[11].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4345926791593356142, guid: be75f6357473ce646b64aa3b20278732, type: 3}
       propertyPath: m_ActionEvents.Array.data[16].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
