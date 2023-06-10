@@ -255,6 +255,7 @@ GameObject:
   - component: {fileID: 4345926791593356135}
   - component: {fileID: 4345926791593356141}
   - component: {fileID: 4345926791593356138}
+  - component: {fileID: 6081528775156235408}
   - component: {fileID: 4345926791593356137}
   - component: {fileID: 4345926791593356142}
   - component: {fileID: 4345926791593356143}
@@ -374,6 +375,18 @@ MonoBehaviour:
   visualMana: {fileID: 0}
   mana: 100
   costoMana: 30
+--- !u!114 &6081528775156235408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4345926792152025831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8766bcad3c6ee31439f74b90ffa71178, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!50 &4345926791593356137
 Rigidbody2D:
   serializedVersion: 4
@@ -544,6 +557,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: ae1ee49a-1f70-4e79-b7e7-07843c33f052
     m_ActionName: Player/Magic[/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 80665a04-8f0e-4013-9060-6ef450ab9e2f
+    m_ActionName: Player/Pause[/Keyboard/escape]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
