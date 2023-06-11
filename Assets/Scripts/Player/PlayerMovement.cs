@@ -13,6 +13,8 @@ public class PlayerMovement : MonoBehaviour
     public Transform wallCheck;
     public LayerMask wall;
 
+    private float vertical;
+    private bool isLadder;
     private float horizontal;
     private float speed = 6f;
     private float jumpingPower = 13f;
@@ -118,6 +120,14 @@ public class PlayerMovement : MonoBehaviour
         {
             canThrowAttack = true; 
         }
+        if (isLadder && Mathf.Abs(vertical) > 0f)
+        {
+            isClimbing = true;
+        }
+        else
+        {
+            isClimbing = false;
+        }
         
     }
 
@@ -125,17 +135,17 @@ public class PlayerMovement : MonoBehaviour
     {
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
         animator.SetBool("enSuelo", IsGrounded());
-        if (isClimbing)
-        {   
-            animator.SetBool("isClimbing", isClimbing);
-            if (horizontal != 0f)
-            {
-                rb.velocity = new Vector2(rb.velocity.x, horizontal * speed);
-            }
+        animator.SetBool("isClimbing", false);
+         if (isClimbing)
+        {
+            rb.gravityScale = 0f;
+            rb.velocity = new Vector2(rb.velocity.x, vertical * speed);
+            animator.SetBool("isClimbing", true);
         }
         else
         {
-            animator.SetBool("isClimbing", false);
+            rb.gravityScale = 5f;
+           // animator.SetBool("isClimbing", true);
         }
         if (!isWallJumping)
         {
@@ -173,14 +183,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void Climb(InputAction.CallbackContext context)
     {
-        if (context.performed && isClimbing)
-        {
-            horizontal = context.ReadValue<Vector2>().y;
-        }
-        else if (context.canceled && isClimbing)
-        {
-            horizontal = 0f;
-        }
+        vertical = context.ReadValue<float>();
     }
 
     private bool IsGrounded()
@@ -200,9 +203,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.CompareTag("stairs"))
         {
-            isClimbing = true;
-            rb.gravityScale = 0f; 
-            rb.velocity = Vector2.zero;
+            isLadder = true;
         }
     }
 
@@ -210,9 +211,8 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.CompareTag("stairs"))
         {
+            isLadder = false;
             isClimbing = false;
-            horizontal = 0f;
-            rb.gravityScale = 4f; 
         }
     }
 
