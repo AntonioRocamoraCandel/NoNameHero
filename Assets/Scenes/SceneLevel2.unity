@@ -2824,6 +2824,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5559083517859278151, guid: 138d401cf6c07c341827bb914d022c48, type: 3}
   m_PrefabInstance: {fileID: 791653131}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &817409676 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4234215014907450031, guid: 378924df747e0b047b490b60e399156f, type: 3}
+  m_PrefabInstance: {fileID: 4234215015048163423}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a64697205e8fcd945aab89fbaff81d90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &882901054 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4345926792152025831, guid: be75f6357473ce646b64aa3b20278732, type: 3}
@@ -108993,6 +109004,10 @@ PrefabInstance:
       propertyPath: visualMana
       value: 
       objectReference: {fileID: 807030219}
+    - target: {fileID: 4345926791593356138, guid: be75f6357473ce646b64aa3b20278732, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 817409676}
     - target: {fileID: 4345926791593356142, guid: be75f6357473ce646b64aa3b20278732, type: 3}
       propertyPath: m_ActionEvents.Array.size
       value: 18

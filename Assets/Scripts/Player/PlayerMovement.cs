@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public GameManager gameManager;
     public Rigidbody2D rb;
     public Transform groundCheck;
     public LayerMask groundLayer;
@@ -139,7 +140,12 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
         }
-        animator.SetBool("enSuelo", IsGrounded());
+        if(gameManager.sePuedeMover){
+            animator.SetBool("enSuelo", IsGrounded());
+        }else{
+            animator.SetBool("enSuelo", true);
+        }
+        
         animator.SetBool("isClimbing", false);
         if (isClimbing)
         {
@@ -155,12 +161,18 @@ public class PlayerMovement : MonoBehaviour
 
     public void Move(InputAction.CallbackContext context)
     {
-        horizontal = context.ReadValue<Vector2>().x;
+        if(gameManager.sePuedeMover && gameManager.vidas > 0){
+            horizontal = context.ReadValue<Vector2>().x;
+        }else if(gameManager.vidas>0 && !gameManager.sePuedeMover){
+            horizontal = 0; 
+        }else{
+            horizontal = 0;
+        }
     }
 
     public void Jump()
     {
-        if (!animator.GetCurrentAnimatorStateInfo(0).IsTag("golpe") || !animator.GetCurrentAnimatorStateInfo(0).IsTag("lanzar") || !animator.GetCurrentAnimatorStateInfo(0).IsTag("lanzarMagia"))
+        if (gameManager.sePuedeMover && gameManager.vidas > 0)
         {
             if (IsGrounded())
             {
@@ -217,26 +229,31 @@ public class PlayerMovement : MonoBehaviour
 
     public void Attack(InputAction.CallbackContext context)
     {
-        if (context.performed && canAttack)
-        {
-            animator.SetTrigger("golpe");
+        if(gameManager.sePuedeMover && gameManager.vidas > 0){
+            if (context.performed && canAttack)
+            {
+                animator.SetTrigger("golpe");
 
-            canAttack = false;
-            lastAttackTime = Time.time;
+                canAttack = false;
+                lastAttackTime = Time.time;
+            }
         }
     }
 
     public void ThrowAttack(InputAction.CallbackContext context)
     {
-        if (context.started && canThrowAttack)
-        {
-            animator.SetTrigger("lanzar");
-            Invoke("InstantiateBullet", 0.3f);
+        if(gameManager.sePuedeMover && gameManager.vidas > 0){
+            if (context.started && canThrowAttack)
+            {
+                animator.SetTrigger("lanzar");
+                Invoke("InstantiateBullet", 0.3f);
 
-            canThrowAttack = false;
-            lastThrowAttackTime = Time.time;
+                canThrowAttack = false;
+                lastThrowAttackTime = Time.time;
 
+            }
         }
+
 
     }
 
@@ -248,16 +265,17 @@ public class PlayerMovement : MonoBehaviour
 
     public void MagicAttack(InputAction.CallbackContext context)
     {
-        if (context.started && canMagicAttack)
-        {
-            animator.SetTrigger("lanzarMagia");
-            Invoke("InstantiateBulletMagic", 0.3f);
+        if(gameManager.sePuedeMover && gameManager.vidas > 0){
+            if (context.started && canMagicAttack)
+            {
+                animator.SetTrigger("lanzarMagia");
+                Invoke("InstantiateBulletMagic", 0.3f);
 
-            mana -= costoMana;
-            canMagicAttack = false;
-            lastMagicAttackTime = Time.time;
+                mana -= costoMana;
+                canMagicAttack = false;
+                lastMagicAttackTime = Time.time;
+            }
         }
-
     }
 
     private void InstantiateBulletMagic()

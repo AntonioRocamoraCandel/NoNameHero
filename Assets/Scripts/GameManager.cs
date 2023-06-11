@@ -11,10 +11,13 @@ public class GameManager : MonoBehaviour
 
     public PlayerMovement playerMovement;
 
-    private int vidas = 3;
+    public int vidas = 3;
     private float tiempoRecuperacion = 20f;
     private float tiempoPasado = 0f;
     public float tiempoEspera = 0.5f;
+    public bool sePuedeMover = true;
+    public Vector2 velocidadRebote = new Vector2(20, 10);
+    public float tiempoPerdidaControl=0f;
 
     private void Awake()
     {
@@ -45,14 +48,16 @@ public class GameManager : MonoBehaviour
         if (vidas == 0)
         {
             if (playerMovement != null && playerMovement.animator != null)
-        {
-            playerMovement.animator.SetBool("isDeath", true);
-            playerMovement.animator.SetTrigger("death");
-        }
+            {
+                playerMovement.animator.SetBool("isDeath", true);
+                playerMovement.animator.SetTrigger("death");
+            }
             StartCoroutine(EsperarYReiniciar(tiempoEspera));
         }else if (playerMovement != null && playerMovement.animator != null)
         {
-             playerMovement.animator.SetTrigger("hurt");
+            playerMovement.animator.SetTrigger("hurt");
+            StartCoroutine(PerderControl());
+            Rebote(velocidadRebote);
         }
 
     }
@@ -85,11 +90,22 @@ public class GameManager : MonoBehaviour
             StartCoroutine(EsperarYReiniciar(tiempoEspera));
         }
     }
+
+    public void Rebote(Vector2 puntoGolpe){
+        playerMovement.rb.velocity = new Vector2(-velocidadRebote.x, velocidadRebote.y);
+    }
+
     private IEnumerator EsperarYReiniciar(float tiempo)
     {
         yield return new WaitForSeconds(tiempo);
         playerMovement.DestruirProtagonista();
         SceneManager.LoadScene("SceneLevel2");
+    }
+
+    private IEnumerator PerderControl(){
+        sePuedeMover=false;
+        yield return new WaitForSeconds(tiempoPerdidaControl);
+        sePuedeMover=true;
     }
 
 }
