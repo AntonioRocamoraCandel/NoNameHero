@@ -25,6 +25,13 @@ public class PlayerMovement : MonoBehaviour
     private int posicionDisparoMagia;
 
     public Animator animator;
+    public AudioSource audioSource;
+    public AudioClip jumpSound;
+    public AudioClip fireballSound;
+    public AudioClip hurtSound;
+    public AudioClip rockSound;
+    public AudioClip punchSound;
+    public AudioClip deathSound;
     private bool isJumping;
     private bool canDoubleJump;
     private int extraJumps = 1;
@@ -72,6 +79,7 @@ public class PlayerMovement : MonoBehaviour
         extraJumps = 1;
         posicionDisparo = 9;
         posicionDisparoMagia = 6;
+        audioSource=GetComponent<AudioSource>();
         StartCoroutine(tiempo());
     }
 
@@ -109,6 +117,7 @@ public class PlayerMovement : MonoBehaviour
         }
         WallSlide();
         WallJump();
+        
 
         if (!canAttack && Time.time >= lastAttackTime + attackCooldown)
         {
@@ -179,14 +188,17 @@ public class PlayerMovement : MonoBehaviour
                 rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
                 canDoubleJump = true;
                 extraJumps = 1;
+                audioSource.PlayOneShot(jumpSound);
             }
             else if (extraJumps > 0 && canDoubleJump)
             {
                 rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+                audioSource.PlayOneShot(jumpSound);
                 extraJumps--;
             }
             else if (IsWalled())
             {
+                audioSource.PlayOneShot(jumpSound);
                 WallJump();
             }
         }
@@ -233,7 +245,7 @@ public class PlayerMovement : MonoBehaviour
             if (context.performed && canAttack)
             {
                 animator.SetTrigger("golpe");
-
+                audioSource.PlayOneShot(punchSound);
                 canAttack = false;
                 lastAttackTime = Time.time;
             }
@@ -247,7 +259,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 animator.SetTrigger("lanzar");
                 Invoke("InstantiateBullet", 0.3f);
-
+                audioSource.PlayOneShot(rockSound);
                 canThrowAttack = false;
                 lastThrowAttackTime = Time.time;
 
@@ -270,7 +282,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 animator.SetTrigger("lanzarMagia");
                 Invoke("InstantiateBulletMagic", 0.3f);
-
+                audioSource.PlayOneShot(fireballSound);
                 mana -= costoMana;
                 canMagicAttack = false;
                 lastMagicAttackTime = Time.time;

@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     public HUD hud;
 
     public PlayerMovement playerMovement;
-
+    public AudioSource audioSource;
     public int vidas = 3;
     private float tiempoRecuperacion = 20f;
     private float tiempoPasado = 0f;
@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
+            audioSource.Play();
         }
         else
         {
@@ -52,10 +53,13 @@ public class GameManager : MonoBehaviour
                 playerMovement.animator.SetBool("isDeath", true);
                 playerMovement.animator.SetTrigger("death");
             }
+            playerMovement.audioSource.PlayOneShot(playerMovement.deathSound);
+            audioSource.mute = true;
             StartCoroutine(EsperarYReiniciar(tiempoEspera));
         }else if (playerMovement != null && playerMovement.animator != null)
         {
             playerMovement.animator.SetTrigger("hurt");
+            playerMovement.audioSource.PlayOneShot(playerMovement.hurtSound);
             StartCoroutine(PerderControl());
             Rebote(velocidadRebote);
         }
@@ -87,6 +91,7 @@ public class GameManager : MonoBehaviour
             playerMovement.animator.SetBool("isDeath", true);
             playerMovement.animator.SetTrigger("death");
         }
+            playerMovement.audioSource.PlayOneShot(playerMovement.deathSound);
             StartCoroutine(EsperarYReiniciar(tiempoEspera));
         }
     }
