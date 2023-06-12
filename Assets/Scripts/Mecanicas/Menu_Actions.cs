@@ -7,7 +7,7 @@ public class Menu_Actions : MonoBehaviour
 {
     public void Jugar()
     {
-        SceneManager.LoadScene("Prueba_mecanicas");
+        SceneManager.LoadScene("SceneLevel2");
     }
 
     public void Salir()
