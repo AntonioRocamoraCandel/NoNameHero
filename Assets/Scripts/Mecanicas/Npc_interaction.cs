@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Npc_interaction : MonoBehaviour
 {
     public GameObject dialoguePanel;
-    public Text dialogueText;
-    public Text NpcNameText;
+    public TextMeshProUGUI dialogueText;
+    public TextMeshProUGUI NpcNameText;
     public string[] dialogue;
     public string NpcName;
     private int index;
