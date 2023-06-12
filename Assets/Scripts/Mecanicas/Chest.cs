@@ -28,6 +28,7 @@ public class Chest : MonoBehaviour {
             }
         }  
     }
+
     IEnumerator GetChestItem() {
         while(ItemCount < itemAmount)
         {

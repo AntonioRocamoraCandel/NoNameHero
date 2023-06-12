@@ -213,37 +213,6 @@ Transform:
   m_Father: {fileID: 4345926791593356135}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &4345926792049722266
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4345926792049722265}
-  m_Layer: 9
-  m_Name: wallCheck
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4345926792049722265
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4345926792049722266}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.2047, y: -0.102, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 4345926791593356135}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4345926792152025831
 GameObject:
   m_ObjectHideFlags: 0
@@ -255,6 +224,7 @@ GameObject:
   - component: {fileID: 4345926791593356135}
   - component: {fileID: 4345926791593356141}
   - component: {fileID: 4345926791593356138}
+  - component: {fileID: 6081528775156235408}
   - component: {fileID: 4345926791593356137}
   - component: {fileID: 4345926791593356142}
   - component: {fileID: 4345926791593356143}
@@ -288,7 +258,6 @@ Transform:
   - {fileID: 4345926791401767979}
   - {fileID: 4345926792612694750}
   - {fileID: 4345926791216527118}
-  - {fileID: 4345926792049722265}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -374,6 +343,18 @@ MonoBehaviour:
   visualMana: {fileID: 0}
   mana: 100
   costoMana: 30
+--- !u!114 &6081528775156235408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4345926792152025831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8766bcad3c6ee31439f74b90ffa71178, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!50 &4345926791593356137
 Rigidbody2D:
   serializedVersion: 4
@@ -544,6 +525,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: ae1ee49a-1f70-4e79-b7e7-07843c33f052
     m_ActionName: Player/Magic[/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 80665a04-8f0e-4013-9060-6ef450ab9e2f
+    m_ActionName: Player/Pause[/Keyboard/escape]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player

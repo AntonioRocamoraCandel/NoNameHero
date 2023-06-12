@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
+using System;
 
 public class Npc_interaction : MonoBehaviour
 {
     public GameObject dialoguePanel;
-    public Text dialogueText;
-    public Text NpcNameText;
+    public TextMeshProUGUI dialogueText;
+    public TextMeshProUGUI NpcNameText;
     public string[] dialogue;
     public string NpcName;
     private int index;
@@ -97,5 +99,6 @@ public class Npc_interaction : MonoBehaviour
         if(other.CompareTag("Player"))
             playerIsClose = false;
             zeroText();
+            Array.Clear(dialogue, 0, dialogue.Length);
     }
 }

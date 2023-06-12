@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public GameManager gameManager;
     public Rigidbody2D rb;
     public Transform groundCheck;
     public LayerMask groundLayer;
@@ -13,6 +14,8 @@ public class PlayerMovement : MonoBehaviour
     public Transform wallCheck;
     public LayerMask wall;
 
+    private float vertical;
+    private bool isLadder;
     private float horizontal;
     private float speed = 6f;
     private float jumpingPower = 13f;
@@ -48,8 +51,8 @@ public class PlayerMovement : MonoBehaviour
     public float mana;
     public int costoMana;
 
-    private bool canAttack = true; 
-    private float attackCooldown = 0.6f; 
+    private bool canAttack = true;
+    private float attackCooldown = 0.6f;
     private float lastAttackTime;
 
     private bool canThrowAttack = true;
@@ -67,28 +70,35 @@ public class PlayerMovement : MonoBehaviour
         GameManager.Instance.playerMovement = this;
         canDoubleJump = false;
         extraJumps = 1;
-        posicionDisparo=9;
-        posicionDisparoMagia=6;
+        posicionDisparo = 9;
+        posicionDisparoMagia = 6;
         StartCoroutine(tiempo());
     }
 
     private void Update()
-    {   
+    {
         animator.SetFloat("Horizontal", Mathf.Abs(horizontal));
-    
+
         visualMana.GetComponent<Slider>().value = mana;
 
         if (!isFacingRight && horizontal > 0f)
         {
-            posicionDisparoMagia=6;
-            posicionDisparo=9;
+            posicionDisparoMagia = 6;
+            posicionDisparo = 9;
             Flip();
         }
         else if (isFacingRight && horizontal < 0f)
         {
-            posicionDisparoMagia=-6;
-            posicionDisparo=-9;
+            posicionDisparoMagia = -6;
+            posicionDisparo = -9;
             Flip();
+        }
+        if (InputSystem.GetDevice<Gamepad>() != null)
+        {
+            if (Gamepad.current.buttonSouth.wasPressedThisFrame)
+            {
+                Jump();
+            }
         }
         if (InputSystem.GetDevice<Keyboard>() != null)
         {
@@ -97,61 +107,72 @@ public class PlayerMovement : MonoBehaviour
                 Jump();
             }
         }
-        else if (InputSystem.GetDevice<Gamepad>() != null)
-        {
-            if (Gamepad.current.buttonSouth.wasPressedThisFrame)
-            {
-                Jump();
-            }
-        }
         WallSlide();
         WallJump();
-        
+
         if (!canAttack && Time.time >= lastAttackTime + attackCooldown)
         {
-            canAttack = true; 
+            canAttack = true;
         }
-        if (!canMagicAttack && Time.time >= lastMagicAttackTime + MagicAttackCooldown  && mana >= costoMana)
+        if (!canMagicAttack && Time.time >= lastMagicAttackTime + MagicAttackCooldown && mana >= costoMana)
         {
-            canMagicAttack = true; 
+            canMagicAttack = true;
         }
         if (!canThrowAttack && Time.time >= lastThrowAttackTime + ThrowAttackCooldown)
         {
-            canThrowAttack = true; 
+            canThrowAttack = true;
         }
-        
+        if (isLadder && Mathf.Abs(vertical) > 0f)
+        {
+            Debug.Log("Climbing");
+            isClimbing = true;
+        }
+        else
+        {
+            isClimbing = false;
+        }
+
     }
 
     private void FixedUpdate()
     {
-        rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
-        animator.SetBool("enSuelo", IsGrounded());
+        if (!isWallSliding)
+        {
+            rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+        }
+        if(gameManager.sePuedeMover){
+            animator.SetBool("enSuelo", IsGrounded());
+        }else{
+            animator.SetBool("enSuelo", true);
+        }
+        
+        animator.SetBool("isClimbing", false);
         if (isClimbing)
-        {   
-            animator.SetBool("isClimbing", isClimbing);
-            if (horizontal != 0f)
-            {
-                rb.velocity = new Vector2(rb.velocity.x, horizontal * speed);
-            }
+        {
+            rb.gravityScale = 0f;
+            rb.velocity = new Vector2(rb.velocity.x, vertical * speed);
+            animator.SetBool("isClimbing", true);
         }
         else
         {
-            animator.SetBool("isClimbing", false);
-        }
-        if (!isWallJumping)
-        {
-            rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+            rb.gravityScale = 5f;
         }
     }
 
     public void Move(InputAction.CallbackContext context)
     {
-        horizontal = context.ReadValue<Vector2>().x;
+        if(gameManager.sePuedeMover && gameManager.vidas > 0){
+            horizontal = context.ReadValue<Vector2>().x;
+        }else if(gameManager.vidas>0 && !gameManager.sePuedeMover){
+            horizontal = 0; 
+        }else{
+            horizontal = 0;
+        }
     }
 
     public void Jump()
     {
-        if (!animator.GetCurrentAnimatorStateInfo(0).IsTag("golpe") ||  !animator.GetCurrentAnimatorStateInfo(0).IsTag("lanzar") || !animator.GetCurrentAnimatorStateInfo(0).IsTag("lanzarMagia"))
+        if (gameManager.sePuedeMover && gameManager.vidas > 0)
         {
             if (IsGrounded())
             {
@@ -168,20 +189,12 @@ public class PlayerMovement : MonoBehaviour
             {
                 WallJump();
             }
-        
         }
     }
 
     public void Climb(InputAction.CallbackContext context)
     {
-        if (context.performed && isClimbing)
-        {
-            horizontal = context.ReadValue<Vector2>().y;
-        }
-        else if (context.canceled && isClimbing)
-        {
-            horizontal = 0f;
-        }
+        vertical = context.ReadValue<float>();
     }
 
     private bool IsGrounded()
@@ -201,9 +214,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.CompareTag("stairs"))
         {
-            isClimbing = true;
-            rb.gravityScale = 0f; 
-            rb.velocity = Vector2.zero;
+            isLadder = true;
         }
     }
 
@@ -211,61 +222,66 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.CompareTag("stairs"))
         {
+            isLadder = false;
             isClimbing = false;
-            horizontal = 0f;
-            rb.gravityScale = 4f; 
         }
     }
 
     public void Attack(InputAction.CallbackContext context)
     {
-        if (context.performed && canAttack)
-        {
-            animator.SetTrigger("golpe");
-            
-            canAttack = false;
-            lastAttackTime = Time.time;
+        if(gameManager.sePuedeMover && gameManager.vidas > 0){
+            if (context.performed && canAttack)
+            {
+                animator.SetTrigger("golpe");
+
+                canAttack = false;
+                lastAttackTime = Time.time;
+            }
         }
     }
 
     public void ThrowAttack(InputAction.CallbackContext context)
     {
-        if (context.started && canThrowAttack)
-        {
-            animator.SetTrigger("lanzar");
-            Invoke("InstantiateBullet", 0.3f);
+        if(gameManager.sePuedeMover && gameManager.vidas > 0){
+            if (context.started && canThrowAttack)
+            {
+                animator.SetTrigger("lanzar");
+                Invoke("InstantiateBullet", 0.3f);
 
-            canThrowAttack = false;
-            lastThrowAttackTime = Time.time;
+                canThrowAttack = false;
+                lastThrowAttackTime = Time.time;
 
+            }
         }
+
 
     }
 
-    private void InstantiateBullet(){
-        bullets = Instantiate(bullet, shootingPoint);
-        bullets.GetComponent<Rigidbody2D>().velocity = new Vector2(posicionDisparo,0);
-        bullets.transform.parent = null;
+    private void InstantiateBullet()
+    {
+        bullets = Instantiate(bullet, shootingPoint.position, shootingPoint.rotation);
+        bullets.GetComponent<Rigidbody2D>().velocity = new Vector2(posicionDisparo, 0);
     }
 
     public void MagicAttack(InputAction.CallbackContext context)
     {
-        if (context.started && canMagicAttack)
-        {
-            animator.SetTrigger("lanzarMagia");
-            Invoke("InstantiateBulletMagic", 0.3f);
+        if(gameManager.sePuedeMover && gameManager.vidas > 0){
+            if (context.started && canMagicAttack)
+            {
+                animator.SetTrigger("lanzarMagia");
+                Invoke("InstantiateBulletMagic", 0.3f);
 
-            mana -=costoMana;
-            canMagicAttack = false;
-            lastMagicAttackTime = Time.time;
+                mana -= costoMana;
+                canMagicAttack = false;
+                lastMagicAttackTime = Time.time;
+            }
         }
-
     }
 
-    private void InstantiateBulletMagic(){
-        bulletsMagic = Instantiate(magicBullet, shootingPointMagic);
-        bulletsMagic.GetComponent<Rigidbody2D>().velocity = new Vector2(posicionDisparoMagia,0);
-        bulletsMagic.transform.parent = null;
+    private void InstantiateBulletMagic()
+    {
+        bulletsMagic = Instantiate(magicBullet, shootingPointMagic.position, shootingPointMagic.rotation);
+        bulletsMagic.GetComponent<Rigidbody2D>().velocity = new Vector2(posicionDisparoMagia, 0);
     }
 
     private void StopWallJumping()
@@ -277,16 +293,18 @@ public class PlayerMovement : MonoBehaviour
     {
         if (IsWalled() && !IsGrounded() && horizontal != 0f)
         {
-            rb.gravityScale = 15f; 
+            Debug.Log("Pared");
+            rb.gravityScale = 20f;
             isWallSliding = true;
             rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -wallSlidingSpeed, float.MaxValue));
         }
         else
         {
-            rb.gravityScale=5f;
+            rb.gravityScale = 5f;
             isWallSliding = false;
         }
     }
+
     private bool IsWalled()
     {
         return Physics2D.OverlapCircle(wallCheck.position, 0.2f, wall);
@@ -326,7 +344,7 @@ public class PlayerMovement : MonoBehaviour
                 Invoke(nameof(StopWallJumping), wallJumpingDuration);
             }
         }
-        else if (InputSystem.GetDevice<Gamepad>() != null)
+        if (InputSystem.GetDevice<Gamepad>() != null)
         {
             if (Gamepad.current.buttonSouth.wasPressedThisFrame && wallJumpingCounter > 0f)
             {
@@ -352,9 +370,15 @@ public class PlayerMovement : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(0.5f);
-            if(mana < 100){
-                mana+=1;
+            if (mana < 100)
+            {
+                mana += 1;
             }
         }
+    }
+
+    public void DestruirProtagonista()
+    {
+        Destroy(gameObject);
     }
 }
