@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System;
 
 public class Npc_interaction : MonoBehaviour
 {
@@ -98,5 +99,6 @@ public class Npc_interaction : MonoBehaviour
         if(other.CompareTag("Player"))
             playerIsClose = false;
             zeroText();
+            Array.Clear(dialogue, 0, dialogue.Length);
     }
 }

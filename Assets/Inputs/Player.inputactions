@@ -60,9 +60,9 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Interact",
+                    "name": "PasarDialogo",
                     "type": "Button",
-                    "id": "4714727c-eb7b-4d53-bc71-1c94c30dab5c",
+                    "id": "507ae356-0045-49c0-9df4-b34419233199",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -230,19 +230,19 @@
                     "path": "<Keyboard>/escape",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Keyboard&Mouse",
                     "action": "Pause",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "78afdde4-b0c4-4957-911f-275898a1338f",
-                    "path": "<Keyboard>/e",
+                    "id": "7298067e-6153-40be-8dc3-fe74e1c0edaa",
+                    "path": "<Keyboard>/p",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
-                    "action": "Interact",
+                    "action": "Pause",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -344,6 +344,17 @@
                     "action": "Climb",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "bf342d55-12d8-4e6e-b3b1-f6553a089fe2",
+                    "path": "<Keyboard>/enter",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PasarDialogo",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
