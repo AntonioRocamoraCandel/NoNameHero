@@ -92,6 +92,7 @@ public class GameManager : MonoBehaviour
             playerMovement.animator.SetTrigger("death");
         }
             playerMovement.audioSource.PlayOneShot(playerMovement.deathSound);
+            audioSource.mute = true;
             StartCoroutine(EsperarYReiniciar(tiempoEspera));
         }
     }
