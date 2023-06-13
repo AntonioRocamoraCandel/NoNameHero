@@ -10,7 +10,7 @@ public class Npc_interaction : MonoBehaviour
     public GameObject dialoguePanel;
     public TextMeshProUGUI dialogueText;
     public TextMeshProUGUI NpcNameText;
-    public string[] dialogue;
+    public List<string> dialogue;
     public string NpcName;
     private int index;
     public GameObject interrogacion;
@@ -20,7 +20,7 @@ public class Npc_interaction : MonoBehaviour
 
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -75,7 +75,7 @@ public class Npc_interaction : MonoBehaviour
     public void NextLine()
     {   
         buttonContinue.SetActive(false);
-        if(index < dialogue.Length -1)
+        if(index < dialogue.Count -1)
         {
             index++;
             dialogueText.text = "";
@@ -90,15 +90,14 @@ public class Npc_interaction : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.CompareTag("Player"))
+        if(other.CompareTag("Heroe"))
             playerIsClose = true;
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if(other.CompareTag("Player"))
+        if(other.CompareTag("Heroe"))
             playerIsClose = false;
             zeroText();
-            Array.Clear(dialogue, 0, dialogue.Length);
     }
 }

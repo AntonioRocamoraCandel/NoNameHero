@@ -9,11 +9,11 @@ public class CoinDestroy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+        inventory = GameObject.FindGameObjectWithTag("Heroe").GetComponent<Inventory>();
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        if(other.tag == "Player")
+        if(other.tag == "Heroe")
         {
             inventory.coins += 1;
             Destroy(gameObject);

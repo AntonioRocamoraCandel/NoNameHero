@@ -19,7 +19,7 @@ public class Chest : MonoBehaviour {
 
     private void OnTriggerStay2D(Collider2D other) {
 
-        if(other.CompareTag("Player")) {
+        if(other.CompareTag("Heroe")) {
 
             if(Input.GetKeyDown(KeyCode.E) && opened == false) {
 
