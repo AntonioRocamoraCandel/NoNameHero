@@ -105,7 +105,7 @@ public class GameManager : MonoBehaviour
     {
         yield return new WaitForSeconds(tiempo);
         playerMovement.DestruirProtagonista();
-        SceneManager.LoadScene("SceneLevel2");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     private IEnumerator PerderControl(){
