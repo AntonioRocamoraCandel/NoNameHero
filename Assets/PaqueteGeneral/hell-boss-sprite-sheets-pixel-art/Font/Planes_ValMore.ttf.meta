@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1616dac7b1b685d49bb036636a65f054
+guid: b0da49915647f364786a7b24992adebb
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -11,12 +11,9 @@ TrueTypeFontImporter:
   fontNames:
   - Planes_ValMore
   fallbackFontReferences:
-  - {fileID: 12800000, guid: dd81ffcd6f03d5c46b9f873e978dcb21, type: 3}
-  - {fileID: 12800000, guid: 1336bd3877a26044a98f7df1947f3850, type: 3}
-  - {fileID: 12800000, guid: 03dae7e1295451245971cdbdd53eddab, type: 3}
-  - {fileID: 12800000, guid: 93b615275edc91041805a5ea9dbc569b, type: 3}
-  - {fileID: 12800000, guid: 5bc4a24b9c92ddc41a380369cf40118b, type: 3}
-  - {fileID: 12800000, guid: e4d102b49a2c66d498a8ffc252cc31e9, type: 3}
+  - {fileID: 12800000, guid: 20c302f553e830e4e9e88247e20e4d69, type: 3}
+  - {fileID: 12800000, guid: b1ede74a75b208843b9f0f56e1afa310, type: 3}
+  - {fileID: 12800000, guid: 0cf21724852f81a4e9939f8df78bef03, type: 3}
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1

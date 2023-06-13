@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a8fc2db92abb4b349b04934c3f8cccf6
+guid: 8d55102199145b74ab10dc493b2bb49f
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -11,15 +11,20 @@ TrueTypeFontImporter:
   fontNames:
   - Planes_ValMore
   fallbackFontReferences:
-  - {fileID: 12800000, guid: dd81ffcd6f03d5c46b9f873e978dcb21, type: 3}
-  - {fileID: 12800000, guid: 1336bd3877a26044a98f7df1947f3850, type: 3}
-  - {fileID: 12800000, guid: 03dae7e1295451245971cdbdd53eddab, type: 3}
-  - {fileID: 12800000, guid: c6f25bbc21090f645823a9031932596c, type: 3}
-  - {fileID: 12800000, guid: 93b615275edc91041805a5ea9dbc569b, type: 3}
-  - {fileID: 12800000, guid: 5bc4a24b9c92ddc41a380369cf40118b, type: 3}
-  - {fileID: 12800000, guid: e4d102b49a2c66d498a8ffc252cc31e9, type: 3}
-  - {fileID: 12800000, guid: 1616dac7b1b685d49bb036636a65f054, type: 3}
-  - {fileID: 12800000, guid: 96c6f0d70b548104998a43294ee69e22, type: 3}
+  - {fileID: 12800000, guid: 20c302f553e830e4e9e88247e20e4d69, type: 3}
+  - {fileID: 12800000, guid: a7f43cadf07830e4e8c2f56e72f241d9, type: 3}
+  - {fileID: 12800000, guid: 79ef87aa5d0162a40bcd0c1f869c6ea5, type: 3}
+  - {fileID: 12800000, guid: b1ede74a75b208843b9f0f56e1afa310, type: 3}
+  - {fileID: 12800000, guid: 44468011aaaa0124aa45305a2efbdf82, type: 3}
+  - {fileID: 12800000, guid: b0da49915647f364786a7b24992adebb, type: 3}
+  - {fileID: 12800000, guid: f9019f6bb87f4ab4d87a8f4269b2fe5a, type: 3}
+  - {fileID: 12800000, guid: 3d37144bda7254e4ca41098f6fb8d12c, type: 3}
+  - {fileID: 12800000, guid: b56058bf73a963f40aec528b4fffc0c2, type: 3}
+  - {fileID: 12800000, guid: 5cdbd39dd7fc89e43b4b956f7a8dfef9, type: 3}
+  - {fileID: 12800000, guid: 0cf21724852f81a4e9939f8df78bef03, type: 3}
+  - {fileID: 12800000, guid: 3381e514a33ed9d4b8b51a05796e4b86, type: 3}
+  - {fileID: 12800000, guid: 3a7a0cd9238cc2f4da022d2f92d5ddc5, type: 3}
+  - {fileID: 12800000, guid: fbc15ded5882441488daa65273afa9b2, type: 3}
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1

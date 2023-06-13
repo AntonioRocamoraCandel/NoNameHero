@@ -1,24 +1,2 @@
 fileFormatVersion: 2
-guid: 1336bd3877a26044a98f7df1947f3850
-TrueTypeFontImporter:
-  externalObjects: {}
-  serializedVersion: 4
-  fontSize: 16
-  forceTextureCase: -2
-  characterSpacing: 0
-  characterPadding: 1
-  includeFontData: 1
-  fontNames:
-  - Planes_ValMore
-  fallbackFontReferences:
-  - {fileID: 12800000, guid: dd81ffcd6f03d5c46b9f873e978dcb21, type: 3}
-  - {fileID: 12800000, guid: 03dae7e1295451245971cdbdd53eddab, type: 3}
-  - {fileID: 12800000, guid: 5bc4a24b9c92ddc41a380369cf40118b, type: 3}
-  customCharacters: 
-  fontRenderingMode: 0
-  ascentCalculationMode: 1
-  useLegacyBoundsCalculation: 0
-  shouldRoundAdvanceValue: 1
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
+guid: 359d79c9d2bdaca49baf26e74b9f7f31

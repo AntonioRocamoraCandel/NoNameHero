@@ -3,7 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - ground
+  - wall
+  - stairs
+  - background
+  - spikes
+  - Enemigo
+  - Heroe
   layers:
   - Default
   - TransparentFX
@@ -14,11 +21,11 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - ground
+  - Background
+  - Foreground
+  - wall
   - 
   - 
   - 
