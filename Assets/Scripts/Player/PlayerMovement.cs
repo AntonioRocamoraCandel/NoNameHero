@@ -294,6 +294,11 @@ public class PlayerMovement : MonoBehaviour
     {
         bulletsMagic = Instantiate(magicBullet, shootingPointMagic.position, shootingPointMagic.rotation);
         bulletsMagic.GetComponent<Rigidbody2D>().velocity = new Vector2(posicionDisparoMagia, 0);
+        if(posicionDisparoMagia<0){
+            Vector3 scale = bulletsMagic.transform.localScale;
+            scale.x = -Mathf.Abs(scale.x);
+            bulletsMagic.transform.localScale = scale;
+        }
     }
 
     private void StopWallJumping()
