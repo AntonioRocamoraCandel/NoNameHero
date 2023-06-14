@@ -7,7 +7,7 @@ public class Menu_Actions : MonoBehaviour
 {
     public void Jugar()
     {
-        SceneManager.LoadScene("SceneLevel2");
+        SceneManager.LoadScene("City");
     }
 
     public void Salir()
