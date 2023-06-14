@@ -3,21 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using System;
 
 public class Npc_interaction : MonoBehaviour
 {
     public GameObject dialoguePanel;
     public TextMeshProUGUI dialogueText;
     public TextMeshProUGUI NpcNameText;
-    public string[] dialogue;
     public string NpcName;
-    private int index;
     public GameObject interrogacion;
     public GameObject buttonContinue;
     public float wordSpeed;
     public bool playerIsClose;
-    public int pasoCiudad;
+    public string pasoCiudad;
 
     void Start()
     {
@@ -27,7 +24,7 @@ public class Npc_interaction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {   
-        if(playerIsClose)
+        if (playerIsClose)
         {
             interrogacion.SetActive(true);
         }
@@ -36,8 +33,7 @@ public class Npc_interaction : MonoBehaviour
             interrogacion.SetActive(false);
         }
 
-
-        if(Input.GetKeyDown(KeyCode.E) && playerIsClose)
+        if (Input.GetKeyDown(KeyCode.E) && playerIsClose)
         {
             if (dialoguePanel.activeInHierarchy)
             {
@@ -48,7 +44,6 @@ public class Npc_interaction : MonoBehaviour
                 buttonContinue.SetActive(false);
                 dialogueText.text = "";
                 dialoguePanel.SetActive(true);
-                NpcNameText.text = "";
                 NpcNameText.text = NpcName;
                 StartCoroutine(Typing());
             }
@@ -58,45 +53,40 @@ public class Npc_interaction : MonoBehaviour
     public void zeroText()
     {
         dialogueText.text = "";
-        index = 0;
         dialoguePanel.SetActive(false);
     }
 
     IEnumerator Typing()
-    {
-        foreach(char letter in dialogue[index].ToCharArray())
+    {   
+        DialogosNpcs dialogosNpcs = GetComponent<DialogosNpcs>();
+        string dialogue = dialogosNpcs.FindDialogueByPositions(NpcName, pasoCiudad);
+        if (dialogue != null)
         {
-            dialogueText.text += letter;
-            yield return new WaitForSeconds(wordSpeed);
+            foreach (char letter in dialogue.ToCharArray())
+            {
+                dialogueText.text += letter;
+                yield return new WaitForSeconds(wordSpeed);
+            }
         }
         buttonContinue.SetActive(true);
     }
 
     public void NextLine()
     {   
-        buttonContinue.SetActive(false);
-        if(index < dialogue[index].Length - 1)
-        {
-            index++;
-            dialogueText.text = "";
-            StartCoroutine(Typing());
-        }
-        else
-        {
-            zeroText();
-        }
+        zeroText();
     }
-    
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.CompareTag("Heroe"))
+        if (other.CompareTag("Heroe"))
+        {
             playerIsClose = true;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if(other.CompareTag("Heroe"))
+        if (other.CompareTag("Heroe"))
         {
             playerIsClose = false;
             zeroText();
