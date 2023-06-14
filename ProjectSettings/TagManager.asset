@@ -11,6 +11,9 @@ TagManager:
   - spikes
   - Enemigo
   - Heroe
+  - Coin
+  - Npc
+  - Object bacground
   layers:
   - Default
   - TransparentFX

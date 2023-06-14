@@ -10,13 +10,14 @@ public class Npc_interaction : MonoBehaviour
     public GameObject dialoguePanel;
     public TextMeshProUGUI dialogueText;
     public TextMeshProUGUI NpcNameText;
-    public List<string> dialogue;
+    public string[] dialogue;
     public string NpcName;
     private int index;
     public GameObject interrogacion;
     public GameObject buttonContinue;
     public float wordSpeed;
     public bool playerIsClose;
+    public int pasoCiudad;
 
     void Start()
     {
@@ -41,7 +42,6 @@ public class Npc_interaction : MonoBehaviour
             if (dialoguePanel.activeInHierarchy)
             {
                 zeroText();
-                
             }
             else
             {
@@ -75,7 +75,7 @@ public class Npc_interaction : MonoBehaviour
     public void NextLine()
     {   
         buttonContinue.SetActive(false);
-        if(index < dialogue.Count -1)
+        if(index < dialogue[index].Length - 1)
         {
             index++;
             dialogueText.text = "";
@@ -97,7 +97,9 @@ public class Npc_interaction : MonoBehaviour
     private void OnTriggerExit2D(Collider2D other)
     {
         if(other.CompareTag("Heroe"))
+        {
             playerIsClose = false;
             zeroText();
+        }
     }
 }
