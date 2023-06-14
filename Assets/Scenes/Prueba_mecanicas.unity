@@ -1062,7 +1062,7 @@ PrefabInstance:
     - target: {fileID: 5149354332183410609, guid: ad9c36aa4d7a16d4297d38a57bda2d67, type: 3}
       propertyPath: m_ActionEvents.Array.data[16].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1410932574}
+      objectReference: {fileID: 2067902344}
     - target: {fileID: 5149354332183410609, guid: ad9c36aa4d7a16d4297d38a57bda2d67, type: 3}
       propertyPath: m_ActionEvents.Array.data[11].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -1101,7 +1101,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5149354332183410609, guid: ad9c36aa4d7a16d4297d38a57bda2d67, type: 3}
       propertyPath: m_ActionEvents.Array.data[16].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: 
+      value: NextLine
       objectReference: {fileID: 0}
     - target: {fileID: 5149354332183410609, guid: ad9c36aa4d7a16d4297d38a57bda2d67, type: 3}
       propertyPath: m_ActionEvents.Array.data[11].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -1117,7 +1117,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5149354332183410609, guid: ad9c36aa4d7a16d4297d38a57bda2d67, type: 3}
       propertyPath: m_ActionEvents.Array.data[16].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UnityEngine.Behaviour, UnityEngine
+      value: Npc_interaction, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 5149354332183410609, guid: ad9c36aa4d7a16d4297d38a57bda2d67, type: 3}
       propertyPath: m_ActionEvents.Array.data[15].m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
@@ -3670,17 +3670,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7650565893276431796, guid: 1bcb653cf631de0429e91bfd42c8e3e0, type: 3}
   m_PrefabInstance: {fileID: 730286535}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1410932574 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7650565893276431794, guid: 1bcb653cf631de0429e91bfd42c8e3e0, type: 3}
-  m_PrefabInstance: {fileID: 730286535}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1410932572}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1500049866
 GameObject:
   m_ObjectHideFlags: 0
@@ -4841,6 +4830,17 @@ MonoBehaviour:
   - Sir Percival
   - 1
   - "\xBFSab\xEDas que el herrero del pueblo es un excelente m\xFAsico? "
+--- !u!114 &2067902344 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5730068205233862450, guid: 5e6094e971157134a8399dfe60f0e470, type: 3}
+  m_PrefabInstance: {fileID: 1648726187}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2067902337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb591b2fc7892d24f9b975859dcb47d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &2077000992 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9166438991150778781, guid: 2d84a3ab7327d3d4fac05d218c9490dd, type: 3}

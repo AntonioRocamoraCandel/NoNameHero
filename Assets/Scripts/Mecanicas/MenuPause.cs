@@ -14,7 +14,6 @@ public class MenuPause : MonoBehaviour
     public void reanudar()
     {
         Time.timeScale = 1f;
-        menuPause.SetActive(false);
     }
 
     public void reiniciar (){
