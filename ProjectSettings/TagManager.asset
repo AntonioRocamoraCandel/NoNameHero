@@ -17,6 +17,8 @@ TagManager:
   - PiedraHeroe
   - MagiaHeroe
   - AtaqueHeroe
+  - attackCheck
+  - obstacle
   layers:
   - Default
   - TransparentFX

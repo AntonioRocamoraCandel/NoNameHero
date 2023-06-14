@@ -20,7 +20,10 @@ public class EnemyBasic : MonoBehaviour
     //Detectar Collisiones con Heroe y Obstaculos
     bool isCollision = false;
 
-    bool isObstacle = false;
+    bool isDerecha = true;
+
+
+    float rotationDelay = 0.0f;
 
     // Animator 
     private Animator animator;
@@ -34,6 +37,8 @@ public class EnemyBasic : MonoBehaviour
     }
     void FixedUpdate() 
     {
+        rotationDelay = rotationDelay + Time.deltaTime;
+
         animator.SetBool("isColliding", isCollision);
         if(!isCollision){
 
@@ -69,31 +74,26 @@ public class EnemyBasic : MonoBehaviour
             {
                 Vector2 newPosition;
 
-
                 isDetected = false;
                 // Si el personaje ha llegado al límite izquierdo, cambia la dirección del movimiento a la derecha
-                if (transform.position.x <= leftLimit || isObstacle)
+                if (isDerecha)
                 {
                     transform.localScale = new Vector3(-1f, 1f, 1f);
-                    newPosition = new Vector2(rightLimit,transform.position.y);
-                    transform.position = Vector2.MoveTowards(transform.position, newPosition, Time.deltaTime * velocidadMovimiento);
-                   
-                    // Si el personaje ha llegado al límite derecho, cambia la dirección del movimiento a la izquierda
-                }else if(transform.position.x <= rightLimit || isObstacle)
+                    newPosition = new Vector2(transform.position.x+1,transform.position.y);  
+                }else
                 {
                     transform.localScale = new Vector3(1f, 1f, 1f);
-                    newPosition = new Vector2(leftLimit,transform.position.y);
-                    transform.position = Vector2.MoveTowards(transform.position, newPosition, Time.deltaTime * velocidadMovimiento);
+                    newPosition = new Vector2(transform.position.x-1,transform.position.y);
                 }
-                // Aplica el movimiento al Rigidbody2D
-                //rb.velocity = movimiento;
+                transform.position = Vector2.MoveTowards(transform.position, newPosition, Time.deltaTime * velocidadMovimiento);
+               
             }
             
         }
         
     }
 
-    
+
     void OnCollisionStay2D(Collision2D collision)
         {
             if (collision.gameObject.CompareTag("Heroe"))
@@ -102,9 +102,15 @@ public class EnemyBasic : MonoBehaviour
             }
 
             if (collision.gameObject.CompareTag("obstacle")){
-                isObstacle = true;
+                if (rotationDelay > 0.5){
+                    isDerecha = !isDerecha;
+                    rotationDelay = 0;
+                }
+                
             }
         }
+
+    
 
     void OnCollisionExit2D(Collision2D collision)
     {
@@ -114,9 +120,6 @@ public class EnemyBasic : MonoBehaviour
         
         }
 
-        if (collision.gameObject.CompareTag("obstacle")){
-                isObstacle = false;
-        }
     }
 
     
