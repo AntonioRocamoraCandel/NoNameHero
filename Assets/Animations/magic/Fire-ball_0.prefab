@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3297747788353223595}
   m_Layer: 0
   m_Name: Fire-ball_0
-  m_TagString: Untagged
+  m_TagString: MagiaHeroe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

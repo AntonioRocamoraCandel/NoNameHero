@@ -586,12 +586,21 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
+    - target: {fileID: 9168190310337954036, guid: 148bf56990d6dd84382e8eb10ea1593a, type: 3}
+      propertyPath: heal
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 9168190310337954037, guid: 148bf56990d6dd84382e8eb10ea1593a, type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 3167154930866884008}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 148bf56990d6dd84382e8eb10ea1593a, type: 3}
+--- !u!4 &103994186 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2725597845941931312, guid: 670e514112ee6684f9d6e859154dcdb4, type: 3}
+  m_PrefabInstance: {fileID: 4601891694326377996}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &106330404
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -785,6 +794,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 148bf56990d6dd84382e8eb10ea1593a, type: 3}
+--- !u!4 &160771460 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2725597845941931312, guid: 670e514112ee6684f9d6e859154dcdb4, type: 3}
+  m_PrefabInstance: {fileID: 791554640}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &165486777 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5559083517859278151, guid: 138d401cf6c07c341827bb914d022c48, type: 3}
@@ -1879,6 +1893,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 138d401cf6c07c341827bb914d022c48, type: 3}
+--- !u!4 &539909744 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2725597845941931312, guid: 670e514112ee6684f9d6e859154dcdb4, type: 3}
+  m_PrefabInstance: {fileID: 755180648}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &542700191
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2669,11 +2688,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 670e514112ee6684f9d6e859154dcdb4, type: 3}
---- !u!4 &755180649 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4601891694830382075, guid: 670e514112ee6684f9d6e859154dcdb4, type: 3}
-  m_PrefabInstance: {fileID: 755180648}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &766813834 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5559083517859278151, guid: 138d401cf6c07c341827bb914d022c48, type: 3}
@@ -2741,11 +2755,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 670e514112ee6684f9d6e859154dcdb4, type: 3}
---- !u!4 &791554641 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4601891694830382075, guid: 670e514112ee6684f9d6e859154dcdb4, type: 3}
-  m_PrefabInstance: {fileID: 791554640}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &791653131
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5901,6 +5910,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9168190310337954036, guid: 148bf56990d6dd84382e8eb10ea1593a, type: 3}
+      propertyPath: heal
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 9168190310337954037, guid: 148bf56990d6dd84382e8eb10ea1593a, type: 3}
       propertyPath: target
       value: 
@@ -6127,13 +6140,12 @@ Transform:
   - {fileID: 1373474375}
   - {fileID: 654694709}
   - {fileID: 1061913187}
-  - {fileID: 1644922359}
-  - {fileID: 755180649}
-  - {fileID: 791554641}
+  - {fileID: 539909744}
   - {fileID: 291330752}
   - {fileID: 1403610600}
   - {fileID: 1119340339}
   - {fileID: 1452700804}
+  - {fileID: 160771460}
   - {fileID: 1623720004}
   - {fileID: 111338940}
   - {fileID: 1688881245}
@@ -6162,6 +6174,7 @@ Transform:
   - {fileID: 143891434}
   - {fileID: 234136462}
   - {fileID: 92054841}
+  - {fileID: 103994186}
   - {fileID: 956643255}
   - {fileID: 766813834}
   - {fileID: 477847109}
@@ -6723,11 +6736,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!4 &1644922359 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4601891694830382075, guid: 670e514112ee6684f9d6e859154dcdb4, type: 3}
-  m_PrefabInstance: {fileID: 4601891694326377996}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1645362968
 PrefabInstance:
   m_ObjectHideFlags: 0
