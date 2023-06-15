@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Linq;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -134,7 +136,6 @@ public class PlayerMovement : MonoBehaviour
         }
         if (isLadder && Mathf.Abs(vertical) > 0f)
         {
-            Debug.Log("Climbing");
             isClimbing = true;
         }
         else
@@ -223,18 +224,50 @@ public class PlayerMovement : MonoBehaviour
         transform.localScale = localScale;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+private void OnTriggerEnter2D(Collider2D collision)
+{
+    if (collision.CompareTag("stairs"))
     {
-        if (collision.CompareTag("stairs"))
-        {
-            isLadder = true;
-        }
+        isLadder = true;
+    }
 
-        if (collision.CompareTag("cambioEscena"))
+    if (collision.CompareTag("cambioEscena"))
+    {
+        Scene currentScene = SceneManager.GetActiveScene();
+        string sceneName = currentScene.name;
+
+        string[] sceneOrder = { "City", "SceneLevel2", "City", "Antonio", "City", "kawtar" };
+
+        if (sceneOrder.Any(scene => scene.Equals(sceneName, StringComparison.OrdinalIgnoreCase)))
         {
-            SceneManager.LoadScene("City");
+            int currentIndex = Array.IndexOf(sceneOrder, sceneName);
+            Debug.Log(currentIndex);
+            Debug.Log(sceneOrder);
+
+            if (sceneName.Equals("SceneLevel2", StringComparison.OrdinalIgnoreCase))
+            {
+                SceneManager.LoadScene("City");
+                Debug.Log("Cityyyyy");
+            }
+            else
+            {
+                for (int i = currentIndex + 1; i < sceneOrder.Length; i++)
+                {
+                    if (!sceneOrder[i].Equals("City", StringComparison.OrdinalIgnoreCase))
+                    {
+                        SceneManager.LoadScene(sceneOrder[i]);
+                        Debug.Log(sceneOrder[i]);
+                        return;
+                    }
+                }
+
+                SceneManager.LoadScene("City");
+            }
         }
     }
+}
+
+
 
     private void OnTriggerExit2D(Collider2D collision)
     {
@@ -316,7 +349,6 @@ public class PlayerMovement : MonoBehaviour
     {
         if (IsWalled() && !IsGrounded() && horizontal != 0f)
         {
-            Debug.Log("Pared");
             rb.gravityScale = 20f;
             isWallSliding = true;
             rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -wallSlidingSpeed, float.MaxValue));

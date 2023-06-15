@@ -1343,6 +1343,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3760535020393032152, guid: 378924df747e0b047b490b60e399156f, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 97ce1c7c3d47a744eb07babfed4e7039, type: 3}
     - target: {fileID: 3760535020393032154, guid: 378924df747e0b047b490b60e399156f, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -25665,15 +25669,15 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 402750528f4133546a46891a6f0d54ba, type: 3}
     - target: {fileID: 4302975343611222588, guid: 5d0a671e4be967f4f98d1c3bd1b5c40b, type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 0.033018887
       objectReference: {fileID: 0}
     - target: {fileID: 4302975343611222588, guid: 5d0a671e4be967f4f98d1c3bd1b5c40b, type: 3}
       propertyPath: m_Color.g
-      value: 1
+      value: 0.07127195
       objectReference: {fileID: 0}
     - target: {fileID: 4302975343611222588, guid: 5d0a671e4be967f4f98d1c3bd1b5c40b, type: 3}
       propertyPath: m_Color.r
-      value: 0.008892536
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4302975343611222588, guid: 5d0a671e4be967f4f98d1c3bd1b5c40b, type: 3}
       propertyPath: m_WasSpriteAssigned

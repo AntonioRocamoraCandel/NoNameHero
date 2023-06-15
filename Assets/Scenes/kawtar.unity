@@ -2339,7 +2339,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2472075398514849978, guid: e05056cf813e920409821e299a0c8d75, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2730610561091478428, guid: e05056cf813e920409821e299a0c8d75, type: 3}
       propertyPath: m_fontSize
@@ -71912,6 +71912,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3760535020393032152, guid: 378924df747e0b047b490b60e399156f, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5117291decadabf48ad6a434fbc9f418, type: 3}
     - target: {fileID: 3760535020393032154, guid: 378924df747e0b047b490b60e399156f, type: 3}
       propertyPath: m_Name
       value: GameManager

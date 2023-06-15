@@ -985,7 +985,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -21013,6 +21013,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3760535020393032152, guid: 378924df747e0b047b490b60e399156f, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 22a5e244854506241b2fc28b15c14463, type: 3}
     - target: {fileID: 3760535020393032154, guid: 378924df747e0b047b490b60e399156f, type: 3}
       propertyPath: m_Name
       value: GameManager

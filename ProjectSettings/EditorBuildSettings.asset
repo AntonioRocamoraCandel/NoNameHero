@@ -5,21 +5,18 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: 0a318431261730c429ca6c457a4adbcb
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 1
-    path: Assets/Scenes/kawtar.unity
-    guid: e257b662740b87242b454db1743c73de
   - enabled: 1
     path: Assets/Scenes/City.unity
     guid: f0aef2b79f5b90e4280c149892aff1b0
+  - enabled: 1
+    path: Assets/Scenes/SceneLevel2.unity
+    guid: e290f0061e8a7e44d99eaad8b3dd419e
+  - enabled: 1
+    path: Assets/Scenes/kawtar.unity
+    guid: e257b662740b87242b454db1743c73de
   - enabled: 1
     path: Assets/Scenes/Antonio.unity
     guid: afff904acca783d41855673f47303631
