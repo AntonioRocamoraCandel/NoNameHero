@@ -15,15 +15,21 @@ public class Npc_interaction : MonoBehaviour
     public float wordSpeed;
     public bool playerIsClose;
     public string pasoCiudad;
+    private DialogosNpcs dialogosNpcs;
 
     void Start()
     {
-        
+        dialogosNpcs = GetComponent<DialogosNpcs>();
     }
 
     // Update is called once per frame
     void Update()
-    {   
+    {
+        if (!dialoguePanel.activeSelf)
+        {
+            dialogueText.text = "";
+        }
+
         if (playerIsClose)
         {
             interrogacion.SetActive(true);
@@ -58,13 +64,14 @@ public class Npc_interaction : MonoBehaviour
 
     IEnumerator Typing()
     {   
-        DialogosNpcs dialogosNpcs = GetComponent<DialogosNpcs>();
         string dialogue = dialogosNpcs.FindDialogueByPositions(NpcName, pasoCiudad);
         if (dialogue != null)
         {
+            string fullText = "";
             foreach (char letter in dialogue.ToCharArray())
             {
-                dialogueText.text += letter;
+                fullText += letter;
+                dialogueText.text = fullText;
                 yield return new WaitForSeconds(wordSpeed);
             }
         }
