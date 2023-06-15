@@ -17,8 +17,13 @@ public class EnemyBasic : MonoBehaviour
     // Variable que dirá si se ha detectado o no al enemigo, para realizar solo la detección cuando lo ha visto después de perderlo de vista
     bool isDetected = false;
 
-    //Detectar
+    //Detectar Collisiones con Heroe y Obstaculos
     bool isCollision = false;
+
+    bool isDerecha = true;
+
+
+    float rotationDelay = 0.0f;
 
     // Animator 
     private Animator animator;
@@ -32,8 +37,10 @@ public class EnemyBasic : MonoBehaviour
     }
     void FixedUpdate() 
     {
+        rotationDelay = rotationDelay + Time.deltaTime;
+
         animator.SetBool("isColliding", isCollision);
-        if(target != null && !isCollision){
+        if(!isCollision){
 
             float distance = Mathf.Abs(transform.position.x - target.transform.position.x);
             
@@ -67,48 +74,52 @@ public class EnemyBasic : MonoBehaviour
             {
                 Vector2 newPosition;
 
-
                 isDetected = false;
                 // Si el personaje ha llegado al límite izquierdo, cambia la dirección del movimiento a la derecha
-                if (transform.position.x <= leftLimit)
+                if (isDerecha)
                 {
                     transform.localScale = new Vector3(-1f, 1f, 1f);
-                    newPosition = new Vector2(rightLimit,transform.position.y);
-                    //movimiento = Vector2.right * velocidadMovimiento;
-                   
-                    // Si el personaje ha llegado al límite derecho, cambia la dirección del movimiento a la izquierda
-                }
-                else 
+                    newPosition = new Vector2(transform.position.x+1,transform.position.y);  
+                }else
                 {
                     transform.localScale = new Vector3(1f, 1f, 1f);
-                    //movimiento = Vector2.left * velocidadMovimiento;
-                    newPosition = new Vector2(leftLimit,transform.position.y);
+                    newPosition = new Vector2(transform.position.x-1,transform.position.y);
                 }
-
-                 transform.position = Vector2.MoveTowards(transform.position, newPosition, Time.deltaTime * velocidadMovimiento);
-                // Aplica el movimiento al Rigidbody2D
-                //rb.velocity = movimiento;
+                transform.position = Vector2.MoveTowards(transform.position, newPosition, Time.deltaTime * velocidadMovimiento);
+               
             }
             
         }
         
     }
 
-    
+
     void OnCollisionStay2D(Collision2D collision)
         {
             if (collision.gameObject.CompareTag("Heroe"))
             {
                 isCollision = true;
             }
+
+            if (collision.gameObject.CompareTag("obstacle")){
+                if (rotationDelay > 0.5){
+                    isDerecha = !isDerecha;
+                    rotationDelay = 0;
+                }
+                
+            }
         }
+
+    
 
     void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Heroe"))
         {
             isCollision = false;
+        
         }
+
     }
 
     

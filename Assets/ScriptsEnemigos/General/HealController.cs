@@ -3,70 +3,98 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class HealController : MonoBehaviour
-    
+
 {
     private Animator animator;
     public int heal;
-    
+
+    private float attackDelay = 0.0f;
+
     void Start()
     {
         animator = GetComponent<Animator>();
     }
 
-    
+
     void Update()
     {
-       
+        attackDelay = attackDelay + Time.deltaTime;
     }
 
-    void OnCollisionStay2D(Collision2D collision){
-        
-        
-            if (collision.gameObject.CompareTag("PiedraHeroe"))
+    void OnCollisionStay2D(Collision2D collision)
+    {
+
+        if (collision.gameObject.CompareTag("PiedraHeroe"))
+        {
+
+            getDamage(25);
+        }
+
+    }
+
+    void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("MagiaHeroe"))
+        {
+
+            getDamage(75);
+        }
+
+        if (collision.gameObject.CompareTag("attackCheck"))
+        {
+            getDamage(25);
+            GameObject parentObject = collision.gameObject.transform.parent.gameObject;
+
+            Animator heroeAnimator = parentObject.GetComponent<Animator>();
+            AnimatorStateInfo stateInfo = heroeAnimator.GetCurrentAnimatorStateInfo(0);
+
+            Debug.Log("Eeeee");
+            // Comprobar si la animación "golpe" se está reproduciendo
+            if (stateInfo.IsName("golpe"))
             {
-           
+                Debug.Log("Recibo daño");
                 getDamage(25);
             }
-        
-    }
-    
-    void OnTriggerStay2D(Collider2D collision){
-        
-        
-            if (collision.gameObject.CompareTag("MagiaHeroe"))
-            {
-           
-                getDamage(75);
-            }
-        
-    }
-    
 
-    
-
-    public void getDamage(int dmg){
-        heal = heal - dmg;
-        Debug.Log("Authc");
-        
-        if (heal <= 0){
-            StartCoroutine(getDeath());
-        }else{
-            animator.Play("Hurt");
         }
+
     }
 
-    IEnumerator getDeath()
+
+    public void getDamage(int dmg)
     {
-        animator.Play("Death"); // Inicia la animación
+        if (attackDelay > 0.5f){
+            attackDelay = 0;
+            heal = heal - dmg;
 
-        // Espera hasta que la animación termine
-        while (animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1f)
-        {
-            yield return null;
+            if (heal <= 0)
+            {
+                PlayDeathAnimation();
+            }
+            else
+            {
+                animator.Play("Hurt");
+            }
         }
+        
+    }
+
+    public void PlayDeathAnimation()
+    {
+        StartCoroutine(PlayDeathAnimationCoroutine());
+    }
+
+    private IEnumerator PlayDeathAnimationCoroutine()
+    {
+        // Inicia la animación
+        animator.Play("Death");
+
+        // Espera hasta que la animación termine (tiempo normalizado >= 1.0f)
+        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
 
         // La animación ha terminado, destruye el GameObject
         Destroy(gameObject);
     }
-    
+
+
 }
