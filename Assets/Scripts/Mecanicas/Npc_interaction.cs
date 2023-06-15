@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using TMPro;
 
@@ -16,6 +17,7 @@ public class Npc_interaction : MonoBehaviour
     public bool playerIsClose;
     public string pasoCiudad;
     private DialogosNpcs dialogosNpcs;
+
 
     void Start()
     {
@@ -39,21 +41,24 @@ public class Npc_interaction : MonoBehaviour
             interrogacion.SetActive(false);
         }
 
-        if (Input.GetKeyDown(KeyCode.E) && playerIsClose)
+        if (InputSystem.GetDevice<Keyboard>() != null) 
         {
-            if (dialoguePanel.activeInHierarchy)
+            if (Keyboard.current[Key.E].wasPressedThisFrame && playerIsClose) 
             {
-                zeroText();
+                if (dialoguePanel.activeInHierarchy)
+                {
+                    zeroText();
+                }
+                else
+                {
+                    buttonContinue.SetActive(false);
+                    dialogueText.text = "";
+                    dialoguePanel.SetActive(true);
+                    NpcNameText.text = NpcName;
+                    StartCoroutine(Typing());
+                }
             }
-            else
-            {
-                buttonContinue.SetActive(false);
-                dialogueText.text = "";
-                dialoguePanel.SetActive(true);
-                NpcNameText.text = NpcName;
-                StartCoroutine(Typing());
-            }
-        }
+        }   
     }
     
     public void zeroText()

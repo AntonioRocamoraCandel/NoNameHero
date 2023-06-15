@@ -200,7 +200,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 108015a55183a504d83200c95334a76c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -289,7 +289,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 108015a55183a504d83200c95334a76c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -360,7 +360,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &231396905
 GameObject:
@@ -434,7 +434,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: d3f8ada33967b4046b9155d4f73130c7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -518,7 +518,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 308f7540587c30844a835c596dc2bc55, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -641,7 +641,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: e6ccffac8bde64d40897485e1ff70b29, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1122,96 +1122,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f124a1585e744904ea38327170e27889, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueArray1_0:
-  - Sir Lancelot
-  - 0
-  - "Vaya d\xEDa hermoso, \xBFno crees? A veces olvidamos apreciar la belleza de
-    nuestro entorno."
-  dialogueArray1_1:
-  - Sir Lancelot
-  - 1
-  - "Vaya d\xEDa hermoso, \xBFno crees? A veces olvidamos apreciar la belleza de
-    nuestro entorno."
-  dialogueArray1_2:
-  - Sir Lancelot
-  - 2
-  - "Vaya d\xEDa hermoso, \xBFno crees? A veces olvidamos apreciar la belleza de
-    nuestro entorno."
-  dialogueArray2_0:
-  - Lord Guinevere
-  - 0
-  - "\xA1Cuidado con la cueva de las setas! Se dice que est\xE1 lleno de criaturas
-    peligrosas."
-  dialogueArray2_1:
-  - Lord Guinevere
-  - 1
-  - "\xA1Cuidado con la cueva de las setas! Se dice que est\xE1 lleno de criaturas
-    peligrosas."
-  dialogueArray2_2:
-  - Lord Guinevere
-  - 2
-  - "\xA1Cuidado con la cueva de las setas! Se dice que est\xE1 lleno de criaturas
-    peligrosas."
-  dialogueArray3_0:
-  - Toby
-  - 0
-  - Guau Guau
-  dialogueArray3_1:
-  - Toby
-  - 1
-  - '*Mueve la colita y se deja acariciar*'
-  dialogueArray3_2:
-  - Toby
-  - 2
-  - '*Aullido*'
-  dialogueArray4_0:
-  - Lady Isolde
-  - 0
-  - 'Me encanta ver a los aventureros valientes que vienen a nuestro pueblo. '
-  dialogueArray4_1:
-  - Lady Isolde
-  - 1
-  - 'Me encanta ver a los aventureros valientes que vienen a nuestro pueblo. '
-  dialogueArray4_2:
-  - Lady Isolde
-  - 2
-  - 'Me encanta ver a los aventureros valientes que vienen a nuestro pueblo. '
-  dialogueArray5_0:
-  - Sir Percival
-  - 0
-  - "\xBFSab\xEDas que el herrero del pueblo es un excelente m\xFAsico? "
-  dialogueArray5_1:
-  - Sir Percival
-  - 1
-  - "\xBFSab\xEDas que el herrero del pueblo es un excelente m\xFAsico? "
-  dialogueArray5_2:
-  - Sir Percival
-  - 2
-  - "\xBFSab\xEDas que el herrero del pueblo es un excelente m\xFAsico? "
-  dialogueArray6_0:
-  - Rasputin
-  - 0
-  - Un momento, quien eres, yo a ti te conozco
-  dialogueArray6_1:
-  - Rasputin
-  - 1
-  - Un momento, quien eres, yo a ti te conozco
-  dialogueArray6_2:
-  - Rasputin
-  - 2
-  - Un momento, quien eres, yo a ti te conozco
-  dialogueArray7_0:
-  - Vagabundo
-  - 0
-  - "\xBFSab\xEDas que el herrero del pueblo es un excelente m\xFAsico? "
-  dialogueArray7_1:
-  - Vagabundo
-  - 1
-  - "\xBFSab\xEDas que el herrero del pueblo es un excelente m\xFAsico? "
-  dialogueArray7_2:
-  - Vagabundo
-  - 2
-  - "\xBFSab\xEDas que el herrero del pueblo es un excelente m\xFAsico? "
 --- !u!1 &702154970
 GameObject:
   m_ObjectHideFlags: 0
@@ -1284,7 +1194,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 108015a55183a504d83200c95334a76c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1494,7 +1404,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: fd6bf38daf510c84298c07024886ae85, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1523,7 +1433,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2331252518813246906, guid: 8cb7e1134dc420742841b71d8c7c2c70, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.98687
+      value: -5.01
       objectReference: {fileID: 0}
     - target: {fileID: 2331252518813246906, guid: 8cb7e1134dc420742841b71d8c7c2c70, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1625,96 +1535,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f124a1585e744904ea38327170e27889, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueArray1_0:
-  - Sir Lancelot
-  - 0
-  - "Vaya d\xEDa hermoso, \xBFno crees? A veces olvidamos apreciar la belleza de
-    nuestro entorno."
-  dialogueArray1_1:
-  - Sir Lancelot
-  - 1
-  - "Vaya d\xEDa hermoso, \xBFno crees? A veces olvidamos apreciar la belleza de
-    nuestro entorno."
-  dialogueArray1_2:
-  - Sir Lancelot
-  - 2
-  - "Vaya d\xEDa hermoso, \xBFno crees? A veces olvidamos apreciar la belleza de
-    nuestro entorno."
-  dialogueArray2_0:
-  - Lord Guinevere
-  - 0
-  - "\xA1Cuidado con la cueva de las setas! Se dice que est\xE1 lleno de criaturas
-    peligrosas."
-  dialogueArray2_1:
-  - Lord Guinevere
-  - 1
-  - "\xA1Cuidado con la cueva de las setas! Se dice que est\xE1 lleno de criaturas
-    peligrosas."
-  dialogueArray2_2:
-  - Lord Guinevere
-  - 2
-  - "\xA1Cuidado con la cueva de las setas! Se dice que est\xE1 lleno de criaturas
-    peligrosas."
-  dialogueArray3_0:
-  - Toby
-  - 0
-  - Guau Guau
-  dialogueArray3_1:
-  - Toby
-  - 1
-  - '*Mueve la colita y se deja acariciar*'
-  dialogueArray3_2:
-  - Toby
-  - 2
-  - '*Aullido*'
-  dialogueArray4_0:
-  - Lady Isolde
-  - 0
-  - 'Me encanta ver a los aventureros valientes que vienen a nuestro pueblo. '
-  dialogueArray4_1:
-  - Lady Isolde
-  - 1
-  - 'Me encanta ver a los aventureros valientes que vienen a nuestro pueblo. '
-  dialogueArray4_2:
-  - Lady Isolde
-  - 2
-  - 'Me encanta ver a los aventureros valientes que vienen a nuestro pueblo. '
-  dialogueArray5_0:
-  - Sir Percival
-  - 0
-  - "\xBFSab\xEDas que el herrero del pueblo es un excelente m\xFAsico? "
-  dialogueArray5_1:
-  - Sir Percival
-  - 1
-  - "\xBFSab\xEDas que el herrero del pueblo es un excelente m\xFAsico? "
-  dialogueArray5_2:
-  - Sir Percival
-  - 2
-  - "\xBFSab\xEDas que el herrero del pueblo es un excelente m\xFAsico? "
-  dialogueArray6_0:
-  - Rasputin
-  - 0
-  - Un momento, quien eres, yo a ti te conozco
-  dialogueArray6_1:
-  - Rasputin
-  - 1
-  - Un momento, quien eres, yo a ti te conozco
-  dialogueArray6_2:
-  - Rasputin
-  - 2
-  - Un momento, quien eres, yo a ti te conozco
-  dialogueArray7_0:
-  - Vagabundo
-  - 0
-  - "\xBFSab\xEDas que el herrero del pueblo es un excelente m\xFAsico? "
-  dialogueArray7_1:
-  - Vagabundo
-  - 1
-  - "\xBFSab\xEDas que el herrero del pueblo es un excelente m\xFAsico? "
-  dialogueArray7_2:
-  - Vagabundo
-  - 2
-  - "\xBFSab\xEDas que el herrero del pueblo es un excelente m\xFAsico? "
 --- !u!1001 &953051065
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1729,11 +1549,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2134314539154387383, guid: 1bcb653cf631de0429e91bfd42c8e3e0, type: 3}
       propertyPath: m_fontSize
-      value: 15.03
+      value: 14.55
       objectReference: {fileID: 0}
     - target: {fileID: 2134314539154387383, guid: 1bcb653cf631de0429e91bfd42c8e3e0, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 19c042efed9896f4e95dc697fa51353a, type: 2}
+    - target: {fileID: 2134314539154387383, guid: 1bcb653cf631de0429e91bfd42c8e3e0, type: 3}
       propertyPath: m_fontSizeBase
-      value: 15.03
+      value: 14.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 2134314539154387383, guid: 1bcb653cf631de0429e91bfd42c8e3e0, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -1129695424578915801, guid: 19c042efed9896f4e95dc697fa51353a, type: 2}
+    - target: {fileID: 2134314539154387383, guid: 1bcb653cf631de0429e91bfd42c8e3e0, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5646393759402946593, guid: 1bcb653cf631de0429e91bfd42c8e3e0, type: 3}
       propertyPath: m_text
@@ -1744,8 +1576,16 @@ PrefabInstance:
       value: 20.9
       objectReference: {fileID: 0}
     - target: {fileID: 5646393759402946593, guid: 1bcb653cf631de0429e91bfd42c8e3e0, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 19c042efed9896f4e95dc697fa51353a, type: 2}
+    - target: {fileID: 5646393759402946593, guid: 1bcb653cf631de0429e91bfd42c8e3e0, type: 3}
       propertyPath: m_fontSizeBase
       value: 20.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5646393759402946593, guid: 1bcb653cf631de0429e91bfd42c8e3e0, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7346352967013151787, guid: 1bcb653cf631de0429e91bfd42c8e3e0, type: 3}
       propertyPath: m_SizeDelta.x
@@ -1757,11 +1597,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7346352967013151787, guid: 1bcb653cf631de0429e91bfd42c8e3e0, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -24.872
+      value: -28.5
       objectReference: {fileID: 0}
     - target: {fileID: 7346352967013151787, guid: 1bcb653cf631de0429e91bfd42c8e3e0, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -11
+      value: -10.1
       objectReference: {fileID: 0}
     - target: {fileID: 7650565893219342728, guid: 1bcb653cf631de0429e91bfd42c8e3e0, type: 3}
       propertyPath: m_Pivot.x
@@ -1865,7 +1705,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8030125073800238163, guid: 1bcb653cf631de0429e91bfd42c8e3e0, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 179.6649
+      value: 255.5674
       objectReference: {fileID: 0}
     - target: {fileID: 8030125073800238163, guid: 1bcb653cf631de0429e91bfd42c8e3e0, type: 3}
       propertyPath: m_SizeDelta.y
@@ -1873,7 +1713,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8030125073800238163, guid: 1bcb653cf631de0429e91bfd42c8e3e0, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -99
+      value: -61.0488
       objectReference: {fileID: 0}
     - target: {fileID: 8030125073800238163, guid: 1bcb653cf631de0429e91bfd42c8e3e0, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2004,7 +1844,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 580edbc319dd34742b9f9e9ab625f1d7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2016,6 +1856,67 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1059308559
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1872640123485057121, guid: 37ef3027c7dcbaa449dc1b406f9a29e6, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1872640123485057121, guid: 37ef3027c7dcbaa449dc1b406f9a29e6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -47.695625
+      objectReference: {fileID: 0}
+    - target: {fileID: 1872640123485057121, guid: 37ef3027c7dcbaa449dc1b406f9a29e6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.767424
+      objectReference: {fileID: 0}
+    - target: {fileID: 1872640123485057121, guid: 37ef3027c7dcbaa449dc1b406f9a29e6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1872640123485057121, guid: 37ef3027c7dcbaa449dc1b406f9a29e6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1872640123485057121, guid: 37ef3027c7dcbaa449dc1b406f9a29e6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1872640123485057121, guid: 37ef3027c7dcbaa449dc1b406f9a29e6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1872640123485057121, guid: 37ef3027c7dcbaa449dc1b406f9a29e6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1872640123485057121, guid: 37ef3027c7dcbaa449dc1b406f9a29e6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1872640123485057121, guid: 37ef3027c7dcbaa449dc1b406f9a29e6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1872640123485057121, guid: 37ef3027c7dcbaa449dc1b406f9a29e6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3806176005242867112, guid: 37ef3027c7dcbaa449dc1b406f9a29e6, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 6f94afce3aaa0ba48965ecec5534221e, type: 2}
+    - target: {fileID: 8310055683067667459, guid: 37ef3027c7dcbaa449dc1b406f9a29e6, type: 3}
+      propertyPath: m_Name
+      value: Cofre
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 37ef3027c7dcbaa449dc1b406f9a29e6, type: 3}
 --- !u!1001 &1129292039
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2194,7 +2095,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 60e0fef06c5a16344a82ad5c4ec0a875, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2278,7 +2179,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: f38b771d749be9a4da4269a62a897e2b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2400,6 +2301,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7413853019740434497, guid: 2b6c1320cd733d541ad1f51a313ead1e, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 19c042efed9896f4e95dc697fa51353a, type: 2}
+    - target: {fileID: 7413853019740434497, guid: 2b6c1320cd733d541ad1f51a313ead1e, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7413853019740434499, guid: 2b6c1320cd733d541ad1f51a313ead1e, type: 3}
       propertyPath: m_Layer
       value: 5
@@ -2432,13 +2341,37 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 7413853020479152196, guid: 2b6c1320cd733d541ad1f51a313ead1e, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 19c042efed9896f4e95dc697fa51353a, type: 2}
+    - target: {fileID: 7413853020479152196, guid: 2b6c1320cd733d541ad1f51a313ead1e, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7413853020479152198, guid: 2b6c1320cd733d541ad1f51a313ead1e, type: 3}
       propertyPath: m_Layer
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 7413853020784178796, guid: 2b6c1320cd733d541ad1f51a313ead1e, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 19c042efed9896f4e95dc697fa51353a, type: 2}
+    - target: {fileID: 7413853020784178796, guid: 2b6c1320cd733d541ad1f51a313ead1e, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7413853020784178798, guid: 2b6c1320cd733d541ad1f51a313ead1e, type: 3}
       propertyPath: m_Layer
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7413853021011715841, guid: 2b6c1320cd733d541ad1f51a313ead1e, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 19c042efed9896f4e95dc697fa51353a, type: 2}
+    - target: {fileID: 7413853021011715841, guid: 2b6c1320cd733d541ad1f51a313ead1e, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7413853021011715843, guid: 2b6c1320cd733d541ad1f51a313ead1e, type: 3}
       propertyPath: m_Layer
@@ -3086,7 +3019,7 @@ Transform:
   - {fileID: 1913994319}
   - {fileID: 540379120}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1577100008
 GameObject:
@@ -3160,7 +3093,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: fd6bf38daf510c84298c07024886ae85, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -12509,7 +12442,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0.5, y: 1, z: 0}
   m_MaxChunkCount: 16
@@ -13355,7 +13288,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 308f7540587c30844a835c596dc2bc55, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -13439,7 +13372,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 108015a55183a504d83200c95334a76c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -25241,96 +25174,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f124a1585e744904ea38327170e27889, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueArray1_0:
-  - Sir Lancelot
-  - 0
-  - "Vaya d\xEDa hermoso, \xBFno crees? A veces olvidamos apreciar la belleza de
-    nuestro entorno."
-  dialogueArray1_1:
-  - Sir Lancelot
-  - 1
-  - "Vaya d\xEDa hermoso, \xBFno crees? A veces olvidamos apreciar la belleza de
-    nuestro entorno."
-  dialogueArray1_2:
-  - Sir Lancelot
-  - 2
-  - "Vaya d\xEDa hermoso, \xBFno crees? A veces olvidamos apreciar la belleza de
-    nuestro entorno."
-  dialogueArray2_0:
-  - Lord Guinevere
-  - 0
-  - "\xA1Cuidado con la cueva de las setas! Se dice que est\xE1 lleno de criaturas
-    peligrosas."
-  dialogueArray2_1:
-  - Lord Guinevere
-  - 1
-  - "\xA1Cuidado con la cueva de las setas! Se dice que est\xE1 lleno de criaturas
-    peligrosas."
-  dialogueArray2_2:
-  - Lord Guinevere
-  - 2
-  - "\xA1Cuidado con la cueva de las setas! Se dice que est\xE1 lleno de criaturas
-    peligrosas."
-  dialogueArray3_0:
-  - Toby
-  - 0
-  - Guau Guau
-  dialogueArray3_1:
-  - Toby
-  - 1
-  - '*Mueve la colita y se deja acariciar*'
-  dialogueArray3_2:
-  - Toby
-  - 2
-  - '*Aullido*'
-  dialogueArray4_0:
-  - Lady Isolde
-  - 0
-  - 'Me encanta ver a los aventureros valientes que vienen a nuestro pueblo. '
-  dialogueArray4_1:
-  - Lady Isolde
-  - 1
-  - 'Me encanta ver a los aventureros valientes que vienen a nuestro pueblo. '
-  dialogueArray4_2:
-  - Lady Isolde
-  - 2
-  - 'Me encanta ver a los aventureros valientes que vienen a nuestro pueblo. '
-  dialogueArray5_0:
-  - Sir Percival
-  - 0
-  - "\xBFSab\xEDas que el herrero del pueblo es un excelente m\xFAsico? "
-  dialogueArray5_1:
-  - Sir Percival
-  - 1
-  - "\xBFSab\xEDas que el herrero del pueblo es un excelente m\xFAsico? "
-  dialogueArray5_2:
-  - Sir Percival
-  - 2
-  - "\xBFSab\xEDas que el herrero del pueblo es un excelente m\xFAsico? "
-  dialogueArray6_0:
-  - Rasputin
-  - 0
-  - Un momento, quien eres, yo a ti te conozco
-  dialogueArray6_1:
-  - Rasputin
-  - 1
-  - Un momento, quien eres, yo a ti te conozco
-  dialogueArray6_2:
-  - Rasputin
-  - 2
-  - Un momento, quien eres, yo a ti te conozco
-  dialogueArray7_0:
-  - Vagabundo
-  - 0
-  - "\xBFSab\xEDas que el herrero del pueblo es un excelente m\xFAsico? "
-  dialogueArray7_1:
-  - Vagabundo
-  - 1
-  - "\xBFSab\xEDas que el herrero del pueblo es un excelente m\xFAsico? "
-  dialogueArray7_2:
-  - Vagabundo
-  - 2
-  - "\xBFSab\xEDas que el herrero del pueblo es un excelente m\xFAsico? "
 --- !u!1001 &210194074362165554
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25432,6 +25275,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1815802288}
     m_Modifications:
+    - target: {fileID: 1949882330765811775, guid: 62184aebe05896a4c8fc72c856b2cc59, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 19c042efed9896f4e95dc697fa51353a, type: 2}
+    - target: {fileID: 1949882330765811775, guid: 62184aebe05896a4c8fc72c856b2cc59, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1949882330858686337, guid: 62184aebe05896a4c8fc72c856b2cc59, type: 3}
+      propertyPath: m_fontSize
+      value: 13.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1949882330858686337, guid: 62184aebe05896a4c8fc72c856b2cc59, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 19c042efed9896f4e95dc697fa51353a, type: 2}
+    - target: {fileID: 1949882330858686337, guid: 62184aebe05896a4c8fc72c856b2cc59, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -1129695424578915801, guid: 19c042efed9896f4e95dc697fa51353a, type: 2}
+    - target: {fileID: 1949882330894939181, guid: 62184aebe05896a4c8fc72c856b2cc59, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 19c042efed9896f4e95dc697fa51353a, type: 2}
+    - target: {fileID: 1949882330894939181, guid: 62184aebe05896a4c8fc72c856b2cc59, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1949882331036049234, guid: 62184aebe05896a4c8fc72c856b2cc59, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -25524,10 +25395,58 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 160420085}
+    - target: {fileID: 1949882331551071074, guid: 62184aebe05896a4c8fc72c856b2cc59, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 19c042efed9896f4e95dc697fa51353a, type: 2}
+    - target: {fileID: 1949882331551071074, guid: 62184aebe05896a4c8fc72c856b2cc59, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1949882331652228774, guid: 62184aebe05896a4c8fc72c856b2cc59, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 160420085}
+    - target: {fileID: 1949882331788022275, guid: 62184aebe05896a4c8fc72c856b2cc59, type: 3}
+      propertyPath: m_fontSize
+      value: 13.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 1949882331788022275, guid: 62184aebe05896a4c8fc72c856b2cc59, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 19c042efed9896f4e95dc697fa51353a, type: 2}
+    - target: {fileID: 1949882331788022275, guid: 62184aebe05896a4c8fc72c856b2cc59, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -1129695424578915801, guid: 19c042efed9896f4e95dc697fa51353a, type: 2}
+    - target: {fileID: 1949882332020182304, guid: 62184aebe05896a4c8fc72c856b2cc59, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 190.4742
+      objectReference: {fileID: 0}
+    - target: {fileID: 1949882332020182304, guid: 62184aebe05896a4c8fc72c856b2cc59, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.000050545
+      objectReference: {fileID: 0}
+    - target: {fileID: 1949882332020182304, guid: 62184aebe05896a4c8fc72c856b2cc59, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 22.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1949882332020182305, guid: 62184aebe05896a4c8fc72c856b2cc59, type: 3}
+      propertyPath: m_fontSize
+      value: 15.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 1949882332020182305, guid: 62184aebe05896a4c8fc72c856b2cc59, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 19c042efed9896f4e95dc697fa51353a, type: 2}
+    - target: {fileID: 1949882332020182305, guid: 62184aebe05896a4c8fc72c856b2cc59, type: 3}
+      propertyPath: m_fontSizeMin
+      value: 15.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 1949882332020182305, guid: 62184aebe05896a4c8fc72c856b2cc59, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -1129695424578915801, guid: 19c042efed9896f4e95dc697fa51353a, type: 2}
     - target: {fileID: 1949882332021863872, guid: 62184aebe05896a4c8fc72c856b2cc59, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -25748,96 +25667,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f124a1585e744904ea38327170e27889, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueArray1_0:
-  - Sir Lancelot
-  - 0
-  - "Vaya d\xEDa hermoso, \xBFno crees? A veces olvidamos apreciar la belleza de
-    nuestro entorno."
-  dialogueArray1_1:
-  - Sir Lancelot
-  - 1
-  - "Vaya d\xEDa hermoso, \xBFno crees? A veces olvidamos apreciar la belleza de
-    nuestro entorno."
-  dialogueArray1_2:
-  - Sir Lancelot
-  - 2
-  - "Vaya d\xEDa hermoso, \xBFno crees? A veces olvidamos apreciar la belleza de
-    nuestro entorno."
-  dialogueArray2_0:
-  - Lord Guinevere
-  - 0
-  - "\xA1Cuidado con la cueva de las setas! Se dice que est\xE1 lleno de criaturas
-    peligrosas."
-  dialogueArray2_1:
-  - Lord Guinevere
-  - 1
-  - "\xA1Cuidado con la cueva de las setas! Se dice que est\xE1 lleno de criaturas
-    peligrosas."
-  dialogueArray2_2:
-  - Lord Guinevere
-  - 2
-  - "\xA1Cuidado con la cueva de las setas! Se dice que est\xE1 lleno de criaturas
-    peligrosas."
-  dialogueArray3_0:
-  - Toby
-  - 0
-  - Guau Guau
-  dialogueArray3_1:
-  - Toby
-  - 1
-  - '*Mueve la colita y se deja acariciar*'
-  dialogueArray3_2:
-  - Toby
-  - 2
-  - '*Aullido*'
-  dialogueArray4_0:
-  - Lady Isolde
-  - 0
-  - 'Me encanta ver a los aventureros valientes que vienen a nuestro pueblo. '
-  dialogueArray4_1:
-  - Lady Isolde
-  - 1
-  - 'Me encanta ver a los aventureros valientes que vienen a nuestro pueblo. '
-  dialogueArray4_2:
-  - Lady Isolde
-  - 2
-  - 'Me encanta ver a los aventureros valientes que vienen a nuestro pueblo. '
-  dialogueArray5_0:
-  - Sir Percival
-  - 0
-  - "\xBFSab\xEDas que el herrero del pueblo es un excelente m\xFAsico? "
-  dialogueArray5_1:
-  - Sir Percival
-  - 1
-  - "\xBFSab\xEDas que el herrero del pueblo es un excelente m\xFAsico? "
-  dialogueArray5_2:
-  - Sir Percival
-  - 2
-  - "\xBFSab\xEDas que el herrero del pueblo es un excelente m\xFAsico? "
-  dialogueArray6_0:
-  - Rasputin
-  - 0
-  - Un momento, quien eres, yo a ti te conozco
-  dialogueArray6_1:
-  - Rasputin
-  - 1
-  - Un momento, quien eres, yo a ti te conozco
-  dialogueArray6_2:
-  - Rasputin
-  - 2
-  - Un momento, quien eres, yo a ti te conozco
-  dialogueArray7_0:
-  - Vagabundo
-  - 0
-  - "\xBFSab\xEDas que el herrero del pueblo es un excelente m\xFAsico? "
-  dialogueArray7_1:
-  - Vagabundo
-  - 1
-  - "\xBFSab\xEDas que el herrero del pueblo es un excelente m\xFAsico? "
-  dialogueArray7_2:
-  - Vagabundo
-  - 2
-  - "\xBFSab\xEDas que el herrero del pueblo es un excelente m\xFAsico? "
 --- !u!1 &8554424290554477059 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2231989805883653990, guid: f9287ba8dfd08e643aef147e9ff2cd0c, type: 3}
@@ -25855,96 +25684,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f124a1585e744904ea38327170e27889, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueArray1_0:
-  - Sir Lancelot
-  - 0
-  - "Vaya d\xEDa hermoso, \xBFno crees? A veces olvidamos apreciar la belleza de
-    nuestro entorno."
-  dialogueArray1_1:
-  - Sir Lancelot
-  - 1
-  - "Vaya d\xEDa hermoso, \xBFno crees? A veces olvidamos apreciar la belleza de
-    nuestro entorno."
-  dialogueArray1_2:
-  - Sir Lancelot
-  - 2
-  - "Vaya d\xEDa hermoso, \xBFno crees? A veces olvidamos apreciar la belleza de
-    nuestro entorno."
-  dialogueArray2_0:
-  - Lord Guinevere
-  - 0
-  - "\xA1Cuidado con la cueva de las setas! Se dice que est\xE1 lleno de criaturas
-    peligrosas."
-  dialogueArray2_1:
-  - Lord Guinevere
-  - 1
-  - "\xA1Cuidado con la cueva de las setas! Se dice que est\xE1 lleno de criaturas
-    peligrosas."
-  dialogueArray2_2:
-  - Lord Guinevere
-  - 2
-  - "\xA1Cuidado con la cueva de las setas! Se dice que est\xE1 lleno de criaturas
-    peligrosas."
-  dialogueArray3_0:
-  - Toby
-  - 0
-  - Guau Guau
-  dialogueArray3_1:
-  - Toby
-  - 1
-  - '*Mueve la colita y se deja acariciar*'
-  dialogueArray3_2:
-  - Toby
-  - 2
-  - '*Aullido*'
-  dialogueArray4_0:
-  - Lady Isolde
-  - 0
-  - 'Me encanta ver a los aventureros valientes que vienen a nuestro pueblo. '
-  dialogueArray4_1:
-  - Lady Isolde
-  - 1
-  - 'Me encanta ver a los aventureros valientes que vienen a nuestro pueblo. '
-  dialogueArray4_2:
-  - Lady Isolde
-  - 2
-  - 'Me encanta ver a los aventureros valientes que vienen a nuestro pueblo. '
-  dialogueArray5_0:
-  - Sir Percival
-  - 0
-  - "\xBFSab\xEDas que el herrero del pueblo es un excelente m\xFAsico? "
-  dialogueArray5_1:
-  - Sir Percival
-  - 1
-  - "\xBFSab\xEDas que el herrero del pueblo es un excelente m\xFAsico? "
-  dialogueArray5_2:
-  - Sir Percival
-  - 2
-  - "\xBFSab\xEDas que el herrero del pueblo es un excelente m\xFAsico? "
-  dialogueArray6_0:
-  - Rasputin
-  - 0
-  - Un momento, quien eres, yo a ti te conozco
-  dialogueArray6_1:
-  - Rasputin
-  - 1
-  - Un momento, quien eres, yo a ti te conozco
-  dialogueArray6_2:
-  - Rasputin
-  - 2
-  - Un momento, quien eres, yo a ti te conozco
-  dialogueArray7_0:
-  - Vagabundo
-  - 0
-  - "\xBFSab\xEDas que el herrero del pueblo es un excelente m\xFAsico? "
-  dialogueArray7_1:
-  - Vagabundo
-  - 1
-  - "\xBFSab\xEDas que el herrero del pueblo es un excelente m\xFAsico? "
-  dialogueArray7_2:
-  - Vagabundo
-  - 2
-  - "\xBFSab\xEDas que el herrero del pueblo es un excelente m\xFAsico? "
 --- !u!1 &8788761836253624104 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8871306450326490650, guid: 84a406f52975f284b8e3212d92b6541c, type: 3}
@@ -25962,96 +25701,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f124a1585e744904ea38327170e27889, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueArray1_0:
-  - Sir Lancelot
-  - 0
-  - "Vaya d\xEDa hermoso, \xBFno crees? A veces olvidamos apreciar la belleza de
-    nuestro entorno."
-  dialogueArray1_1:
-  - Sir Lancelot
-  - 1
-  - "Vaya d\xEDa hermoso, \xBFno crees? A veces olvidamos apreciar la belleza de
-    nuestro entorno."
-  dialogueArray1_2:
-  - Sir Lancelot
-  - 2
-  - "Vaya d\xEDa hermoso, \xBFno crees? A veces olvidamos apreciar la belleza de
-    nuestro entorno."
-  dialogueArray2_0:
-  - Lord Guinevere
-  - 0
-  - "\xA1Cuidado con la cueva de las setas! Se dice que est\xE1 lleno de criaturas
-    peligrosas."
-  dialogueArray2_1:
-  - Lord Guinevere
-  - 1
-  - "\xA1Cuidado con la cueva de las setas! Se dice que est\xE1 lleno de criaturas
-    peligrosas."
-  dialogueArray2_2:
-  - Lord Guinevere
-  - 2
-  - "\xA1Cuidado con la cueva de las setas! Se dice que est\xE1 lleno de criaturas
-    peligrosas."
-  dialogueArray3_0:
-  - Toby
-  - 0
-  - Guau Guau
-  dialogueArray3_1:
-  - Toby
-  - 1
-  - '*Mueve la colita y se deja acariciar*'
-  dialogueArray3_2:
-  - Toby
-  - 2
-  - '*Aullido*'
-  dialogueArray4_0:
-  - Lady Isolde
-  - 0
-  - 'Me encanta ver a los aventureros valientes que vienen a nuestro pueblo. '
-  dialogueArray4_1:
-  - Lady Isolde
-  - 1
-  - 'Me encanta ver a los aventureros valientes que vienen a nuestro pueblo. '
-  dialogueArray4_2:
-  - Lady Isolde
-  - 2
-  - 'Me encanta ver a los aventureros valientes que vienen a nuestro pueblo. '
-  dialogueArray5_0:
-  - Sir Percival
-  - 0
-  - "\xBFSab\xEDas que el herrero del pueblo es un excelente m\xFAsico? "
-  dialogueArray5_1:
-  - Sir Percival
-  - 1
-  - "\xBFSab\xEDas que el herrero del pueblo es un excelente m\xFAsico? "
-  dialogueArray5_2:
-  - Sir Percival
-  - 2
-  - "\xBFSab\xEDas que el herrero del pueblo es un excelente m\xFAsico? "
-  dialogueArray6_0:
-  - Rasputin
-  - 0
-  - Un momento, quien eres, yo a ti te conozco
-  dialogueArray6_1:
-  - Rasputin
-  - 1
-  - Un momento, quien eres, yo a ti te conozco
-  dialogueArray6_2:
-  - Rasputin
-  - 2
-  - Un momento, quien eres, yo a ti te conozco
-  dialogueArray7_0:
-  - Vagabundo
-  - 0
-  - "\xBFSab\xEDas que el herrero del pueblo es un excelente m\xFAsico? "
-  dialogueArray7_1:
-  - Vagabundo
-  - 1
-  - "\xBFSab\xEDas que el herrero del pueblo es un excelente m\xFAsico? "
-  dialogueArray7_2:
-  - Vagabundo
-  - 2
-  - "\xBFSab\xEDas que el herrero del pueblo es un excelente m\xFAsico? "
 --- !u!4 &8986869936984317761 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2647312399162579318, guid: 354558af0d222cc479166661448974f0, type: 3}
@@ -26069,96 +25718,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f124a1585e744904ea38327170e27889, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueArray1_0:
-  - Sir Lancelot
-  - 0
-  - "Vaya d\xEDa hermoso, \xBFno crees? A veces olvidamos apreciar la belleza de
-    nuestro entorno."
-  dialogueArray1_1:
-  - Sir Lancelot
-  - 1
-  - "Vaya d\xEDa hermoso, \xBFno crees? A veces olvidamos apreciar la belleza de
-    nuestro entorno."
-  dialogueArray1_2:
-  - Sir Lancelot
-  - 2
-  - "Vaya d\xEDa hermoso, \xBFno crees? A veces olvidamos apreciar la belleza de
-    nuestro entorno."
-  dialogueArray2_0:
-  - Lord Guinevere
-  - 0
-  - "\xA1Cuidado con la cueva de las setas! Se dice que est\xE1 lleno de criaturas
-    peligrosas."
-  dialogueArray2_1:
-  - Lord Guinevere
-  - 1
-  - "\xA1Cuidado con la cueva de las setas! Se dice que est\xE1 lleno de criaturas
-    peligrosas."
-  dialogueArray2_2:
-  - Lord Guinevere
-  - 2
-  - "\xA1Cuidado con la cueva de las setas! Se dice que est\xE1 lleno de criaturas
-    peligrosas."
-  dialogueArray3_0:
-  - Toby
-  - 0
-  - Guau Guau
-  dialogueArray3_1:
-  - Toby
-  - 1
-  - '*Mueve la colita y se deja acariciar*'
-  dialogueArray3_2:
-  - Toby
-  - 2
-  - '*Aullido*'
-  dialogueArray4_0:
-  - Lady Isolde
-  - 0
-  - 'Me encanta ver a los aventureros valientes que vienen a nuestro pueblo. '
-  dialogueArray4_1:
-  - Lady Isolde
-  - 1
-  - 'Me encanta ver a los aventureros valientes que vienen a nuestro pueblo. '
-  dialogueArray4_2:
-  - Lady Isolde
-  - 2
-  - 'Me encanta ver a los aventureros valientes que vienen a nuestro pueblo. '
-  dialogueArray5_0:
-  - Sir Percival
-  - 0
-  - "\xBFSab\xEDas que el herrero del pueblo es un excelente m\xFAsico? "
-  dialogueArray5_1:
-  - Sir Percival
-  - 1
-  - "\xBFSab\xEDas que el herrero del pueblo es un excelente m\xFAsico? "
-  dialogueArray5_2:
-  - Sir Percival
-  - 2
-  - "\xBFSab\xEDas que el herrero del pueblo es un excelente m\xFAsico? "
-  dialogueArray6_0:
-  - Rasputin
-  - 0
-  - Un momento, quien eres, yo a ti te conozco
-  dialogueArray6_1:
-  - Rasputin
-  - 1
-  - Un momento, quien eres, yo a ti te conozco
-  dialogueArray6_2:
-  - Rasputin
-  - 2
-  - Un momento, quien eres, yo a ti te conozco
-  dialogueArray7_0:
-  - Vagabundo
-  - 0
-  - "\xBFSab\xEDas que el herrero del pueblo es un excelente m\xFAsico? "
-  dialogueArray7_1:
-  - Vagabundo
-  - 1
-  - "\xBFSab\xEDas que el herrero del pueblo es un excelente m\xFAsico? "
-  dialogueArray7_2:
-  - Vagabundo
-  - 2
-  - "\xBFSab\xEDas que el herrero del pueblo es un excelente m\xFAsico? "
 --- !u!1001 &9099028809040470989
 PrefabInstance:
   m_ObjectHideFlags: 0
