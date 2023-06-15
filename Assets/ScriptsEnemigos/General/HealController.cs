@@ -21,7 +21,7 @@ public class HealController : MonoBehaviour
         attackDelay = attackDelay + Time.deltaTime;
     }
 
-    void OnCollisionStay2D(Collision2D collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
 
         if (collision.gameObject.CompareTag("PiedraHeroe"))

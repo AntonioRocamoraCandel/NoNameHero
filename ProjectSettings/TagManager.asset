@@ -19,6 +19,8 @@ TagManager:
   - AtaqueHeroe
   - attackCheck
   - obstacle
+  - cambioEscena
+  - HeroMuerto
   layers:
   - Default
   - TransparentFX
@@ -34,7 +36,7 @@ TagManager:
   - Background
   - Foreground
   - wall
-  - 
+  - PlayerDead
   - 
   - 
   - 

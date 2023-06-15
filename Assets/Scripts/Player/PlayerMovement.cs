@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -227,6 +228,11 @@ public class PlayerMovement : MonoBehaviour
         if (collision.CompareTag("stairs"))
         {
             isLadder = true;
+        }
+
+        if (collision.CompareTag("cambioEscena"))
+        {
+            SceneManager.LoadScene("City");
         }
     }
 
