@@ -44,15 +44,14 @@ public class HealController : MonoBehaviour
 
         if (collision.gameObject.CompareTag("attackCheck"))
         {
-            getDamage(25);
+            //getDamage(25);
             GameObject parentObject = collision.gameObject.transform.parent.gameObject;
 
             Animator heroeAnimator = parentObject.GetComponent<Animator>();
             AnimatorStateInfo stateInfo = heroeAnimator.GetCurrentAnimatorStateInfo(0);
 
-            Debug.Log("Eeeee");
             // Comprobar si la animación "golpe" se está reproduciendo
-            if (stateInfo.IsName("golpe"))
+            if (stateInfo.IsName("hero-attack"))
             {
                 Debug.Log("Recibo daño");
                 getDamage(25);
