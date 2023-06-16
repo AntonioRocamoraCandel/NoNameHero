@@ -301,6 +301,111 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &219260232
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1815802288}
+    m_Modifications:
+    - target: {fileID: 2472075398514849978, guid: e05056cf813e920409821e299a0c8d75, type: 3}
+      propertyPath: m_Name
+      value: Pantallamuerte
+      objectReference: {fileID: 0}
+    - target: {fileID: 2472075398514849978, guid: e05056cf813e920409821e299a0c8d75, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2730610561677190811, guid: e05056cf813e920409821e299a0c8d75, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2730610562840998218, guid: e05056cf813e920409821e299a0c8d75, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2730610562840998218, guid: e05056cf813e920409821e299a0c8d75, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2730610562840998218, guid: e05056cf813e920409821e299a0c8d75, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2730610562840998218, guid: e05056cf813e920409821e299a0c8d75, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2730610562840998218, guid: e05056cf813e920409821e299a0c8d75, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2730610562840998218, guid: e05056cf813e920409821e299a0c8d75, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2730610562840998218, guid: e05056cf813e920409821e299a0c8d75, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2730610562840998218, guid: e05056cf813e920409821e299a0c8d75, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 996.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 2730610562840998218, guid: e05056cf813e920409821e299a0c8d75, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 709.187
+      objectReference: {fileID: 0}
+    - target: {fileID: 2730610562840998218, guid: e05056cf813e920409821e299a0c8d75, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2730610562840998218, guid: e05056cf813e920409821e299a0c8d75, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2730610562840998218, guid: e05056cf813e920409821e299a0c8d75, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2730610562840998218, guid: e05056cf813e920409821e299a0c8d75, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2730610562840998218, guid: e05056cf813e920409821e299a0c8d75, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2730610562840998218, guid: e05056cf813e920409821e299a0c8d75, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2730610562840998218, guid: e05056cf813e920409821e299a0c8d75, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2730610562840998218, guid: e05056cf813e920409821e299a0c8d75, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -23
+      objectReference: {fileID: 0}
+    - target: {fileID: 2730610562840998218, guid: e05056cf813e920409821e299a0c8d75, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2730610562840998218, guid: e05056cf813e920409821e299a0c8d75, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2730610562840998218, guid: e05056cf813e920409821e299a0c8d75, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2730610562840998218, guid: e05056cf813e920409821e299a0c8d75, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e05056cf813e920409821e299a0c8d75, type: 3}
 --- !u!1 &221869139
 GameObject:
   m_ObjectHideFlags: 0
@@ -1599,7 +1704,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8147420318637075758, guid: 8cb7e1134dc420742841b71d8c7c2c70, type: 3}
       propertyPath: NpcName
-      value: Vagabundo
+      value: ???
       objectReference: {fileID: 0}
     - target: {fileID: 8147420318637075758, guid: 8cb7e1134dc420742841b71d8c7c2c70, type: 3}
       propertyPath: pasoCiudad
@@ -2095,6 +2200,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 9166438991150778781, guid: 2d84a3ab7327d3d4fac05d218c9490dd, type: 3}
   m_PrefabInstance: {fileID: 1129292039}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1132328534 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2730610561677190811, guid: e05056cf813e920409821e299a0c8d75, type: 3}
+  m_PrefabInstance: {fileID: 219260232}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1226891804
 GameObject:
@@ -13492,6 +13602,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Protagonista
       objectReference: {fileID: 0}
+    - target: {fileID: 6817913390895596760, guid: be75f6357473ce646b64aa3b20278732, type: 3}
+      propertyPath: gameOver
+      value: 
+      objectReference: {fileID: 1132328534}
     - target: {fileID: 6817913390895596760, guid: be75f6357473ce646b64aa3b20278732, type: 3}
       propertyPath: menuPausa
       value: 
@@ -25645,7 +25759,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4302975342400727411, guid: 5d0a671e4be967f4f98d1c3bd1b5c40b, type: 3}
       propertyPath: NpcName
-      value: Lady Isolde
+      value: Borracho
       objectReference: {fileID: 0}
     - target: {fileID: 4302975342400727411, guid: 5d0a671e4be967f4f98d1c3bd1b5c40b, type: 3}
       propertyPath: pasoCiudad
@@ -25830,7 +25944,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8500002053955916258, guid: 354558af0d222cc479166661448974f0, type: 3}
       propertyPath: NpcName
-      value: Sir Percival
+      value: Maribel
       objectReference: {fileID: 0}
     - target: {fileID: 8500002053955916258, guid: 354558af0d222cc479166661448974f0, type: 3}
       propertyPath: pasoCiudad
