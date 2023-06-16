@@ -21,11 +21,11 @@ public class DialogosNpcs : MonoBehaviour
     private string[] dialogueArray4_1 = { "Lady Isolde", "1", "Me encanta ver a los aventureros valientes que vienen a nuestro pueblo. " };
     private string[] dialogueArray4_2 = { "Lady Isolde", "2", "Me encanta ver a los aventureros valientes que vienen a nuestro pueblo. " };
 
-    private string[] dialogueArray5_0 = { "Sir Percival", "0", "¿Sabías que el herrero del pueblo es un excelente músico? " };
+    private string[] dialogueArray5_0 = { "Sir Percival", "0", "Yo antes era un aventurero como tú, pero me hirieron con una flecha en la rodilla" }; 
     private string[] dialogueArray5_1 = { "Sir Percival", "1", "¿Sabías que el herrero del pueblo es un excelente músico? " };
     private string[] dialogueArray5_2 = { "Sir Percival", "2", "¿Sabías que el herrero del pueblo es un excelente músico? " };
     
-    private string[] dialogueArray6_0 = { "Rasputin", "0", "Un momento, quien eres, yo a ti te conozco" };
+    private string[] dialogueArray6_0 = { "Rasputin", "0", "Espera, yo a ti te conozco" };
     private string[] dialogueArray6_1 = { "Rasputin", "1", "Un momento, quien eres, yo a ti te conozco" };
     private string[] dialogueArray6_2 = { "Rasputin", "2", "Un momento, quien eres, yo a ti te conozco" };
 
