@@ -13493,6 +13493,10 @@ PrefabInstance:
       value: Protagonista
       objectReference: {fileID: 0}
     - target: {fileID: 6817913390895596760, guid: be75f6357473ce646b64aa3b20278732, type: 3}
+      propertyPath: menuPausa
+      value: 
+      objectReference: {fileID: 160420085}
+    - target: {fileID: 6817913390895596760, guid: be75f6357473ce646b64aa3b20278732, type: 3}
       propertyPath: visualMana
       value: 
       objectReference: {fileID: 342725516}
