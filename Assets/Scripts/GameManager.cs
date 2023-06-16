@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
     public float tiempoEspera = 0.5f;
     public bool sePuedeMover = true;
     public Vector2 velocidadRebote = new Vector2(20, 10);
-    public float tiempoPerdidaControl=0f;
+    public float tiempoPerdidaControl=1f;
     public GameObject gameOver;
 
     private void Awake()
@@ -62,6 +62,7 @@ public class GameManager : MonoBehaviour
         {
             playerMovement.animator.SetTrigger("hurt");
             playerMovement.audioSource.PlayOneShot(playerMovement.hurtSound);
+            Debug.Log("hola");
             StartCoroutine(PerderControl());
             Rebote(velocidadRebote);
         }
@@ -112,9 +113,11 @@ public class GameManager : MonoBehaviour
         //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    private IEnumerator PerderControl(){
+    private IEnumerator<WaitForSeconds> PerderControl(){
         sePuedeMover=false;
+        Debug.Log("hola2");
         yield return new WaitForSeconds(tiempoPerdidaControl);
+        Debug.Log("hola3");
         sePuedeMover=true;
     }
 
