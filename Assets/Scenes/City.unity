@@ -2490,7 +2490,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 19c042efed9896f4e95dc697fa51353a, type: 2}
     - target: {fileID: 7413853019740434497, guid: 2b6c1320cd733d541ad1f51a313ead1e, type: 3}
       propertyPath: m_hasFontAssetChanged
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7413853019740434499, guid: 2b6c1320cd733d541ad1f51a313ead1e, type: 3}
       propertyPath: m_Layer
@@ -2503,7 +2503,7 @@ PrefabInstance:
     - target: {fileID: 7413853020459592368, guid: 2b6c1320cd733d541ad1f51a313ead1e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 2076601685}
+      objectReference: {fileID: 1515099654}
     - target: {fileID: 7413853020459592368, guid: 2b6c1320cd733d541ad1f51a313ead1e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -2530,7 +2530,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 19c042efed9896f4e95dc697fa51353a, type: 2}
     - target: {fileID: 7413853020479152196, guid: 2b6c1320cd733d541ad1f51a313ead1e, type: 3}
       propertyPath: m_hasFontAssetChanged
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7413853020479152198, guid: 2b6c1320cd733d541ad1f51a313ead1e, type: 3}
       propertyPath: m_Layer
@@ -2542,7 +2542,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 19c042efed9896f4e95dc697fa51353a, type: 2}
     - target: {fileID: 7413853020784178796, guid: 2b6c1320cd733d541ad1f51a313ead1e, type: 3}
       propertyPath: m_hasFontAssetChanged
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7413853020784178798, guid: 2b6c1320cd733d541ad1f51a313ead1e, type: 3}
       propertyPath: m_Layer
@@ -2554,7 +2554,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 19c042efed9896f4e95dc697fa51353a, type: 2}
     - target: {fileID: 7413853021011715841, guid: 2b6c1320cd733d541ad1f51a313ead1e, type: 3}
       propertyPath: m_hasFontAssetChanged
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7413853021011715843, guid: 2b6c1320cd733d541ad1f51a313ead1e, type: 3}
       propertyPath: m_Layer
@@ -2618,6 +2618,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b6c1320cd733d541ad1f51a313ead1e, type: 3}
+--- !u!1 &1515099654 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6487754320827026059, guid: 2b6c1320cd733d541ad1f51a313ead1e, type: 3}
+  m_PrefabInstance: {fileID: 1515099653}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1535142553
 GameObject:
   m_ObjectHideFlags: 0
@@ -25407,11 +25412,6 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
---- !u!1 &2076601685 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1949882331922049083, guid: 62184aebe05896a4c8fc72c856b2cc59, type: 3}
-  m_PrefabInstance: {fileID: 1949882330776618350}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2092413811 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2003337334466067656, guid: 2d84a3ab7327d3d4fac05d218c9490dd, type: 3}

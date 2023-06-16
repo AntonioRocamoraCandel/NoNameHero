@@ -16768,11 +16768,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62184aebe05896a4c8fc72c856b2cc59, type: 3}
---- !u!1 &705504630 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1949882331922049083, guid: 62184aebe05896a4c8fc72c856b2cc59, type: 3}
-  m_PrefabInstance: {fileID: 705504629}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &705504631 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1949882332021863872, guid: 62184aebe05896a4c8fc72c856b2cc59, type: 3}
@@ -21178,7 +21173,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 19c042efed9896f4e95dc697fa51353a, type: 2}
     - target: {fileID: 7413853019740434497, guid: 2b6c1320cd733d541ad1f51a313ead1e, type: 3}
       propertyPath: m_hasFontAssetChanged
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7413853019740434498, guid: 2b6c1320cd733d541ad1f51a313ead1e, type: 3}
       propertyPath: m_SizeDelta.x
@@ -21190,16 +21185,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7413853019740434498, guid: 2b6c1320cd733d541ad1f51a313ead1e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 8.7871
+      value: 8.787
       objectReference: {fileID: 0}
     - target: {fileID: 7413853019740434498, guid: 2b6c1320cd733d541ad1f51a313ead1e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 174.17
+      value: 197
       objectReference: {fileID: 0}
     - target: {fileID: 7413853020459592368, guid: 2b6c1320cd733d541ad1f51a313ead1e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 705504630}
+      objectReference: {fileID: 1488279844}
     - target: {fileID: 7413853020459592368, guid: 2b6c1320cd733d541ad1f51a313ead1e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SetActive
@@ -21210,7 +21205,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 19c042efed9896f4e95dc697fa51353a, type: 2}
     - target: {fileID: 7413853020479152196, guid: 2b6c1320cd733d541ad1f51a313ead1e, type: 3}
       propertyPath: m_hasFontAssetChanged
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7413853020479152197, guid: 2b6c1320cd733d541ad1f51a313ead1e, type: 3}
       propertyPath: m_SizeDelta.x
@@ -21230,7 +21225,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 19c042efed9896f4e95dc697fa51353a, type: 2}
     - target: {fileID: 7413853020784178796, guid: 2b6c1320cd733d541ad1f51a313ead1e, type: 3}
       propertyPath: m_hasFontAssetChanged
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7413853020784178797, guid: 2b6c1320cd733d541ad1f51a313ead1e, type: 3}
       propertyPath: m_SizeDelta.x
@@ -21246,15 +21241,15 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 19c042efed9896f4e95dc697fa51353a, type: 2}
     - target: {fileID: 7413853021011715841, guid: 2b6c1320cd733d541ad1f51a313ead1e, type: 3}
       propertyPath: m_hasFontAssetChanged
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7413853021011715842, guid: 2b6c1320cd733d541ad1f51a313ead1e, type: 3}
       propertyPath: m_SizeDelta.x
-      value: -130.766
+      value: -80.2769
       objectReference: {fileID: 0}
     - target: {fileID: 7413853021011715842, guid: 2b6c1320cd733d541ad1f51a313ead1e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 24.099998
+      value: 25.428719
       objectReference: {fileID: 0}
     - target: {fileID: 7413853021011715842, guid: 2b6c1320cd733d541ad1f51a313ead1e, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -21290,6 +21285,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 023a916db6b53534a85acfe17e29f508, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1488279844 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6487754320827026059, guid: 2b6c1320cd733d541ad1f51a313ead1e, type: 3}
+  m_PrefabInstance: {fileID: 1488279841}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1518184000 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8318528677047358948, guid: e46d2f90762d17740a16ac44263f7b06, type: 3}
