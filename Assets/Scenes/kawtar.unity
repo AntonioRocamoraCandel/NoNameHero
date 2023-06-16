@@ -128,6 +128,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8452093146774617211, guid: 8134d9eb0b13e5547aff5d471abaeb8b, type: 3}
   m_PrefabInstance: {fileID: 380879430}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &23720660 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2393354505620945947, guid: 88eb84f95c5aee143a984c4522ca62a5, type: 3}
+  m_PrefabInstance: {fileID: 435174217}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &56091605 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6487754320827026059, guid: 2b6c1320cd733d541ad1f51a313ead1e, type: 3}
@@ -2164,6 +2169,11 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &196297830 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2393354507031510501, guid: 88eb84f95c5aee143a984c4522ca62a5, type: 3}
+  m_PrefabInstance: {fileID: 435174217}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &198858427 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8452093146774617211, guid: 8134d9eb0b13e5547aff5d471abaeb8b, type: 3}
@@ -2303,6 +2313,14 @@ PrefabInstance:
       propertyPath: menuPause
       value: 
       objectReference: {fileID: 1052097310}
+    - target: {fileID: 3941814383649264418, guid: be75f6357473ce646b64aa3b20278732, type: 3}
+      propertyPath: pauseMenu
+      value: 
+      objectReference: {fileID: 1052097310}
+    - target: {fileID: 3941814383649264418, guid: be75f6357473ce646b64aa3b20278732, type: 3}
+      propertyPath: gameOverScreen
+      value: 
+      objectReference: {fileID: 291387641}
     - target: {fileID: 6817913390895596760, guid: be75f6357473ce646b64aa3b20278732, type: 3}
       propertyPath: gameOver
       value: 
@@ -73125,6 +73143,23 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2393354505620945952, guid: 88eb84f95c5aee143a984c4522ca62a5, type: 3}
   m_PrefabInstance: {fileID: 435174217}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1778171722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 23720660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cec3e18636895704d9e0d13a5e23b134, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidadMovimiento: 2
+  maxRange: 2
+  target: {fileID: 501798407}
+  spriteObject: {fileID: 196297830}
+  gameManager: {fileID: 1376300017}
 --- !u!4 &1799719196 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8452093146774617211, guid: 8134d9eb0b13e5547aff5d471abaeb8b, type: 3}
