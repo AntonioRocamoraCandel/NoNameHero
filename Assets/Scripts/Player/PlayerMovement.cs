@@ -73,6 +73,7 @@ public class PlayerMovement : MonoBehaviour
     private float MagicAttackCooldown = 3f;
     private float lastMagicAttackTime;
 
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -236,33 +237,40 @@ private void OnTriggerEnter2D(Collider2D collision)
         Scene currentScene = SceneManager.GetActiveScene();
         string sceneName = currentScene.name;
 
-        string[] sceneOrder = { "City", "SceneLevel2", "City", "Antonio", "City", "kawtar" };
+        string[] sceneOrder = { "City", "SceneLevel2", "Antonio", "kawtar" };
 
         if (sceneOrder.Any(scene => scene.Equals(sceneName, StringComparison.OrdinalIgnoreCase)))
         {
-            int currentIndex = Array.IndexOf(sceneOrder, sceneName);
-            Debug.Log(currentIndex);
-            Debug.Log(sceneOrder);
+            //int currentIndex = Array.IndexOf(sceneOrder, sceneName);
+            Debug.Log(VariablesGlobales.currentIndex);
+            //Debug.Log(sceneOrder[1]);
 
             if (sceneName.Equals("SceneLevel2", StringComparison.OrdinalIgnoreCase))
             {
                 SceneManager.LoadScene("City");
                 Debug.Log("Cityyyyy");
-            }
-            else
+                VariablesGlobales.currentIndex++;
+            }else if (sceneName.Equals("Antonio", StringComparison.OrdinalIgnoreCase))
             {
-                for (int i = currentIndex + 1; i < sceneOrder.Length; i++)
-                {
-                    if (!sceneOrder[i].Equals("City", StringComparison.OrdinalIgnoreCase))
-                    {
-                        SceneManager.LoadScene(sceneOrder[i]);
-                        Debug.Log(sceneOrder[i]);
-                        return;
-                    }
-                }
-
                 SceneManager.LoadScene("City");
+                Debug.Log("Cityyyyy");
+                VariablesGlobales.currentIndex++;
+            }else if (sceneName.Equals("kawtar", StringComparison.OrdinalIgnoreCase))
+            {
+                SceneManager.LoadScene("City");
+                Debug.Log("Cityyyyy");
+                VariablesGlobales.currentIndex++;
+            }else if (sceneName.Equals("City", StringComparison.OrdinalIgnoreCase))
+            {
+                if(VariablesGlobales.currentIndex==0){
+                    SceneManager.LoadScene("SceneLevel2");
+                }else if(VariablesGlobales.currentIndex==1){
+                    SceneManager.LoadScene("Antonio");
+                }else if(VariablesGlobales.currentIndex==2){
+                    SceneManager.LoadScene("kawtar");
+                }
             }
+        
         }
     }
 }

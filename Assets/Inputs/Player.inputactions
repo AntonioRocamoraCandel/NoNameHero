@@ -247,6 +247,17 @@
                     "isPartOfComposite": false
                 },
                 {
+                    "name": "",
+                    "id": "7abf7fe8-c1ec-4308-a663-5e2f61eed3cf",
+                    "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
                     "name": "CLIMB KEYS",
                     "id": "c6544bc8-a216-49b0-974f-ccfbacada5be",
                     "path": "1DAxis",
@@ -352,6 +363,17 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
+                    "action": "PasarDialogo",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f18805fc-65d0-440e-a25e-808f8395b7ab",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
                     "action": "PasarDialogo",
                     "isComposite": false,
                     "isPartOfComposite": false
