@@ -2295,6 +2295,14 @@ PrefabInstance:
       value: Heroe
       objectReference: {fileID: 0}
     - target: {fileID: 6817913390895596760, guid: be75f6357473ce646b64aa3b20278732, type: 3}
+      propertyPath: gameOver
+      value: 
+      objectReference: {fileID: 291387641}
+    - target: {fileID: 6817913390895596760, guid: be75f6357473ce646b64aa3b20278732, type: 3}
+      propertyPath: menuPausa
+      value: 
+      objectReference: {fileID: 1052097310}
+    - target: {fileID: 6817913390895596760, guid: be75f6357473ce646b64aa3b20278732, type: 3}
       propertyPath: visualMana
       value: 
       objectReference: {fileID: 91335525}
@@ -2630,6 +2638,11 @@ PrefabInstance:
 --- !u!1 &291387640 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2472075398514849978, guid: e05056cf813e920409821e299a0c8d75, type: 3}
+  m_PrefabInstance: {fileID: 291387639}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &291387641 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2730610561677190811, guid: e05056cf813e920409821e299a0c8d75, type: 3}
   m_PrefabInstance: {fileID: 291387639}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &301269379
