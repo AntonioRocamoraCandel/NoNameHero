@@ -36,6 +36,7 @@ public class PlayerMovement : MonoBehaviour
     public AudioClip punchSound;
     public AudioClip deathSound;
     public GameObject menuPausa;
+    public GameObject gameOver;
     private bool isJumping;
     private bool canDoubleJump;
     private int extraJumps = 1;
@@ -90,7 +91,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        if(menuPausa.activeSelf){
+        if(menuPausa.activeSelf || gameOver.activeSelf){
             GetComponent<PlayerInput>().enabled = false;
         }else{
             GetComponent<PlayerInput>().enabled = true;
