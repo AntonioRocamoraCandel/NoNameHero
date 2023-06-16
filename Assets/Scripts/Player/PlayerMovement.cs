@@ -35,6 +35,7 @@ public class PlayerMovement : MonoBehaviour
     public AudioClip rockSound;
     public AudioClip punchSound;
     public AudioClip deathSound;
+    public GameObject menuPausa;
     private bool isJumping;
     private bool canDoubleJump;
     private int extraJumps = 1;
@@ -89,6 +90,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        if(menuPausa.activeSelf){
+            GetComponent<PlayerInput>().enabled = false;
+        }else{
+            GetComponent<PlayerInput>().enabled = true;
+        }
         animator.SetFloat("Horizontal", Mathf.Abs(horizontal));
 
         visualMana.GetComponent<Slider>().value = mana;

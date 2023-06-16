@@ -6093,6 +6093,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2472075398514849978, guid: e05056cf813e920409821e299a0c8d75, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2730610561677190811, guid: e05056cf813e920409821e299a0c8d75, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2730610562840998218, guid: e05056cf813e920409821e299a0c8d75, type: 3}
@@ -109081,6 +109085,11 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &2144713536 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2730610561677190811, guid: e05056cf813e920409821e299a0c8d75, type: 3}
+  m_PrefabInstance: {fileID: 1524058049}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3141439599560701031
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -109199,6 +109208,10 @@ PrefabInstance:
       value: Protagonista
       objectReference: {fileID: 0}
     - target: {fileID: 6817913390895596760, guid: be75f6357473ce646b64aa3b20278732, type: 3}
+      propertyPath: menuPausa
+      value: 
+      objectReference: {fileID: 1318498218}
+    - target: {fileID: 6817913390895596760, guid: be75f6357473ce646b64aa3b20278732, type: 3}
       propertyPath: visualMana
       value: 
       objectReference: {fileID: 807030219}
@@ -109239,6 +109252,10 @@ PrefabInstance:
       propertyPath: hud
       value: 
       objectReference: {fileID: 909744380}
+    - target: {fileID: 3760535019280241963, guid: 378924df747e0b047b490b60e399156f, type: 3}
+      propertyPath: gameOver
+      value: 
+      objectReference: {fileID: 2144713536}
     - target: {fileID: 3760535020393031975, guid: 378924df747e0b047b490b60e399156f, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -109313,6 +109330,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HUD
       objectReference: {fileID: 0}
+    - target: {fileID: 5503926806384442420, guid: 6e1126cd9e0877f4e81775868666a289, type: 3}
+      propertyPath: gameOver
+      value: 
+      objectReference: {fileID: 2144713536}
     - target: {fileID: 5503926806384442824, guid: 6e1126cd9e0877f4e81775868666a289, type: 3}
       propertyPath: m_Pivot.x
       value: 0

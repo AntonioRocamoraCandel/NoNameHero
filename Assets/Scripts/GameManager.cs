@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     public bool sePuedeMover = true;
     public Vector2 velocidadRebote = new Vector2(20, 10);
     public float tiempoPerdidaControl=0f;
+    public GameObject gameOver;
 
     private void Awake()
     {
@@ -55,6 +56,7 @@ public class GameManager : MonoBehaviour
             }
             playerMovement.audioSource.PlayOneShot(playerMovement.deathSound);
             audioSource.mute = true;
+            //gameOver.SetActive(true);
             StartCoroutine(EsperarYReiniciar(tiempoEspera));
         }else if (playerMovement != null && playerMovement.animator != null)
         {
@@ -93,6 +95,7 @@ public class GameManager : MonoBehaviour
         }
             playerMovement.audioSource.PlayOneShot(playerMovement.deathSound);
             audioSource.mute = true;
+            //gameOver.SetActive(true);
             StartCoroutine(EsperarYReiniciar(tiempoEspera));
         }
     }
@@ -104,8 +107,9 @@ public class GameManager : MonoBehaviour
     private IEnumerator EsperarYReiniciar(float tiempo)
     {
         yield return new WaitForSeconds(tiempo);
-        playerMovement.DestruirProtagonista();
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        //playerMovement.DestruirProtagonista();
+        gameOver.SetActive(true);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     private IEnumerator PerderControl(){

@@ -59,6 +59,24 @@ public class Npc_interaction : MonoBehaviour
                 }
             }
         }   
+        if (InputSystem.GetDevice<Gamepad>() != null) 
+        {
+            if (Gamepad.current.buttonNorth.wasPressedThisFrame && playerIsClose) 
+            {
+                if (dialoguePanel.activeInHierarchy)
+                {
+                    zeroText();
+                }
+                else
+                {
+                    buttonContinue.SetActive(false);
+                    dialogueText.text = "";
+                    dialoguePanel.SetActive(true);
+                    NpcNameText.text = NpcName;
+                    StartCoroutine(Typing());
+                }
+            }
+        }  
     }
     
     public void zeroText()
