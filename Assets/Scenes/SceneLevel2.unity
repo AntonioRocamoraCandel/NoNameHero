@@ -590,10 +590,22 @@ PrefabInstance:
       propertyPath: heal
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 9168190310337954036, guid: 148bf56990d6dd84382e8eb10ea1593a, type: 3}
+      propertyPath: protagonista
+      value: 
+      objectReference: {fileID: 4239603367830023706}
+    - target: {fileID: 9168190310337954036, guid: 148bf56990d6dd84382e8eb10ea1593a, type: 3}
+      propertyPath: protagonistaGameObject
+      value: 
+      objectReference: {fileID: 3167154930866884008}
     - target: {fileID: 9168190310337954037, guid: 148bf56990d6dd84382e8eb10ea1593a, type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 3167154930866884008}
+    - target: {fileID: 9168190310337954037, guid: 148bf56990d6dd84382e8eb10ea1593a, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 817409676}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 148bf56990d6dd84382e8eb10ea1593a, type: 3}
 --- !u!4 &111338940 stripped
@@ -2325,10 +2337,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Goblin_Melee
       objectReference: {fileID: 0}
+    - target: {fileID: 1222968049602832478, guid: 82ff71bd084f20a4c9c05579177549e1, type: 3}
+      propertyPath: protagonista
+      value: 
+      objectReference: {fileID: 4239603367830023706}
+    - target: {fileID: 1222968049602832478, guid: 82ff71bd084f20a4c9c05579177549e1, type: 3}
+      propertyPath: protagonistaGameObject
+      value: 
+      objectReference: {fileID: 3167154930866884008}
     - target: {fileID: 1222968049602832479, guid: 82ff71bd084f20a4c9c05579177549e1, type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 3167154930866884008}
+    - target: {fileID: 1222968049602832479, guid: 82ff71bd084f20a4c9c05579177549e1, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 817409676}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82ff71bd084f20a4c9c05579177549e1, type: 3}
 --- !u!1001 &585143472
@@ -2447,10 +2471,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Goblin_Melee (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1222968049602832478, guid: 82ff71bd084f20a4c9c05579177549e1, type: 3}
+      propertyPath: protagonista
+      value: 
+      objectReference: {fileID: 4239603367830023706}
+    - target: {fileID: 1222968049602832478, guid: 82ff71bd084f20a4c9c05579177549e1, type: 3}
+      propertyPath: protagonistaGameObject
+      value: 
+      objectReference: {fileID: 3167154930866884008}
     - target: {fileID: 1222968049602832479, guid: 82ff71bd084f20a4c9c05579177549e1, type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 3167154930866884008}
+    - target: {fileID: 1222968049602832479, guid: 82ff71bd084f20a4c9c05579177549e1, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 817409676}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82ff71bd084f20a4c9c05579177549e1, type: 3}
 --- !u!4 &602055746 stripped
@@ -109359,6 +109395,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 770838301039762864, guid: be75f6357473ce646b64aa3b20278732, type: 3}
   m_PrefabInstance: {fileID: 3487063285351805858}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4239603367830023706 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6817913390895596760, guid: be75f6357473ce646b64aa3b20278732, type: 3}
+  m_PrefabInstance: {fileID: 3487063285351805858}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3167154930866884008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88c3a64808fc154fa36201ec95a077b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5503926805548164296
 PrefabInstance:
   m_ObjectHideFlags: 0

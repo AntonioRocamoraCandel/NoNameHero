@@ -27,6 +27,9 @@ public class EnemyBasic : MonoBehaviour
 
     // Animator 
     private Animator animator;
+
+    public GameManager gameManager;
+    
     void Start()
     {   
         rb = GetComponent<Rigidbody2D>(); // Obtiene el componente Rigidbody2D del sprite
@@ -40,55 +43,56 @@ public class EnemyBasic : MonoBehaviour
         rotationDelay = rotationDelay + Time.deltaTime;
 
         animator.SetBool("isColliding", isCollision);
-        if(!isCollision){
+        if (!gameManager.estaMuerto){
+            if(!isCollision){
 
-            float distance = Mathf.Abs(transform.position.x - target.transform.position.x);
-            
-            if (distance <= 5)
-            {
-                if (isDetected == false)
+                float distance = Mathf.Abs(transform.position.x - target.transform.position.x);
+                
+                if (distance <= 5)
                 {
-                    EnemyDetection spriteVisibility = spriteObject.GetComponent<EnemyDetection>();
-                    spriteVisibility.MakeSpriteVisible();
-                }
+                    if (isDetected == false)
+                    {
+                        EnemyDetection spriteVisibility = spriteObject.GetComponent<EnemyDetection>();
+                        spriteVisibility.MakeSpriteVisible();
+                    }
 
-                isDetected = true;
+                    isDetected = true;
 
-                Vector2 newPosition;
+                    Vector2 newPosition;
 
-                // Calcula la nueva posición del sprite solo en el eje X
-                if (target.transform.position.x > transform.position.x)
-                {
-                    transform.localScale = new Vector3(-1f, 1f, 1f);
-                    newPosition = new Vector2(target.transform.position.x - 0.1f, transform.position.y);
+                    // Calcula la nueva posición del sprite solo en el eje X
+                    if (target.transform.position.x > transform.position.x)
+                    {
+                        transform.localScale = new Vector3(-1f, 1f, 1f);
+                        newPosition = new Vector2(target.transform.position.x - 0.1f, transform.position.y);
+                    }
+                    else
+                    {
+                        transform.localScale = new Vector3(1f, 1f, 1f);
+                        newPosition = new Vector2(target.transform.position.x + 0.1f, transform.position.y);
+                    }
+
+                    transform.position = Vector2.MoveTowards(transform.position, newPosition, Time.deltaTime * velocidadMovimiento);
                 }
                 else
                 {
-                    transform.localScale = new Vector3(1f, 1f, 1f);
-                    newPosition = new Vector2(target.transform.position.x + 0.1f, transform.position.y);
-                }
+                    Vector2 newPosition;
 
-                transform.position = Vector2.MoveTowards(transform.position, newPosition, Time.deltaTime * velocidadMovimiento);
-            }
-            else
-            {
-                Vector2 newPosition;
-
-                isDetected = false;
-                // Si el personaje ha llegado al límite izquierdo, cambia la dirección del movimiento a la derecha
-                if (isDerecha)
-                {
-                    transform.localScale = new Vector3(-1f, 1f, 1f);
-                    newPosition = new Vector2(transform.position.x+1,transform.position.y);  
-                }else
-                {
-                    transform.localScale = new Vector3(1f, 1f, 1f);
-                    newPosition = new Vector2(transform.position.x-1,transform.position.y);
+                    isDetected = false;
+                    // Si el personaje ha llegado al límite izquierdo, cambia la dirección del movimiento a la derecha
+                    if (isDerecha)
+                    {
+                        transform.localScale = new Vector3(-1f, 1f, 1f);
+                        newPosition = new Vector2(transform.position.x+1,transform.position.y);  
+                    }else
+                    {
+                        transform.localScale = new Vector3(1f, 1f, 1f);
+                        newPosition = new Vector2(transform.position.x-1,transform.position.y);
+                    }
+                    transform.position = Vector2.MoveTowards(transform.position, newPosition, Time.deltaTime * velocidadMovimiento);
+                
                 }
-                transform.position = Vector2.MoveTowards(transform.position, newPosition, Time.deltaTime * velocidadMovimiento);
-               
             }
-            
         }
         
     }

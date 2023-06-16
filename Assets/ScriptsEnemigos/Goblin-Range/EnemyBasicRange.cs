@@ -23,6 +23,9 @@ public class EnemyBasicRange : MonoBehaviour
 
     // Animator 
     private Animator animator;
+
+    public GameManager gameManager;
+
     void Start()
     {
         attackControllerRange = GetComponent<AttackControllerRange>();
@@ -35,50 +38,53 @@ public class EnemyBasicRange : MonoBehaviour
     void FixedUpdate() 
     {
         animator.SetBool("isColliding", isCollision);
-        if(target != null || !isCollision){
+        
+        if (!gameManager.estaMuerto){
+            if(target != null || !isCollision){
 
-            float distance = Mathf.Abs(transform.position.x - target.transform.position.x);
+                float distance = Mathf.Abs(transform.position.x - target.transform.position.x);
 
-            if(distance <= 5){
-                isCollision = true;
-                if (isDetected == false){
-                    EnemyDetection spriteVisibility = spriteObject.GetComponent<EnemyDetection>();
-                    spriteVisibility.MakeSpriteVisible();
-                }
+                if(distance <= 5){
+                    isCollision = true;
+                    if (isDetected == false){
+                        EnemyDetection spriteVisibility = spriteObject.GetComponent<EnemyDetection>();
+                        spriteVisibility.MakeSpriteVisible();
+                    }
 
-                isDetected = true;
-                
-                 // Calcula la nueva posición del sprite solo en el eje X
-                
-                if(target.transform.position.x > transform.position.x){
-                    transform.localScale = new Vector3(-1f, 1f, 1f);
-                }else{
-                    transform.localScale = new Vector3(1f, 1f, 1f);
-                }
-                attackControllerRange.attack(target);
-                
-            }else
-            {
-                isCollision = false;
-                isDetected = false;
-                // Si el personaje ha llegado al límite izquierdo, cambia la dirección del movimiento a la derecha
-                if(transform.position.x <= leftLimit)
+                    isDetected = true;
+                    
+                    // Calcula la nueva posición del sprite solo en el eje X
+                    
+                    if(target.transform.position.x > transform.position.x){
+                        transform.localScale = new Vector3(-1f, 1f, 1f);
+                    }else{
+                        transform.localScale = new Vector3(1f, 1f, 1f);
+                    }
+                    attackControllerRange.attack(target);
+                    
+                }else
                 {
-                    movimiento = Vector2.right * velocidadMovimiento;
-                    transform.localScale = new Vector3(-1f, 1f, 1f);
-                }
-                // Si el personaje ha llegado al límite derecho, cambia la dirección del movimiento a la izquierda
-                else if(transform.position.x > rightLimit)
-                {
-                    movimiento = Vector2.left * velocidadMovimiento;
-                    transform.localScale = new Vector3(1f, 1f, 1f);
-                }
+                    isCollision = false;
+                    isDetected = false;
+                    // Si el personaje ha llegado al límite izquierdo, cambia la dirección del movimiento a la derecha
+                    if(transform.position.x <= leftLimit)
+                    {
+                        movimiento = Vector2.right * velocidadMovimiento;
+                        transform.localScale = new Vector3(-1f, 1f, 1f);
+                    }
+                    // Si el personaje ha llegado al límite derecho, cambia la dirección del movimiento a la izquierda
+                    else if(transform.position.x > rightLimit)
+                    {
+                        movimiento = Vector2.left * velocidadMovimiento;
+                        transform.localScale = new Vector3(1f, 1f, 1f);
+                    }
 
-                // Aplica el movimiento al Rigidbody2D
-                rb.velocity = movimiento;
+                    // Aplica el movimiento al Rigidbody2D
+                    rb.velocity = movimiento;
 
+                }
             }
-            
+                
         }
         
     }

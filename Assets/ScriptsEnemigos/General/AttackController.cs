@@ -42,7 +42,7 @@ public class AttackController : MonoBehaviour
 
         if (!isAnimationPlaying){
             animator.Play("Attack");
-            GameManager.Instance.PerderVidas(dmg);
+            GameManager.Instance.PerderVida();
         }
         
         

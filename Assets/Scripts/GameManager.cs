@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     public Vector2 velocidadRebote = new Vector2(20, 10);
     public float tiempoPerdidaControl=1f;
     public GameObject gameOver;
+    public bool estaMuerto=false;
 
     private void Awake()
     {
@@ -53,6 +54,7 @@ public class GameManager : MonoBehaviour
             {
                 playerMovement.animator.SetBool("isDeath", true);
                 playerMovement.animator.SetTrigger("death");
+                estaMuerto=true;
             }
             playerMovement.audioSource.PlayOneShot(playerMovement.deathSound);
             audioSource.mute = true;
@@ -93,6 +95,7 @@ public class GameManager : MonoBehaviour
         {
             playerMovement.animator.SetBool("isDeath", true);
             playerMovement.animator.SetTrigger("death");
+            estaMuerto=true;
         }
             playerMovement.audioSource.PlayOneShot(playerMovement.deathSound);
             audioSource.mute = true;
