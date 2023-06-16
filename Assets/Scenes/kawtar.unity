@@ -37697,6 +37697,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 501798407}
+    - target: {fileID: 9168190310337954037, guid: 148bf56990d6dd84382e8eb10ea1593a, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 1376300017}
     - target: {fileID: 9168190310337954039, guid: 148bf56990d6dd84382e8eb10ea1593a, type: 3}
       propertyPath: m_Name
       value: Goblin_Range
@@ -38044,6 +38048,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 501798407}
+    - target: {fileID: 9168190310337954037, guid: 148bf56990d6dd84382e8eb10ea1593a, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 1376300017}
     - target: {fileID: 9168190310337954039, guid: 148bf56990d6dd84382e8eb10ea1593a, type: 3}
       propertyPath: m_Name
       value: Goblin_Range (2)
@@ -38757,7 +38765,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7413853021451905697, guid: 2b6c1320cd733d541ad1f51a313ead1e, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7413853021693877005, guid: 2b6c1320cd733d541ad1f51a313ead1e, type: 3}
       propertyPath: m_SizeDelta.x
@@ -71909,6 +71917,10 @@ PrefabInstance:
       propertyPath: hud
       value: 
       objectReference: {fileID: 1581044559}
+    - target: {fileID: 3760535019280241963, guid: 378924df747e0b047b490b60e399156f, type: 3}
+      propertyPath: gameOver
+      value: 
+      objectReference: {fileID: 291387641}
     - target: {fileID: 3760535020393031975, guid: 378924df747e0b047b490b60e399156f, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -73081,6 +73093,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 501798407}
+    - target: {fileID: 1222968049602832479, guid: 82ff71bd084f20a4c9c05579177549e1, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 1376300017}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82ff71bd084f20a4c9c05579177549e1, type: 3}
 --- !u!4 &1778171715 stripped
@@ -73578,6 +73594,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 501798407}
+    - target: {fileID: 9168190310337954037, guid: 148bf56990d6dd84382e8eb10ea1593a, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 1376300017}
     - target: {fileID: 9168190310337954039, guid: 148bf56990d6dd84382e8eb10ea1593a, type: 3}
       propertyPath: m_Name
       value: Goblin_Range (1)
@@ -73643,6 +73663,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 501798407}
+    - target: {fileID: 1222968049602832479, guid: 82ff71bd084f20a4c9c05579177549e1, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 1376300017}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82ff71bd084f20a4c9c05579177549e1, type: 3}
 --- !u!1 &1988626073
