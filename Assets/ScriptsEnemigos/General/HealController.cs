@@ -10,6 +10,8 @@ public class HealController : MonoBehaviour
 
     private float attackDelay = 0.0f;
 
+    public bool isDeath = false;
+
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -81,6 +83,7 @@ public class HealController : MonoBehaviour
 
     public void PlayDeathAnimation()
     {
+        isDeath = true;
         StartCoroutine(PlayDeathAnimationCoroutine());
     }
 
