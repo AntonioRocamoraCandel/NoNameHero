@@ -21,6 +21,7 @@ public class Npc_interaction : MonoBehaviour
 
     void Start()
     {
+
         dialogosNpcs = GetComponent<DialogosNpcs>();
     }
 
@@ -87,7 +88,7 @@ public class Npc_interaction : MonoBehaviour
 
     IEnumerator Typing()
     {   
-        string dialogue = dialogosNpcs.FindDialogueByPositions(NpcName, pasoCiudad);
+        string dialogue = dialogosNpcs.FindDialogueByPositions(NpcName, VariablesGlobales.currentIndex.ToString());
         if (dialogue != null)
         {
             string fullText = "";
