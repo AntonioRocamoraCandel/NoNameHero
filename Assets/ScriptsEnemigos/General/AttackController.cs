@@ -26,7 +26,7 @@ public class AttackController : MonoBehaviour
     void OnTriggerStay2D(Collider2D collision){
          if (collision.gameObject.CompareTag("Heroe"))
         {
-            if (lastAttack >= 2)
+            if (lastAttack >= 2 && !GetComponent<HealController>().isDeath)
             {
                 // Han pasado dos segundos desde el último ataque
                 // Tu código para atacar aquí
