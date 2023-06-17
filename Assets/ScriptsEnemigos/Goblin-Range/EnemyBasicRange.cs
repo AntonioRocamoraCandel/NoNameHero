@@ -34,7 +34,7 @@ public class EnemyBasicRange : MonoBehaviour
 
     public GameManager gameManager;
 
-    public HealController healController;
+    private HealController healController;
 
     void Start()
     {
