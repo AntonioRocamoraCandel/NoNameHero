@@ -33,7 +33,7 @@ public class AttackControllerHuge : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Heroe"))
         {
-            if (lastAttack >= 2)
+            if (lastAttack >= 3)
             {
                 // Han pasado dos segundos desde el último ataque
                 lastAttack = 0; // Actualiza el tiempo del último ataque
@@ -44,32 +44,34 @@ public class AttackControllerHuge : MonoBehaviour
 
     public void Attack(Collider2D target)
     {
-        bool isAnimationPlaying = animator.GetCurrentAnimatorStateInfo(0).IsName("Hurt");
 
-        if (!isAnimationPlaying)
+        string[] attackAnimations = { "Attack1", "Attack2", "Attack4" };
+        int randomIndex = Random.Range(0, attackAnimations.Length);
+        string randomAnimation = attackAnimations[randomIndex];
+
+        if (randomAnimation == "Attack4" && !canPlayAttack4)
         {
-            string[] attackAnimations = { "Attack1", "Attack2", "Attack4" };
-            int randomIndex = Random.Range(0, attackAnimations.Length);
-            string randomAnimation = attackAnimations[randomIndex];
-
-            if (randomAnimation == "Attack4" && !canPlayAttack4)
-            {
-                return; // Si la animación seleccionada es "Attack4" pero no se puede reproducir, salimos de la función
-            }
-
-            animator.Play(randomAnimation);
-
-            if (randomAnimation == "Attack4")
-            {
-                canPlayAttack4 = false;
-                dmg += 1;
-                StartCoroutine(ResetAttack4Timer());
-            }else if(randomAnimation == "Attack1"){
-                GameManager.Instance.PerderVidas(dmg);
-            }else if(randomAnimation == "Attack2"){
-                GameManager.Instance.PerderVidas(dmg+1);
-            }
+            return; // Si la animación seleccionada es "Attack4" pero no se puede reproducir, salimos de la función
         }
+
+        animator.Play(randomAnimation);
+
+        if (randomAnimation == "Attack4")
+        {
+            canPlayAttack4 = false;
+            dmg += 1;
+            StartCoroutine(ResetAttack4Timer());
+
+        }
+        else if (randomAnimation == "Attack1")
+        {
+            GameManager.Instance.PerderVida();
+        }
+        else if (randomAnimation == "Attack2")
+        {
+            GameManager.Instance.PerderVida();
+        }
+
     }
 
     private IEnumerator ResetAttack4Timer()

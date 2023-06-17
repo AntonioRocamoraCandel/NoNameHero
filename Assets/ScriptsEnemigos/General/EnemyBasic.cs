@@ -35,6 +35,7 @@ public class EnemyBasic : MonoBehaviour
 
     
     void Start()
+
     {   
         rb = GetComponent<Rigidbody2D>(); // Obtiene el componente Rigidbody2D del sprite
         rightLimit = transform.position.x + maxRange; // Limite de recorrido hacia la derecha
@@ -42,8 +43,8 @@ public class EnemyBasic : MonoBehaviour
         movimiento = Vector2.right * velocidadMovimiento; // Define el movimiento a la derecha como el vector de velocidad por defecto
         animator = GetComponent<Animator>();
 
-        
     }
+
     void FixedUpdate() 
     {
 
@@ -78,12 +79,12 @@ public class EnemyBasic : MonoBehaviour
                     if (target.transform.position.x > transform.position.x)
                     {
                         transform.localScale = new Vector3(-1f, 1f, 1f);
-                        newPosition = new Vector2(target.transform.position.x - 0.1f, transform.position.y);
+                        newPosition = new Vector2(target.transform.position.x - 0.3f, transform.position.y);
                     }
                     else
                     {
                         transform.localScale = new Vector3(1f, 1f, 1f);
-                        newPosition = new Vector2(target.transform.position.x + 0.1f, transform.position.y);
+                        newPosition = new Vector2(target.transform.position.x + 0.3f, transform.position.y);
                     }
                     
                     transform.position = Vector2.MoveTowards(transform.position, newPosition, Time.deltaTime * velocidadMovimiento);
@@ -117,6 +118,7 @@ public class EnemyBasic : MonoBehaviour
     {
             if (collision.gameObject.CompareTag("Heroe"))
             {
+                Debug.Log("Stay");
                 isCollision = true;
             }  
 
@@ -132,12 +134,11 @@ public class EnemyBasic : MonoBehaviour
 
 
 
-    
-
     void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Heroe"))
         {
+            Debug.Log("Exit");
             isCollision = false;
         
         }
@@ -153,17 +154,24 @@ public class EnemyBasic : MonoBehaviour
  
     void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.gameObject.CompareTag("Heroe"))
+        {
+            Debug.Log("Enter");
+            isCollision = true;
+        
+        }
+
         if (collision.gameObject.CompareTag("Enemigo") || collision.gameObject.CompareTag("Heroe"))
         {
             Physics2D.IgnoreCollision(GetComponent<Collider2D>(), collision.collider);
         }
 
         if (collision.gameObject.CompareTag("obstacle")){
-                if (rotationDelay > 0.5){
-                    isDerecha = !isDerecha;
-                    rotationDelay = 0;
-                    isObstacle = true;
-                }
+            if (rotationDelay > 0.5){
+                isDerecha = !isDerecha;
+                rotationDelay = 0;
+                isObstacle = true;
+            }
                 
         }   
 

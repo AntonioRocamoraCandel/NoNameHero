@@ -123,7 +123,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 684230409513369103}
   m_LocalRotation: {x: -0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.8, y: -1, z: 0}
+  m_LocalPosition: {x: -0.8, y: -0.991, z: 0}
   m_LocalScale: {x: 1.0926561, y: 2.6244256, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -143,7 +143,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.43868127, y: 0.34160674}
+  m_Offset: {x: 0.4386813, y: 0.26215988}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -154,7 +154,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.20478863, y: 0.4086902}
+  m_Size: {x: 0.2859892, y: 0.5878681}
   m_EdgeRadius: 0
 --- !u!114 &684230409513369101
 MonoBehaviour:
@@ -185,7 +185,7 @@ GameObject:
   - component: {fileID: 684230409876022679}
   - component: {fileID: 684230409876022696}
   - component: {fileID: 684230409876022697}
-  - component: {fileID: 684230409876022698}
+  - component: {fileID: 1174181556028853480}
   m_Layer: 0
   m_Name: Huge_Mushroom
   m_TagString: Enemigo
@@ -342,7 +342,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca11cf40b7a74fa589ca9cefef94a204, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialDmg: 0
+  initialDmg: 15
   attack4Cooldown: 20
 --- !u!114 &684230409876022697
 MonoBehaviour:
@@ -358,7 +358,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heal: 1000
   isDeath: 0
---- !u!114 &684230409876022698
+--- !u!114 &1174181556028853480
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -367,10 +367,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 684230409876022699}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16e3e65b9fb1413f85f3210d2f099b95, type: 3}
+  m_Script: {fileID: 11500000, guid: cec3e18636895704d9e0d13a5e23b134, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidadMovimiento: 2
+  velocidadMovimiento: 3
   maxRange: 5
   target: {fileID: 0}
-  spriteObject: {fileID: 684230408875768034}
+  spriteObject: {fileID: 0}
+  gameManager: {fileID: 0}
