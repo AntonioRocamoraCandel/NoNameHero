@@ -5,11 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class MenuPause : MonoBehaviour
 {
-    public GameObject menuPause;
+ 
     public void pause()
     {
         Time.timeScale = 0f;
-        menuPause.SetActive(true);
     }
     public void reanudar()
     {
