@@ -16167,6 +16167,26 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 1710313452}
+    - target: {fileID: 6817913390895596760, guid: be75f6357473ce646b64aa3b20278732, type: 3}
+      propertyPath: controlesMando
+      value: 
+      objectReference: {fileID: 1661540079}
+    - target: {fileID: 6817913390895596760, guid: be75f6357473ce646b64aa3b20278732, type: 3}
+      propertyPath: controlesTeclado
+      value: 
+      objectReference: {fileID: 926660295}
+    - target: {fileID: 6817913390895596760, guid: be75f6357473ce646b64aa3b20278732, type: 3}
+      propertyPath: confirmacionSalir
+      value: 
+      objectReference: {fileID: 1637584498}
+    - target: {fileID: 6817913390895596760, guid: be75f6357473ce646b64aa3b20278732, type: 3}
+      propertyPath: confirmacionReinicio
+      value: 
+      objectReference: {fileID: 705504631}
+    - target: {fileID: 6817913390895596760, guid: be75f6357473ce646b64aa3b20278732, type: 3}
+      propertyPath: confirmacionControles
+      value: 
+      objectReference: {fileID: 1488279844}
     - target: {fileID: 6817913390895596764, guid: be75f6357473ce646b64aa3b20278732, type: 3}
       propertyPath: m_ActionEvents.Array.data[15].m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -16993,6 +17013,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2f027bdfdc491c41bad97d39f4cdbe7, type: 3}
+--- !u!1 &926660295 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6141447457249088764, guid: 2b6c1320cd733d541ad1f51a313ead1e, type: 3}
+  m_PrefabInstance: {fileID: 1488279841}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &939821971
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21506,6 +21531,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11e3350002955f044983a15dbf628020, type: 3}
+--- !u!1 &1637584498 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1949882331922049083, guid: 62184aebe05896a4c8fc72c856b2cc59, type: 3}
+  m_PrefabInstance: {fileID: 705504629}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1652614417 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5503926806384442420, guid: 6e1126cd9e0877f4e81775868666a289, type: 3}
@@ -21521,6 +21551,11 @@ MonoBehaviour:
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5503926806384442824, guid: 6e1126cd9e0877f4e81775868666a289, type: 3}
   m_PrefabInstance: {fileID: 161342124}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1661540079 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6141447455603984766, guid: 2b6c1320cd733d541ad1f51a313ead1e, type: 3}
+  m_PrefabInstance: {fileID: 1488279841}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1668580133 stripped
 Transform:

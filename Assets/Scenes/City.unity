@@ -1987,6 +1987,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &954006016 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1949882331922049083, guid: 62184aebe05896a4c8fc72c856b2cc59, type: 3}
+  m_PrefabInstance: {fileID: 1949882330776618350}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1021892113
 GameObject:
   m_ObjectHideFlags: 0
@@ -2374,6 +2379,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1374496452 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6141447457249088764, guid: 2b6c1320cd733d541ad1f51a313ead1e, type: 3}
+  m_PrefabInstance: {fileID: 1515099653}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1456757265 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5503926806384442420, guid: 6e1126cd9e0877f4e81775868666a289, type: 3}
@@ -2385,6 +2395,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22ad8f567ff2a0e48b5b30277a19827e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1489625540 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6141447455603984766, guid: 2b6c1320cd733d541ad1f51a313ead1e, type: 3}
+  m_PrefabInstance: {fileID: 1515099653}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1515099653
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13644,6 +13659,26 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 1973001665}
+    - target: {fileID: 6817913390895596760, guid: be75f6357473ce646b64aa3b20278732, type: 3}
+      propertyPath: controlesMando
+      value: 
+      objectReference: {fileID: 1489625540}
+    - target: {fileID: 6817913390895596760, guid: be75f6357473ce646b64aa3b20278732, type: 3}
+      propertyPath: controlesTeclado
+      value: 
+      objectReference: {fileID: 1374496452}
+    - target: {fileID: 6817913390895596760, guid: be75f6357473ce646b64aa3b20278732, type: 3}
+      propertyPath: confirmacionSalir
+      value: 
+      objectReference: {fileID: 954006016}
+    - target: {fileID: 6817913390895596760, guid: be75f6357473ce646b64aa3b20278732, type: 3}
+      propertyPath: confirmacionReinicio
+      value: 
+      objectReference: {fileID: 1983475886}
+    - target: {fileID: 6817913390895596760, guid: be75f6357473ce646b64aa3b20278732, type: 3}
+      propertyPath: confirmacionControles
+      value: 
+      objectReference: {fileID: 1515099654}
     - target: {fileID: 6817913390895596764, guid: be75f6357473ce646b64aa3b20278732, type: 3}
       propertyPath: m_ActionEvents.Array.data[16].m_PersistentCalls.m_Calls.Array.size
       value: 1
