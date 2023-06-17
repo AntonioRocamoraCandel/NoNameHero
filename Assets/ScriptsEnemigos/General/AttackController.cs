@@ -6,6 +6,10 @@ public class AttackController : MonoBehaviour
 
     private float lastAttack;
     private Animator animator;
+
+    GameObject parentObject;
+
+    HealController healController;
   
     void Awake()
     {
@@ -14,6 +18,8 @@ public class AttackController : MonoBehaviour
     void Start()
     {
         lastAttack = 0f;
+        parentObject = GetComponent<Transform>().parent.gameObject;
+        healController = parentObject.GetComponent<HealController>();
     }
 
     
@@ -26,7 +32,7 @@ public class AttackController : MonoBehaviour
     void OnTriggerStay2D(Collider2D collision){
          if (collision.gameObject.CompareTag("Heroe"))
         {
-            if (lastAttack >= 2 && !GetComponent<HealController>().isDeath)
+            if (lastAttack >= 2 && !healController.isDeath)
             {
                 // Han pasado dos segundos desde el último ataque
                 // Tu código para atacar aquí
