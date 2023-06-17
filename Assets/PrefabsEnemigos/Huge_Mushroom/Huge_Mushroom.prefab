@@ -274,7 +274,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -356,7 +356,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bb990f4c3402b44c9e4c6e4e45592da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heal: 0
+  heal: 1000
+  isDeath: 0
 --- !u!114 &684230409876022698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -369,7 +370,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16e3e65b9fb1413f85f3210d2f099b95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidadMovimiento: 1
+  velocidadMovimiento: 2
   maxRange: 5
   target: {fileID: 0}
   spriteObject: {fileID: 684230408875768034}

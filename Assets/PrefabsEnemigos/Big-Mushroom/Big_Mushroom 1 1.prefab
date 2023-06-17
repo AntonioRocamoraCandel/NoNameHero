@@ -214,7 +214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cec3e18636895704d9e0d13a5e23b134, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidadMovimiento: 5
+  velocidadMovimiento: 3
   maxRange: 5
   target: {fileID: 0}
   spriteObject: {fileID: 5452769421549738653}

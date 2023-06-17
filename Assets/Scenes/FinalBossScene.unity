@@ -608,7 +608,7 @@ PrefabInstance:
       objectReference: {fileID: 973826512}
     - target: {fileID: 733483636279868048, guid: ef4f4df4051172b45abf7b6494892c70, type: 3}
       propertyPath: velocidadMovimiento
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5452769422290262872, guid: ef4f4df4051172b45abf7b6494892c70, type: 3}
       propertyPath: m_RootOrder
@@ -758,6 +758,10 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 973826512}
+    - target: {fileID: 6817913392054605858, guid: be75f6357473ce646b64aa3b20278732, type: 3}
+      propertyPath: m_TagString
+      value: attackCheck
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be75f6357473ce646b64aa3b20278732, type: 3}
 --- !u!1 &1092853834
@@ -989,9 +993,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 684230409876022677, guid: b29cf135b62be6548bda1a4f242b935f, type: 3}
+      propertyPath: m_Mass
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 684230409876022697, guid: b29cf135b62be6548bda1a4f242b935f, type: 3}
       propertyPath: heal
-      value: 300
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 684230409876022698, guid: b29cf135b62be6548bda1a4f242b935f, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1554766708}
+    - target: {fileID: 684230409876022698, guid: b29cf135b62be6548bda1a4f242b935f, type: 3}
+      propertyPath: velocidadMovimiento
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 684230409876022699, guid: b29cf135b62be6548bda1a4f242b935f, type: 3}
       propertyPath: m_Name
