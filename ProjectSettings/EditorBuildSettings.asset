@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Antonio.unity
     guid: afff904acca783d41855673f47303631
+  - enabled: 1
+    path: Assets/Scenes/FinalBossScene.unity
+    guid: 3e07e6a438b88bf4380b75f4ccf151dc
   m_configObjects: {}

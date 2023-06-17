@@ -260,23 +260,19 @@ private void OnTriggerEnter2D(Collider2D collision)
         {
             //int currentIndex = Array.IndexOf(sceneOrder, sceneName);
             Debug.Log(VariablesGlobales.currentIndex);
-            //Debug.Log(sceneOrder[1]);
+            Debug.Log(currentScene.name);
 
             if (sceneName.Equals("SceneLevel2", StringComparison.OrdinalIgnoreCase))
             {
                 StartCoroutine(CambiarEscena("City"));
-                VariablesGlobales.currentIndex++;
             }else if (sceneName.Equals("Antonio", StringComparison.OrdinalIgnoreCase))
             {
                 StartCoroutine(CambiarEscena("City"));
-                VariablesGlobales.currentIndex++;
             }else if (sceneName.Equals("kawtar", StringComparison.OrdinalIgnoreCase))
             {
                 StartCoroutine(CambiarEscena("City"));
-                VariablesGlobales.currentIndex++;
             }else if (sceneName.Equals("FinalBossScene", StringComparison.OrdinalIgnoreCase))
             {
-                //Termina el juego
             }else if (sceneName.Equals("City", StringComparison.OrdinalIgnoreCase))
             {
                 if(VariablesGlobales.currentIndex==0){
@@ -469,5 +465,11 @@ private void OnTriggerEnter2D(Collider2D collision)
 
         yield return new WaitForSeconds(transicionEscena.animacionFinal.length);
         SceneManager.LoadScene(escena);
+        if(!escena.Equals("City")){
+
+            VariablesGlobales.currentIndex++;
+            Debug.Log(VariablesGlobales.currentIndex);
+            Debug.Log(escena);
+        }
     }
 }
