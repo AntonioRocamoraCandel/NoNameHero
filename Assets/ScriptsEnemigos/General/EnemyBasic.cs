@@ -113,6 +113,7 @@ public class EnemyBasic : MonoBehaviour
         
     }
 
+    
 
     void OnCollisionStay2D(Collision2D collision)
     {
@@ -138,31 +139,27 @@ public class EnemyBasic : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Heroe"))
         {
-            Debug.Log("Exit");
             isCollision = false;
-        
+            //Physics2D.IgnoreCollision(GetComponent<Collider2D>(), collision.collider, false);
         }
 
         if (collision.gameObject.CompareTag("obstacle"))
         {
             isObstacle = false;
-        
         }
 
     }
 
  
     void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Heroe"))
-        {
-            Debug.Log("Enter");
-            isCollision = true;
-        
-        }
+    {   
 
         if (collision.gameObject.CompareTag("Enemigo") || collision.gameObject.CompareTag("Heroe"))
         {
+            if (collision.gameObject.CompareTag("Heroe")){
+                isCollision = true;
+            }
+
             Physics2D.IgnoreCollision(GetComponent<Collider2D>(), collision.collider);
         }
 

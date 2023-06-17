@@ -108,6 +108,7 @@ public class EnemyBasicHuge : MonoBehaviour
         if (collision.gameObject.CompareTag("Heroe"))
         {
             isCollision = false;
+            Physics2D.IgnoreCollision(GetComponent<Collider2D>(), collision.collider,false);
         }
     }
 
