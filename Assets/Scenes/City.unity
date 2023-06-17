@@ -25627,12 +25627,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 1815802288}
     m_Modifications:
     - target: {fileID: 1949882330765811775, guid: 62184aebe05896a4c8fc72c856b2cc59, type: 3}
+      propertyPath: m_fontSize
+      value: 15.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1949882330765811775, guid: 62184aebe05896a4c8fc72c856b2cc59, type: 3}
       propertyPath: m_fontAsset
       value: 
       objectReference: {fileID: 11400000, guid: 19c042efed9896f4e95dc697fa51353a, type: 2}
     - target: {fileID: 1949882330765811775, guid: 62184aebe05896a4c8fc72c856b2cc59, type: 3}
+      propertyPath: m_fontSizeMin
+      value: 15.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 1949882330765811775, guid: 62184aebe05896a4c8fc72c856b2cc59, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -1129695424578915801, guid: 19c042efed9896f4e95dc697fa51353a, type: 2}
+    - target: {fileID: 1949882330765811775, guid: 62184aebe05896a4c8fc72c856b2cc59, type: 3}
       propertyPath: m_hasFontAssetChanged
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1949882330858686337, guid: 62184aebe05896a4c8fc72c856b2cc59, type: 3}
       propertyPath: m_fontSize
@@ -25770,6 +25782,10 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: -1129695424578915801, guid: 19c042efed9896f4e95dc697fa51353a, type: 2}
+    - target: {fileID: 1949882331922049083, guid: 62184aebe05896a4c8fc72c856b2cc59, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1949882332020182304, guid: 62184aebe05896a4c8fc72c856b2cc59, type: 3}
       propertyPath: m_SizeDelta.x
       value: 190.4742
