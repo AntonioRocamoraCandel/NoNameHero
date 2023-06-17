@@ -16135,6 +16135,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Protagonista
       objectReference: {fileID: 0}
+    - target: {fileID: 3941814383649264418, guid: be75f6357473ce646b64aa3b20278732, type: 3}
+      propertyPath: pauseMenu
+      value: 
+      objectReference: {fileID: 1488279842}
+    - target: {fileID: 3941814383649264418, guid: be75f6357473ce646b64aa3b20278732, type: 3}
+      propertyPath: menuControles
+      value: 
+      objectReference: {fileID: 1422082628}
+    - target: {fileID: 3941814383649264418, guid: be75f6357473ce646b64aa3b20278732, type: 3}
+      propertyPath: gameOverScreen
+      value: 
+      objectReference: {fileID: 19550701}
     - target: {fileID: 6817913390895596760, guid: be75f6357473ce646b64aa3b20278732, type: 3}
       propertyPath: gameOver
       value: 
@@ -16147,6 +16159,10 @@ PrefabInstance:
       propertyPath: visualMana
       value: 
       objectReference: {fileID: 2131479278}
+    - target: {fileID: 6817913390895596760, guid: be75f6357473ce646b64aa3b20278732, type: 3}
+      propertyPath: attackCheck
+      value: 
+      objectReference: {fileID: 1411165183}
     - target: {fileID: 6817913390895596760, guid: be75f6357473ce646b64aa3b20278732, type: 3}
       propertyPath: gameManager
       value: 
@@ -16162,6 +16178,10 @@ PrefabInstance:
     - target: {fileID: 6817913390895596764, guid: be75f6357473ce646b64aa3b20278732, type: 3}
       propertyPath: m_ActionEvents.Array.data[15].m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6817913392054605858, guid: be75f6357473ce646b64aa3b20278732, type: 3}
+      propertyPath: m_TagString
+      value: attackCheck
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be75f6357473ce646b64aa3b20278732, type: 3}
@@ -20478,6 +20498,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8134d9eb0b13e5547aff5d471abaeb8b, type: 3}
+--- !u!1 &1422082628 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6141447456395908550, guid: 2b6c1320cd733d541ad1f51a313ead1e, type: 3}
+  m_PrefabInstance: {fileID: 1488279841}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1435182783
 GameObject:
   m_ObjectHideFlags: 0
