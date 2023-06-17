@@ -37152,6 +37152,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1713949202}
+    - target: {fileID: 1694168986617760420, guid: cc8ae628e317644488c820cdb73c6d00, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 1376300017}
     - target: {fileID: 6197830681962818391, guid: cc8ae628e317644488c820cdb73c6d00, type: 3}
       propertyPath: m_Name
       value: Big_Mushroom 1 1 1 (1)
@@ -73748,6 +73752,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1713949202}
+    - target: {fileID: 1694168986617760420, guid: cc8ae628e317644488c820cdb73c6d00, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 1376300017}
     - target: {fileID: 6197830681962818391, guid: cc8ae628e317644488c820cdb73c6d00, type: 3}
       propertyPath: m_Name
       value: Big_Mushroom 1 1 1
