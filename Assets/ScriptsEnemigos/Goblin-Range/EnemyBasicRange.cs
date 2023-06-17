@@ -49,7 +49,7 @@ public class EnemyBasicRange : MonoBehaviour
     }
     void FixedUpdate() 
     {
-        animator.SetBool("isColliding", isCollision);
+        
         
         rotationDelay = rotationDelay + Time.deltaTime;
 
@@ -65,7 +65,7 @@ public class EnemyBasicRange : MonoBehaviour
                 float distance = Mathf.Abs(transform.position.x - target.transform.position.x);
 
                 if(distance <= 5 && timeObstacle > 1.5f){
-                    //isCollision = true;
+                    animator.SetBool("isColliding", true);
                     if (isDetected == false){
                         EnemyDetection spriteVisibility = spriteObject.GetComponent<EnemyDetection>();
                         spriteVisibility.MakeSpriteVisible();
@@ -86,6 +86,7 @@ public class EnemyBasicRange : MonoBehaviour
                     
                 }else
                 {
+                    animator.SetBool("isColliding", false);
                     Vector2 newPosition;
 
                     isDetected = false;
@@ -103,6 +104,7 @@ public class EnemyBasicRange : MonoBehaviour
 
                 }
             }
+
                 
         }
         
