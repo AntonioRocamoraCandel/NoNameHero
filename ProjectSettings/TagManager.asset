@@ -21,6 +21,8 @@ TagManager:
   - obstacle
   - cambioEscena
   - HeroMuerto
+  - DeshabilitarPared
+  - HabilitarPared
   layers:
   - Default
   - TransparentFX
