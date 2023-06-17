@@ -19,24 +19,25 @@ public class AttackController_Big_Mushroom : MonoBehaviour
     }
 
 
-    void OnTriggerStay2D(Collider2D collision){
-        if (collision.gameObject.CompareTag("attackCheck"))
+    void OnTriggerStay2D(Collider2D collider)
+    {
+        Debug.Log(collider.gameObject.tag);
+        
+        if (collider.gameObject.CompareTag("HealArea"))
         {
-            Debug.Log("Atacandooo");
             if (lastAttack >= 2)
             {
                 // Han pasado dos segundos desde el último ataque
                 // Tu código para atacar aquí
                 lastAttack = 0; // Actualiza el tiempo del último ataque
-                attack(collision);
+                attack();
             }
         }
     }
 
+
     
-    public void attack(Collider2D target){
-        Debug.Log("Atacando");
+    public void attack(){
         GameManager.Instance.PerderVida();
-        
     }
 }

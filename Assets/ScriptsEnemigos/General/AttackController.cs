@@ -30,20 +30,20 @@ public class AttackController : MonoBehaviour
 
     // Atacar cuando la colisión siga permaneciendo
     void OnTriggerStay2D(Collider2D collision){
-         if (collision.gameObject.CompareTag("Heroe"))
+         if (collision.gameObject.CompareTag("HealArea"))
         {
             if (lastAttack >= 2 && !healController.isDeath)
             {
                 // Han pasado dos segundos desde el último ataque
                 // Tu código para atacar aquí
                 lastAttack = 0; // Actualiza el tiempo del último ataque
-                attack(collision);
+                attack();
             }
         }
     }
 
     
-    public void attack(Collider2D target){
+    public void attack(){
         bool isAnimationPlaying = animator.GetCurrentAnimatorStateInfo(0).IsName("Hurt");
 
         if (!isAnimationPlaying){

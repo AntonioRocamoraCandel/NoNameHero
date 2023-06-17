@@ -21,6 +21,7 @@ TagManager:
   - obstacle
   - cambioEscena
   - HeroMuerto
+  - HealArea
   layers:
   - Default
   - TransparentFX
