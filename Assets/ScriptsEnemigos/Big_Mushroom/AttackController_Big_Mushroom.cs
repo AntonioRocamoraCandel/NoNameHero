@@ -20,8 +20,10 @@ public class AttackController_Big_Mushroom : MonoBehaviour
 
 
     void OnTriggerStay2D(Collider2D collision){
-         if (collision.gameObject.CompareTag("Heroe"))
+        Debug.Log(collision.gameObject.tag);
+         if (collision.gameObject.CompareTag("attackCheck"))
         {
+            Debug.Log("Atacandooo");
             if (lastAttack >= 2)
             {
                 // Han pasado dos segundos desde el último ataque
@@ -34,7 +36,8 @@ public class AttackController_Big_Mushroom : MonoBehaviour
 
     
     public void attack(Collider2D target){
-        // Seria acceder al script del target y lanzar el metodo recibir daño enviandole nuestro dmg
+        Debug.Log("Atacando");
+        GameManager.Instance.PerderVida();
         
     }
 }
