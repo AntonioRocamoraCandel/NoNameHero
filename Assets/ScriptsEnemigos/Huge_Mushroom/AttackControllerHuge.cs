@@ -56,20 +56,21 @@ public class AttackControllerHuge : MonoBehaviour
 
         animator.Play(randomAnimation);
 
-        if (randomAnimation == "Attack4")
+        if (randomAnimation.Equals("Attack4"))
         {
             canPlayAttack4 = false;
-            dmg += 1;
             StartCoroutine(ResetAttack4Timer());
 
         }
-        else if (randomAnimation == "Attack1")
+        else if (randomAnimation.Equals("Attack1"))
         {
             GameManager.Instance.PerderVida();
+            return;
         }
-        else if (randomAnimation == "Attack2")
+        else if (randomAnimation.Equals("Attack2"))
         {
             GameManager.Instance.PerderVida();
+            return;
         }
 
     }
