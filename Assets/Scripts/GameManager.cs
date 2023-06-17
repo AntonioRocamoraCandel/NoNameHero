@@ -75,7 +75,9 @@ public class GameManager : MonoBehaviour
         {
             return false;
         }
-
+        if (vidas==0){
+            return false;
+        }
         hud.ActivarVida(vidas);
         vidas += 1;
         tiempoPasado = 0f;

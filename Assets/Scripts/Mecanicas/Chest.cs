@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Chest : MonoBehaviour {
     Animator myAnim;
@@ -20,13 +21,24 @@ public class Chest : MonoBehaviour {
     private void OnTriggerStay2D(Collider2D other) {
 
         if(other.CompareTag("Heroe")) {
-
-            if(Input.GetKeyDown(KeyCode.E) && opened == false) {
-
+            if (InputSystem.GetDevice<Gamepad>() != null)
+        {
+            if (Gamepad.current.buttonWest.wasPressedThisFrame && opened == false)
+            {
                 myAnim.Play("Chest_open");
                 StartCoroutine(GetChestItem());
             }
+        }
+        if (InputSystem.GetDevice<Keyboard>() != null )
+        {
+            if (Keyboard.current[Key.E].wasPressedThisFrame)
+            {
+                myAnim.Play("Chest_open");
+                StartCoroutine(GetChestItem());
+            }
+        }
         }  
+        
     }
 
     IEnumerator GetChestItem() {
