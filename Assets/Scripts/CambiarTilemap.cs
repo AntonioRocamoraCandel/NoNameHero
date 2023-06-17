@@ -29,7 +29,7 @@ public class CambiarTilemap : MonoBehaviour
             tilemapCollider.isTrigger = false;
             GameObject tilemapGameObject = tilemap.gameObject;
             tilemapGameObject.tag = "wall";
-            tilemapGameObject.layer = LayerMask.NameToLayer("wall");;
+            tilemapGameObject.layer = LayerMask.NameToLayer("wall");
             
         }
     }
@@ -40,7 +40,7 @@ public class CambiarTilemap : MonoBehaviour
             tilemapCollider.isTrigger = true;
             GameObject tilemapGameObject = tilemap.gameObject;
             tilemapGameObject.tag = "Untagged";
-            tilemapGameObject.layer = LayerMask.NameToLayer("Default");;
+            tilemapGameObject.layer = LayerMask.NameToLayer("Default");
     }
     }
 }
