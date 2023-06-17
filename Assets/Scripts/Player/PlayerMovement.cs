@@ -37,6 +37,11 @@ public class PlayerMovement : MonoBehaviour
     public AudioClip deathSound;
     public GameObject menuPausa;
     public GameObject gameOver;
+    public GameObject confirmacionReinicio;
+    public GameObject confirmacionSalir;
+    public GameObject confirmacionControles;
+    public GameObject controlesTeclado;
+    public GameObject controlesMando;
     private bool isJumping;
     private bool canDoubleJump;
     private int extraJumps = 1;
@@ -91,7 +96,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        if(menuPausa.activeSelf || gameOver.activeSelf){
+        if(menuPausa.activeSelf || gameOver.activeSelf || confirmacionControles.activeSelf ||controlesMando.activeSelf ||controlesTeclado.activeSelf ||
+        confirmacionSalir.activeSelf ||confirmacionReinicio.activeSelf){
             GetComponent<PlayerInput>().enabled = false;
         }else{
             GetComponent<PlayerInput>().enabled = true;

@@ -5,6 +5,8 @@ public class CambiarSpriteButtonMenu : MonoBehaviour
 {
     public Sprite normalSprite;
     public Sprite clickedSprite;
+    public AudioSource audioSource;
+    private float volumenOriginal;
 
     private Image buttonImage;
 
@@ -12,6 +14,8 @@ public class CambiarSpriteButtonMenu : MonoBehaviour
     {
         buttonImage = GetComponent<Image>();
         buttonImage.sprite = normalSprite;
+        audioSource = GetComponent<AudioSource>();
+        volumenOriginal = audioSource.volume;
     }
 
     public void CambiarImagen()
@@ -19,11 +23,13 @@ public class CambiarSpriteButtonMenu : MonoBehaviour
         if (buttonImage.sprite == normalSprite)
         {
             buttonImage.sprite = clickedSprite;
+            audioSource.mute = true;
+            //audioSource.volume = volumenOriginal;
         }
         else
         {
             buttonImage.sprite = normalSprite;
+            audioSource.mute = false;
         }
     }
-
 }
