@@ -56,7 +56,7 @@ public class LogicaPantallaCompleta : MonoBehaviour
             resolucionesDropDown.value = resolucionActual;
             resolucionesDropDown.RefreshShownValue();
 
-            resolucionesDropDown.value = PlayerPrefs.GetInt("numeroResolucion, 0");
+            resolucionesDropDown.value = PlayerPrefs.GetInt("numeroResolucion", 0);
     }
 
     public void CanbiarResolucion(int indiceResolucion)
