@@ -54,6 +54,7 @@ public class GameManager : MonoBehaviour
                 playerMovement.animator.SetBool("isDeath", true);
                 playerMovement.animator.SetTrigger("death");
                 estaMuerto=true;
+                playerMovement.visualMana.gameObject.SetActive(false);
             }
             playerMovement.audioSource.PlayOneShot(playerMovement.deathSound);
             audioSource.mute = true;
@@ -96,6 +97,7 @@ public class GameManager : MonoBehaviour
             playerMovement.animator.SetBool("isDeath", true);
             playerMovement.animator.SetTrigger("death");
             estaMuerto=true;
+            playerMovement.visualMana.gameObject.SetActive(false);
         }
             playerMovement.audioSource.PlayOneShot(playerMovement.deathSound);
             audioSource.mute = true;

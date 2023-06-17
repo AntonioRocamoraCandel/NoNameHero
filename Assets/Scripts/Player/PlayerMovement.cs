@@ -9,6 +9,7 @@ using System.Linq;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public TransicionEscena transicionEscena;
     public GameManager gameManager;
     public Rigidbody2D rb;
     public Transform groundCheck;
@@ -253,7 +254,7 @@ private void OnTriggerEnter2D(Collider2D collision)
         Scene currentScene = SceneManager.GetActiveScene();
         string sceneName = currentScene.name;
 
-        string[] sceneOrder = { "City", "SceneLevel2", "Antonio", "kawtar" };
+        string[] sceneOrder = { "City", "SceneLevel2", "Antonio", "kawtar", "FinalBossScene"};
 
         if (sceneOrder.Any(scene => scene.Equals(sceneName, StringComparison.OrdinalIgnoreCase)))
         {
@@ -263,27 +264,29 @@ private void OnTriggerEnter2D(Collider2D collision)
 
             if (sceneName.Equals("SceneLevel2", StringComparison.OrdinalIgnoreCase))
             {
-                SceneManager.LoadScene("City");
-                Debug.Log("Cityyyyy");
+                StartCoroutine(CambiarEscena("City"));
                 VariablesGlobales.currentIndex++;
             }else if (sceneName.Equals("Antonio", StringComparison.OrdinalIgnoreCase))
             {
-                SceneManager.LoadScene("City");
-                Debug.Log("Cityyyyy");
+                StartCoroutine(CambiarEscena("City"));
                 VariablesGlobales.currentIndex++;
             }else if (sceneName.Equals("kawtar", StringComparison.OrdinalIgnoreCase))
             {
-                SceneManager.LoadScene("City");
-                Debug.Log("Cityyyyy");
+                StartCoroutine(CambiarEscena("City"));
                 VariablesGlobales.currentIndex++;
+            }else if (sceneName.Equals("FinalBossScene", StringComparison.OrdinalIgnoreCase))
+            {
+                //Termina el juego
             }else if (sceneName.Equals("City", StringComparison.OrdinalIgnoreCase))
             {
                 if(VariablesGlobales.currentIndex==0){
-                    SceneManager.LoadScene("SceneLevel2");
+                    StartCoroutine(CambiarEscena("SceneLevel2"));
                 }else if(VariablesGlobales.currentIndex==1){
-                    SceneManager.LoadScene("Antonio");
+                    StartCoroutine(CambiarEscena("Antonio"));
                 }else if(VariablesGlobales.currentIndex==2){
-                    SceneManager.LoadScene("kawtar");
+                    StartCoroutine(CambiarEscena("kawtar"));
+                }else if(VariablesGlobales.currentIndex==3){
+                    StartCoroutine(CambiarEscena("FinalBossScene"));
                 }
             }
         
@@ -459,5 +462,12 @@ private void OnTriggerEnter2D(Collider2D collision)
     public void DestruirProtagonista()
     {
         Destroy(gameObject);
+    }
+
+    IEnumerator CambiarEscena(String escena){
+        transicionEscena.animator.SetTrigger("Iniciar");
+
+        yield return new WaitForSeconds(transicionEscena.animacionFinal.length);
+        SceneManager.LoadScene(escena);
     }
 }
