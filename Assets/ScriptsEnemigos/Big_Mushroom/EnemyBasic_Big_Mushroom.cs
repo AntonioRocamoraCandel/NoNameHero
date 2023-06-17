@@ -29,7 +29,7 @@ public class EnemyBasic_Big_Mushroom : MonoBehaviour
     }
     void FixedUpdate() 
     {
-       
+    
         if(target != null){
 
             float distance = Mathf.Abs(transform.position.x - target.transform.position.x);

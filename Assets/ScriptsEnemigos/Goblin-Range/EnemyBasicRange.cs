@@ -34,6 +34,8 @@ public class EnemyBasicRange : MonoBehaviour
 
     public GameManager gameManager;
 
+    public HealController healController;
+
     void Start()
     {
         attackControllerRange = GetComponent<AttackControllerRange>();
@@ -42,13 +44,14 @@ public class EnemyBasicRange : MonoBehaviour
         leftLimit = transform.position.x - maxRange; // Limite de recorrido hacia la izquierda
         movimiento = Vector2.right * velocidadMovimiento; // Define el movimiento a la derecha como el vector de velocidad por defecto
         animator = GetComponent<Animator>();
+
+        healController = GetComponent<HealController>();
     }
     void FixedUpdate() 
     {
         animator.SetBool("isColliding", isCollision);
         
         rotationDelay = rotationDelay + Time.deltaTime;
-
 
         timeObstacle = timeObstacle + Time.deltaTime;
 
@@ -77,7 +80,9 @@ public class EnemyBasicRange : MonoBehaviour
                     }else{
                         transform.localScale = new Vector3(1f, 1f, 1f);
                     }
-                    attackControllerRange.attack(target);
+                    if(!healController.isDeath){
+                        attackControllerRange.attack(target);
+                    }
                     
                 }else
                 {
