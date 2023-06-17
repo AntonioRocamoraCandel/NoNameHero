@@ -586,12 +586,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62184aebe05896a4c8fc72c856b2cc59, type: 3}
---- !u!4 &858971710 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 770838301039762864, guid: be75f6357473ce646b64aa3b20278732, type: 3}
+--- !u!1 &625315095 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1988188826438336010, guid: be75f6357473ce646b64aa3b20278732, type: 3}
   m_PrefabInstance: {fileID: 1010111082}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &939506578
+--- !u!1001 &823324743
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -601,26 +601,22 @@ PrefabInstance:
     - target: {fileID: 733483636279868048, guid: ef4f4df4051172b45abf7b6494892c70, type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 1554766708}
+      objectReference: {fileID: 625315095}
     - target: {fileID: 733483636279868048, guid: ef4f4df4051172b45abf7b6494892c70, type: 3}
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 973826512}
-    - target: {fileID: 733483636279868048, guid: ef4f4df4051172b45abf7b6494892c70, type: 3}
-      propertyPath: velocidadMovimiento
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 5452769422290262872, guid: ef4f4df4051172b45abf7b6494892c70, type: 3}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5452769422290262872, guid: ef4f4df4051172b45abf7b6494892c70, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.961275
+      value: -11.42
       objectReference: {fileID: 0}
     - target: {fileID: 5452769422290262872, guid: ef4f4df4051172b45abf7b6494892c70, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.1872275
+      value: -3.34
       objectReference: {fileID: 0}
     - target: {fileID: 5452769422290262872, guid: ef4f4df4051172b45abf7b6494892c70, type: 3}
       propertyPath: m_LocalPosition.z
@@ -658,12 +654,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Big_Mushroom 1 1
       objectReference: {fileID: 0}
-    - target: {fileID: 5776016655409832868, guid: ef4f4df4051172b45abf7b6494892c70, type: 3}
-      propertyPath: isDeath
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef4f4df4051172b45abf7b6494892c70, type: 3}
+--- !u!4 &858971710 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 770838301039762864, guid: be75f6357473ce646b64aa3b20278732, type: 3}
+  m_PrefabInstance: {fileID: 1010111082}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &973826512 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3760535019280241963, guid: 378924df747e0b047b490b60e399156f, type: 3}
@@ -734,6 +731,10 @@ PrefabInstance:
       propertyPath: pauseMenu
       value: 
       objectReference: {fileID: 338482768}
+    - target: {fileID: 3941814383649264418, guid: be75f6357473ce646b64aa3b20278732, type: 3}
+      propertyPath: menuControles
+      value: 
+      objectReference: {fileID: 2040326243}
     - target: {fileID: 3941814383649264418, guid: be75f6357473ce646b64aa3b20278732, type: 3}
       propertyPath: gameOverScreen
       value: 
@@ -993,22 +994,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 684230409876022677, guid: b29cf135b62be6548bda1a4f242b935f, type: 3}
-      propertyPath: m_Mass
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 684230409876022697, guid: b29cf135b62be6548bda1a4f242b935f, type: 3}
       propertyPath: heal
-      value: 1000
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 684230409876022698, guid: b29cf135b62be6548bda1a4f242b935f, type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 1554766708}
-    - target: {fileID: 684230409876022698, guid: b29cf135b62be6548bda1a4f242b935f, type: 3}
-      propertyPath: velocidadMovimiento
-      value: 2
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 625315095}
     - target: {fileID: 684230409876022699, guid: b29cf135b62be6548bda1a4f242b935f, type: 3}
       propertyPath: m_Name
       value: Huge_Mushroom
@@ -8294,11 +8287,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1554766708 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1988188826438336010, guid: be75f6357473ce646b64aa3b20278732, type: 3}
-  m_PrefabInstance: {fileID: 1010111082}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1563543558
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14963,10 +14951,15 @@ PrefabInstance:
     - target: {fileID: 3760535020393032152, guid: 378924df747e0b047b490b60e399156f, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 6f27a790786c1ed43b9ab7ef449b78cf, type: 3}
+      objectReference: {fileID: 8300000, guid: 28afc628572e8b64bad64ec71804441a, type: 3}
     - target: {fileID: 3760535020393032154, guid: 378924df747e0b047b490b60e399156f, type: 3}
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 378924df747e0b047b490b60e399156f, type: 3}
+--- !u!1 &2040326243 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6141447456395908550, guid: 2b6c1320cd733d541ad1f51a313ead1e, type: 3}
+  m_PrefabInstance: {fileID: 338482767}
+  m_PrefabAsset: {fileID: 0}
