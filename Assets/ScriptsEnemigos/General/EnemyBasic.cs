@@ -113,16 +113,30 @@ public class EnemyBasic : MonoBehaviour
         
     }
 
-    
+    void OnTriggerStay2D(Collider2D collision){
+         if (collision.gameObject.CompareTag("HealArea"))
+        {
+            isCollision = true;
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D collision){
+         if (collision.gameObject.CompareTag("HealArea"))
+        {
+            isCollision = false;
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D collision){
+         if (collision.gameObject.CompareTag("HealArea"))
+        {
+            isCollision = true;
+        }
+    }
 
     void OnCollisionStay2D(Collision2D collision)
     {
-            if (collision.gameObject.CompareTag("Heroe"))
-            {
-                Debug.Log("Stay");
-                isCollision = true;
-            }  
-
+        
             if (collision.gameObject.CompareTag("obstacle")){
                 if (rotationDelay > 0.5){
                     isDerecha = !isDerecha;
@@ -137,12 +151,6 @@ public class EnemyBasic : MonoBehaviour
 
     void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Heroe"))
-        {
-            isCollision = false;
-            //Physics2D.IgnoreCollision(GetComponent<Collider2D>(), collision.collider, false);
-        }
-
         if (collision.gameObject.CompareTag("obstacle"))
         {
             isObstacle = false;
