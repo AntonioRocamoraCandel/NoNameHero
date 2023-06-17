@@ -7,8 +7,7 @@ public class CambiarTilemap : MonoBehaviour
     public TilemapRenderer tilemapRenderer;
     public TilemapCollider2D tilemapCollider;
 
-    private bool isParedHabilitada = true;
-    private bool isColliderTrigger = true;
+    public HealController healController;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -17,8 +16,13 @@ public class CambiarTilemap : MonoBehaviour
             tilemap.enabled = true;
             tilemapRenderer.enabled = true;
             tilemapCollider.isTrigger = false;
-            isParedHabilitada = true;
             
         }
+    }
+    public void EnemyDeath()
+    {
+            tilemap.enabled = false;
+            tilemapRenderer.enabled = false;
+            tilemapCollider.isTrigger = true;
     }
 }
