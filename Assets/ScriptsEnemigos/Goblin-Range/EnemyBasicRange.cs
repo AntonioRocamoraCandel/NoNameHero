@@ -59,7 +59,7 @@ public class EnemyBasicRange : MonoBehaviour
             timeObstacle = 0.0f;
         }
 
-        if (!gameManager.estaMuerto){
+        if (!gameManager.estaMuerto && !healController.isDeath){
             if(!isCollision){
 
                 float distance = Mathf.Abs(transform.position.x - target.transform.position.x);
