@@ -21,7 +21,7 @@ public class AttackController_Big_Mushroom : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D collision){
         Debug.Log(collision.gameObject.tag);
-         if (collision.gameObject.CompareTag("attackCheck"))
+        if (collision.gameObject.CompareTag("attackCheck"))
         {
             Debug.Log("Atacandooo");
             if (lastAttack >= 2)

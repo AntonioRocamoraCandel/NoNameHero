@@ -17,7 +17,6 @@ public class GameManager : MonoBehaviour
     public float tiempoEspera = 0.5f;
     public bool sePuedeMover = true;
     public Vector2 velocidadRebote = new Vector2(20, 10);
-    public float tiempoPerdidaControl=1f;
     public GameObject gameOver;
     public bool estaMuerto=false;
 
@@ -64,9 +63,8 @@ public class GameManager : MonoBehaviour
         {
             playerMovement.animator.SetTrigger("hurt");
             playerMovement.audioSource.PlayOneShot(playerMovement.hurtSound);
-            Debug.Log("hola");
-            StartCoroutine(PerderControl());
             Rebote(velocidadRebote);
+            StartCoroutine(PerderControl());
         }
 
     }
@@ -106,6 +104,7 @@ public class GameManager : MonoBehaviour
 
     public void Rebote(Vector2 puntoGolpe){
         playerMovement.rb.velocity = new Vector2(-velocidadRebote.x, velocidadRebote.y);
+        Debug.Log(playerMovement.rb.velocity.x);
     }
 
     private IEnumerator EsperarYReiniciar(float tiempo)
@@ -118,9 +117,7 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator<WaitForSeconds> PerderControl(){
         sePuedeMover=false;
-        Debug.Log("hola2");
-        yield return new WaitForSeconds(tiempoPerdidaControl);
-        Debug.Log("hola3");
+        yield return new WaitForSeconds(1);
         sePuedeMover=true;
     }
 

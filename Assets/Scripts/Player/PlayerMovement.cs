@@ -182,10 +182,13 @@ public class PlayerMovement : MonoBehaviour
     {
         if(gameManager.sePuedeMover && gameManager.vidas > 0){
             horizontal = context.ReadValue<Vector2>().x;
+            GetComponent<PlayerInput>().enabled = true;
         }else if(gameManager.vidas>0 && !gameManager.sePuedeMover){
             horizontal = 0; 
+            GetComponent<PlayerInput>().enabled = true;
         }else{
             horizontal = 0;
+            GetComponent<PlayerInput>().enabled = false;
         }
     }
 
