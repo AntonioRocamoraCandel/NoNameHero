@@ -32,7 +32,13 @@ public class HealController : MonoBehaviour
             getDamage(25);
         }
 
+        if (collision.gameObject.CompareTag("spikes")){
+            getDamage(9999);
+        }
+
     }
+
+    
 
     void OnTriggerEnter2D(Collider2D collision)
     {

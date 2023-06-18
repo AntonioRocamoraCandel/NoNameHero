@@ -47,7 +47,6 @@ public class AttackController : MonoBehaviour
         bool isAnimationPlaying = animator.GetCurrentAnimatorStateInfo(0).IsName("Hurt");
 
         if (!isAnimationPlaying){
-            animator.Play("Attack");
             GameManager.Instance.PerderVida();
         }
         

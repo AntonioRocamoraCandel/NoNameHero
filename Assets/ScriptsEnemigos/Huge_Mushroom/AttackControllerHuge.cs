@@ -62,7 +62,7 @@ public class AttackControllerHuge : MonoBehaviour
 
         if (randomAnimation.Equals("Attack4"))
         {
-            enemyBasic.velocidadMovimiento = enemyBasic.velocidadMovimiento + 1;
+            enemyBasic.velocidadMovimiento = enemyBasic.velocidadMovimiento + 0.5f;
             canPlayAttack4 = false;
             StartCoroutine(ResetAttack4Timer());
 
