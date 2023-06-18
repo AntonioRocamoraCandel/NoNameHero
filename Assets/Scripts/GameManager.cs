@@ -35,11 +35,13 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        tiempoPasado += Time.deltaTime;
+        if(vidas<3){
+            tiempoPasado += Time.deltaTime;
 
-        if (tiempoPasado >= tiempoRecuperacion && vidas < 3)
-        {
-            RecuperarVida();
+            if (tiempoPasado >= tiempoRecuperacion && vidas < 3)
+            {
+                RecuperarVida();
+            }
         }
     }
 

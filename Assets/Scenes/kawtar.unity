@@ -71663,7 +71663,7 @@ PrefabInstance:
     - target: {fileID: 3760535019280241963, guid: 378924df747e0b047b490b60e399156f, type: 3}
       propertyPath: gameOver
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1728274524}
     - target: {fileID: 3760535020393031975, guid: 378924df747e0b047b490b60e399156f, type: 3}
       propertyPath: m_RootOrder
       value: 8
