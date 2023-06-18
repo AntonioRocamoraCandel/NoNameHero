@@ -1267,7 +1267,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: W/A/S/D - Movimiento Juagdor
+  m_text: W/A/S/D - Movimiento Jugador
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 19c042efed9896f4e95dc697fa51353a, type: 2}
   m_sharedMaterial: {fileID: -1129695424578915801, guid: 19c042efed9896f4e95dc697fa51353a, type: 2}
