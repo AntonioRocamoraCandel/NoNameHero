@@ -2878,7 +2878,7 @@ PrefabInstance:
       objectReference: {fileID: -1129695424578915801, guid: 19c042efed9896f4e95dc697fa51353a, type: 2}
     - target: {fileID: 2134314539154387383, guid: 1bcb653cf631de0429e91bfd42c8e3e0, type: 3}
       propertyPath: m_enableAutoSizing
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5646393759402946593, guid: 1bcb653cf631de0429e91bfd42c8e3e0, type: 3}
       propertyPath: m_fontAsset
