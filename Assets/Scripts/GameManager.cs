@@ -111,6 +111,7 @@ public class GameManager : MonoBehaviour
     }
 
     public void Rebote(Vector2 puntoGolpe){
+        playerMovement.horizontal=0f;
         playerMovement.rb.velocity = new Vector2(-velocidadRebote.x, velocidadRebote.y);
         Debug.Log(playerMovement.rb.velocity.x);
     }
