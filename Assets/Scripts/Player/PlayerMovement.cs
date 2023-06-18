@@ -17,6 +17,8 @@ public class PlayerMovement : MonoBehaviour
     public Transform attackCheck;
     public Transform wallCheck;
     public LayerMask wall;
+    private Vector2 posicionInicial= new Vector2(-39.17f,-3.5f);
+    private GameObject personaje;
 
     private float vertical;
     private bool isLadder;
@@ -84,6 +86,10 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
+        personaje = GameObject.FindGameObjectWithTag("Heroe");
+        if(VariablesGlobales.currentIndex==0){
+            personaje.transform.position = posicionInicial;
+        }
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         GameManager.Instance.playerMovement = this;
@@ -466,7 +472,7 @@ private void OnTriggerEnter2D(Collider2D collision)
         yield return new WaitForSeconds(transicionEscena.animacionFinal.length);
         SceneManager.LoadScene(escena);
         if(!escena.Equals("City")){
-
+            
             VariablesGlobales.currentIndex++;
             Debug.Log(VariablesGlobales.currentIndex);
             Debug.Log(escena);
