@@ -8,12 +8,15 @@ public class Menu_Actions : MonoBehaviour
     public TransicionEscena transicionEscena;
     public void Jugar()
     {
+        VariablesGlobales.currentIndex=0;
         StartCoroutine(CambiarEscena());
+
     }
 
     public void Salir()
     {
         Debug.Log("Salir...");
+        VariablesGlobales.currentIndex=0;
         Application.Quit();
     }
 
