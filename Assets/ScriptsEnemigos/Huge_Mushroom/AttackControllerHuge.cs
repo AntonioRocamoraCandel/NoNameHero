@@ -12,9 +12,13 @@ public class AttackControllerHuge : MonoBehaviour
     private bool canPlayAttack4 = true;
     private Animator animator;
 
+    EnemyBasic enemyBasic;
+
     void Awake()
     {
         animator = GetComponentInParent<Animator>();
+
+        enemyBasic = GetComponentInParent<EnemyBasic>();
     }
 
     void Start()
@@ -33,7 +37,7 @@ public class AttackControllerHuge : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Heroe"))
         {
-            if (lastAttack >= 3)
+            if (lastAttack >= 2)
             {
                 // Han pasado dos segundos desde el último ataque
                 lastAttack = 0; // Actualiza el tiempo del último ataque
@@ -58,6 +62,7 @@ public class AttackControllerHuge : MonoBehaviour
 
         if (randomAnimation.Equals("Attack4"))
         {
+            enemyBasic.velocidadMovimiento = enemyBasic.velocidadMovimiento + 1;
             canPlayAttack4 = false;
             StartCoroutine(ResetAttack4Timer());
 
