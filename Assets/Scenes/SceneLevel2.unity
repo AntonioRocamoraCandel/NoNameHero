@@ -110245,13 +110245,33 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3167262202712610360, guid: f52b22001425c294c8232b83a0da7ca8, type: 3}
+      propertyPath: controles
+      value: 
+      objectReference: {fileID: 1318498220}
+    - target: {fileID: 3167262202712610360, guid: f52b22001425c294c8232b83a0da7ca8, type: 3}
+      propertyPath: menuSalir
+      value: 
+      objectReference: {fileID: 1766004463}
+    - target: {fileID: 3167262202712610360, guid: f52b22001425c294c8232b83a0da7ca8, type: 3}
       propertyPath: pauseMenu
       value: 
       objectReference: {fileID: 1318498218}
     - target: {fileID: 3167262202712610360, guid: f52b22001425c294c8232b83a0da7ca8, type: 3}
+      propertyPath: controlesPC
+      value: 
+      objectReference: {fileID: 1318498221}
+    - target: {fileID: 3167262202712610360, guid: f52b22001425c294c8232b83a0da7ca8, type: 3}
       propertyPath: menuControles
       value: 
       objectReference: {fileID: 1262823589}
+    - target: {fileID: 3167262202712610360, guid: f52b22001425c294c8232b83a0da7ca8, type: 3}
+      propertyPath: menuReiniciar
+      value: 
+      objectReference: {fileID: 1766004464}
+    - target: {fileID: 3167262202712610360, guid: f52b22001425c294c8232b83a0da7ca8, type: 3}
+      propertyPath: controlesMando
+      value: 
+      objectReference: {fileID: 1318498222}
     - target: {fileID: 3167262202712610360, guid: f52b22001425c294c8232b83a0da7ca8, type: 3}
       propertyPath: gameOverScreen
       value: 

@@ -38881,11 +38881,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6141447455603984766, guid: 2b6c1320cd733d541ad1f51a313ead1e, type: 3}
   m_PrefabInstance: {fileID: 1052097309}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1052097314 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6141447456395908550, guid: 2b6c1320cd733d541ad1f51a313ead1e, type: 3}
-  m_PrefabInstance: {fileID: 1052097309}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1061223282
 GameObject:
   m_ObjectHideFlags: 0
@@ -73239,13 +73234,33 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3167262202712610360, guid: f52b22001425c294c8232b83a0da7ca8, type: 3}
+      propertyPath: controles
+      value: 
+      objectReference: {fileID: 56091605}
+    - target: {fileID: 3167262202712610360, guid: f52b22001425c294c8232b83a0da7ca8, type: 3}
+      propertyPath: menuSalir
+      value: 
+      objectReference: {fileID: 1800712991}
+    - target: {fileID: 3167262202712610360, guid: f52b22001425c294c8232b83a0da7ca8, type: 3}
       propertyPath: pauseMenu
       value: 
       objectReference: {fileID: 1052097310}
     - target: {fileID: 3167262202712610360, guid: f52b22001425c294c8232b83a0da7ca8, type: 3}
+      propertyPath: controlesPC
+      value: 
+      objectReference: {fileID: 1052097312}
+    - target: {fileID: 3167262202712610360, guid: f52b22001425c294c8232b83a0da7ca8, type: 3}
       propertyPath: menuControles
       value: 
-      objectReference: {fileID: 1052097314}
+      objectReference: {fileID: 56091605}
+    - target: {fileID: 3167262202712610360, guid: f52b22001425c294c8232b83a0da7ca8, type: 3}
+      propertyPath: menuReiniciar
+      value: 
+      objectReference: {fileID: 1800712992}
+    - target: {fileID: 3167262202712610360, guid: f52b22001425c294c8232b83a0da7ca8, type: 3}
+      propertyPath: controlesMando
+      value: 
+      objectReference: {fileID: 1052097313}
     - target: {fileID: 3167262202712610360, guid: f52b22001425c294c8232b83a0da7ca8, type: 3}
       propertyPath: gameOverScreen
       value: 

@@ -13744,13 +13744,33 @@ PrefabInstance:
       value: Protagonista
       objectReference: {fileID: 0}
     - target: {fileID: 3941814383649264418, guid: be75f6357473ce646b64aa3b20278732, type: 3}
+      propertyPath: controles
+      value: 
+      objectReference: {fileID: 1515099654}
+    - target: {fileID: 3941814383649264418, guid: be75f6357473ce646b64aa3b20278732, type: 3}
+      propertyPath: menuSalir
+      value: 
+      objectReference: {fileID: 954006016}
+    - target: {fileID: 3941814383649264418, guid: be75f6357473ce646b64aa3b20278732, type: 3}
       propertyPath: pauseMenu
       value: 
       objectReference: {fileID: 160420085}
     - target: {fileID: 3941814383649264418, guid: be75f6357473ce646b64aa3b20278732, type: 3}
+      propertyPath: controlesPC
+      value: 
+      objectReference: {fileID: 1374496452}
+    - target: {fileID: 3941814383649264418, guid: be75f6357473ce646b64aa3b20278732, type: 3}
       propertyPath: menuControles
       value: 
       objectReference: {fileID: 2005224149}
+    - target: {fileID: 3941814383649264418, guid: be75f6357473ce646b64aa3b20278732, type: 3}
+      propertyPath: menuReiniciar
+      value: 
+      objectReference: {fileID: 1983475886}
+    - target: {fileID: 3941814383649264418, guid: be75f6357473ce646b64aa3b20278732, type: 3}
+      propertyPath: controlesMando
+      value: 
+      objectReference: {fileID: 1489625540}
     - target: {fileID: 3941814383649264418, guid: be75f6357473ce646b64aa3b20278732, type: 3}
       propertyPath: gameOverScreen
       value: 
