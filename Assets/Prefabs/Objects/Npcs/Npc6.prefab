@@ -94,6 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7500403710948666332}
   - component: {fileID: 4133740559836472143}
+  - component: {fileID: 1212012958592653448}
   - component: {fileID: 4133740559836472142}
   - component: {fileID: 4133740559836472139}
   - component: {fileID: 4133740559836472138}
@@ -173,6 +174,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1212012958592653448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8871306450326490650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f124a1585e744904ea38327170e27889, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!95 &4133740559836472142
 Animator:
   serializedVersion: 5
@@ -256,4 +269,3 @@ MonoBehaviour:
   buttonContinue: {fileID: 0}
   wordSpeed: 0.02
   playerIsClose: 0
-  pasoCiudad: 

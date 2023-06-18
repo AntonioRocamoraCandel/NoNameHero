@@ -15,7 +15,6 @@ public class Npc_interaction : MonoBehaviour
     public GameObject buttonContinue;
     public float wordSpeed;
     public bool playerIsClose;
-    public string pasoCiudad;
     private DialogosNpcs dialogosNpcs;
 
 
@@ -88,6 +87,7 @@ public class Npc_interaction : MonoBehaviour
 
     IEnumerator Typing()
     {   
+        Debug.Log(VariablesGlobales.currentIndex);
         string dialogue = dialogosNpcs.FindDialogueByPositions(NpcName, VariablesGlobales.currentIndex.ToString());
         if (dialogue != null)
         {

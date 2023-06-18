@@ -39,6 +39,8 @@ public class DialogosNpcs : MonoBehaviour
     private string[] dialogueArray7_1 = { "???", "1", "Yo solía ser un aventurero como tú, pero un día me dieron en la rodilla con una flecha" };
     private string[] dialogueArray7_2 = { "???", "2", "¿Tu especie no se extinguió?, debes ser un ejemplar muy valioso" };
     private string[] dialogueArray7_3 = { "???", "3", "Si mueres no te preocupes, yo estoy para encargarme de ese tipo de cosas" };
+    
+    private string[] dialogueArray8_0 = { "LibrosFinales", "0", "uwu" };
     private string[][] dialogueArrays;
 
     private void Start()
@@ -71,7 +73,8 @@ public class DialogosNpcs : MonoBehaviour
             dialogueArray7_0,
             dialogueArray7_1,
             dialogueArray7_2,
-            dialogueArray7_3
+            dialogueArray7_3,
+            dialogueArray8_0
         };
     }
 
