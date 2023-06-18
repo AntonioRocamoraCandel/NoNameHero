@@ -53,6 +53,7 @@ public class GameManager : MonoBehaviour
         {
             if (playerMovement != null && playerMovement.animator != null)
             {
+                playerMovement.horizontal=0f;
                 playerMovement.animator.SetBool("isDeath", true);
                 playerMovement.animator.SetTrigger("death");
                 estaMuerto=true;
@@ -96,6 +97,7 @@ public class GameManager : MonoBehaviour
             vidas = 0;
             if (playerMovement != null && playerMovement.animator != null)
         {
+            playerMovement.horizontal=0f;
             playerMovement.animator.SetBool("isDeath", true);
             playerMovement.animator.SetTrigger("death");
             estaMuerto=true;

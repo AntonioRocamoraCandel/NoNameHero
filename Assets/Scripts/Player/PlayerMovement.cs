@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
 
     private float vertical;
     private bool isLadder;
-    private float horizontal;
+    public float horizontal=0f;
     private float speed = 6f;
     private float jumpingPower = 13f;
     private bool isFacingRight = true;
