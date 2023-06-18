@@ -19848,7 +19848,8 @@ PrefabInstance:
       propertyPath: m_ActionEvents.Array.data[16].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3167262202712610360, guid: f52b22001425c294c8232b83a0da7ca8, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f52b22001425c294c8232b83a0da7ca8, type: 3}
 --- !u!1 &1640489681 stripped
 GameObject:
@@ -19860,6 +19861,26 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1725672661787990186, guid: f52b22001425c294c8232b83a0da7ca8, type: 3}
   m_PrefabInstance: {fileID: 1640489680}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1640489683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1640489681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a72f5e12cc65fae4aa5fd721b29a9a25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenu: {fileID: 338482768}
+  gameOverScreen: {fileID: 1727428179}
+  controles: {fileID: 338482772}
+  controlesMando: {fileID: 338482770}
+  controlesPC: {fileID: 338482771}
+  menuSalir: {fileID: 914574539}
+  menuReiniciar: {fileID: 1331794957}
+  menuFelicidades: {fileID: 1486504068}
 --- !u!1001 &1716593821
 PrefabInstance:
   m_ObjectHideFlags: 0
